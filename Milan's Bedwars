@@ -1,0 +1,312 @@
+local ScreenGui = Instance.new("ScreenGui")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local TextCombat = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local ScrollingFrame_2 = Instance.new("ScrollingFrame")
+local TextRender = Instance.new("TextLabel")
+local esptext = Instance.new("TextButton")
+local ScrollingFrame_3 = Instance.new("ScrollingFrame")
+local TextWorld = Instance.new("TextLabel")
+local OpenClose = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ScrollingFrame.Parent = ScreenGui
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.229535922, 0, 0.198492467, 0)
+ScrollingFrame.Size = UDim2.new(0.141772151, 0, 0.301507533, 0)
+ScrollingFrame.Visible = false
+
+TextCombat.Name = "Text Combat"
+TextCombat.Parent = ScrollingFrame
+TextCombat.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+TextCombat.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextCombat.BorderSizePixel = 0
+TextCombat.Position = UDim2.new(-0.0604026429, 0, 0, 0)
+TextCombat.Size = UDim2.new(0, 178, 0, 50)
+TextCombat.Font = Enum.Font.SourceSans
+TextCombat.Text = "Combat"
+TextCombat.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextCombat.TextSize = 50.000
+
+TextButton.Parent = TextCombat
+TextButton.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.0561797768, 0, 1, 0)
+TextButton.Size = UDim2.new(0, 168, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "AUTOCLICKER"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 30.000
+
+ScrollingFrame_2.Parent = ScreenGui
+ScrollingFrame_2.Active = true
+ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame_2.BorderSizePixel = 0
+ScrollingFrame_2.Position = UDim2.new(0.429535925, 0, 0.198492467, 0)
+ScrollingFrame_2.Size = UDim2.new(0.140084386, 0, 0.301507533, 0)
+ScrollingFrame_2.Visible = false
+
+TextRender.Name = "Text Render"
+TextRender.Parent = ScrollingFrame_2
+TextRender.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+TextRender.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextRender.BorderSizePixel = 0
+TextRender.Size = UDim2.new(0, 166, 0, 50)
+TextRender.Font = Enum.Font.SourceSans
+TextRender.Text = "Render"
+TextRender.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextRender.TextSize = 50.000
+
+esptext.Name = "esp text"
+esptext.Parent = TextRender
+esptext.BackgroundColor3 = Color3.fromRGB(85, 255, 127)
+esptext.BorderColor3 = Color3.fromRGB(0, 0, 0)
+esptext.BorderSizePixel = 0
+esptext.Position = UDim2.new(0, 0, 1, 0)
+esptext.Size = UDim2.new(0, 155, 0, 40)
+esptext.Font = Enum.Font.SourceSans
+esptext.Text = "ESP"
+esptext.TextColor3 = Color3.fromRGB(0, 0, 0)
+esptext.TextSize = 50.000
+
+ScrollingFrame_3.Parent = ScreenGui
+ScrollingFrame_3.Active = true
+ScrollingFrame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame_3.BorderSizePixel = 0
+ScrollingFrame_3.Position = UDim2.new(0.625316501, 0, 0.198492467, 0)
+ScrollingFrame_3.Size = UDim2.new(0.135021091, 0, 0.301507533, 0)
+ScrollingFrame_3.Visible = false
+
+TextWorld.Name = "Text World"
+TextWorld.Parent = ScrollingFrame_3
+TextWorld.BackgroundColor3 = Color3.fromRGB(85, 255, 127)
+TextWorld.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextWorld.BorderSizePixel = 0
+TextWorld.Size = UDim2.new(0, 160, 0, 50)
+TextWorld.Font = Enum.Font.SourceSans
+TextWorld.Text = "World"
+TextWorld.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextWorld.TextSize = 50.000
+
+OpenClose.Name = "Open/Close"
+OpenClose.Parent = ScreenGui
+OpenClose.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenClose.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OpenClose.BorderSizePixel = 0
+OpenClose.Position = UDim2.new(0, 0, 0.463567853, 0)
+OpenClose.Size = UDim2.new(0.0312236287, 0, 0.0515075363, 0)
+OpenClose.Font = Enum.Font.SourceSans
+OpenClose.Text = "Open"
+OpenClose.TextColor3 = Color3.fromRGB(0, 0, 0)
+OpenClose.TextSize = 14.000
+
+UICorner.Parent = OpenClose
+
+-- Scripts:
+
+local function EQAVKC_fake_script() -- ScrollingFrame.LocalScript 
+	local script = Instance.new('LocalScript', ScrollingFrame)
+
+	local Gui = script.Parent
+	
+	local function onKeyPress(input)
+		if input.KeyCode == Enum.KeyCode.RightShift then
+			if Gui.Visible == true then
+				Gui.Visible = false
+			else
+				Gui.Visible = true
+			end
+		end
+	end
+	
+	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
+	
+end
+coroutine.wrap(EQAVKC_fake_script)()
+local function FBXFB_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local UserInputService = game:GetService("UserInputService")
+	local Players = game:GetService("Players")
+	local LocalPlayer = Players.LocalPlayer
+	local Mouse = LocalPlayer:GetMouse()
+	
+	local autoclickerEnabled = false
+	local clickInterval = 0.05 -- 20 CPS = 0.05 seconds per click
+	
+	local function startAutoClicker()
+		while autoclickerEnabled and Mouse.Target do
+			Mouse:Click()
+			task.wait(clickInterval)
+		end
+	end
+	
+	local function onCharacterAdded(character)
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	
+		UserInputService.InputBegan:Connect(function(input, gameProcessed)
+			if not gameProcessed and input.KeyCode == Enum.KeyCode.LeftShift then
+				autoclickerEnabled = not autoclickerEnabled
+				if autoclickerEnabled then
+					startAutoClicker()
+				end
+			end
+		end)
+	end
+	
+	LocalPlayer.CharacterAdded:Connect(onCharacterAdded)
+	if LocalPlayer.Character then
+		onCharacterAdded(LocalPlayer.Character)
+	end
+	
+end
+coroutine.wrap(FBXFB_fake_script)()
+local function ZVED_fake_script() -- ScrollingFrame_2.LocalScript 
+	local script = Instance.new('LocalScript', ScrollingFrame_2)
+
+	local Gui = script.Parent
+	
+	local function onKeyPress(input)
+		if input.KeyCode == Enum.KeyCode.RightShift then
+			if Gui.Visible == true then
+				Gui.Visible = false
+			else
+				Gui.Visible = true
+			end
+		end
+	end
+	
+	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
+	
+end
+coroutine.wrap(ZVED_fake_script)()
+local function YLZRNP_fake_script() -- esptext.PlayerESP 
+	local script = Instance.new('LocalScript', esptext)
+
+	local Players = game:GetService("Players")
+	local scrollingFrame = script.Parent
+	local template = scrollingFrame:FindFirstChild("esp text")
+	
+	local function updateESP()
+	    -- Clear existing entries
+	    for _, child in scrollingFrame:GetChildren() do
+	        if child:IsA("TextButton") and child ~= template then
+	            child:Destroy()
+	        end
+	    end
+	
+	    -- Get all players
+	    for _, player in Players:GetPlayers() do
+	        local character = player.Character or player.CharacterAdded:Wait()
+	        local humanoid = character:FindFirstChild("Humanoid")
+	        
+	        if humanoid and humanoid.Health > 0 then
+	            local newEntry = template:Clone()
+	            newEntry.Text = string.format("%s: %.1f, %.1f, %.1f", 
+	                player.Name, 
+	                character:GetPivot().Position.X,
+	                character:GetPivot().Position.Y,
+	                character:GetPivot().Position.Z
+	            )
+	            newEntry.Visible = true
+	            newEntry.Parent = scrollingFrame
+	        end
+	    end
+	end
+	
+	-- Initial update
+	updateESP()
+	
+	-- Update every 5 seconds
+	while true do
+	    task.wait(5)
+	    updateESP()
+	end
+	
+	
+end
+coroutine.wrap(YLZRNP_fake_script)()
+local function YVCGP_fake_script() -- ScrollingFrame_3.LocalScript 
+	local script = Instance.new('LocalScript', ScrollingFrame_3)
+
+	local Gui = script.Parent
+	
+	local function onKeyPress(input)
+		if input.KeyCode == Enum.KeyCode.RightShift then
+			if Gui.Visible == true then
+				Gui.Visible = false
+			else
+				Gui.Visible = true
+			end
+		end
+	end
+	
+	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
+	
+end
+coroutine.wrap(YVCGP_fake_script)()
+local function BPAESWG_fake_script() -- nil.ToggleScrollingFrames 
+	local script = Instance.new('LocalScript', nil)
+
+	local button = script.Parent
+	local parent = button.Parent
+	local scrollingFrames = {}
+	
+	-- Collect all ScrollingFrames in parent
+	for _, child in parent:GetChildren() do
+	    if child:IsA("ScrollingFrame") then
+	        table.insert(scrollingFrames, child)
+	    end
+	end
+	
+	local isOpen = false
+	
+	button.MouseButton1Click:Connect(function()
+	    isOpen = not isOpen
+	    button.Text = isOpen and "Close" or "Open"
+	    
+	    for _, frame in scrollingFrames do
+	        frame.Visible = isOpen
+	    end
+	end)
+	
+	
+end
+coroutine.wrap(BPAESWG_fake_script)()
+local function METZCI_fake_script() -- OpenClose.LocalScript 
+	local script = Instance.new('LocalScript', OpenClose)
+
+	local button = script.Parent
+	local parent = button.Parent
+	local scrollingFrames = {}
+	
+	-- Collect all ScrollingFrames in parent
+	for _, child in parent:GetChildren() do
+		if child:IsA("ScrollingFrame") then
+			table.insert(scrollingFrames, child)
+		end
+	end
+	
+	local isOpen = false
+	
+	button.MouseButton1Click:Connect(function()
+		isOpen = not isOpen
+		button.Text = isOpen and "Close" or "Open"
+	
+		for _, frame in scrollingFrames do
+			frame.Visible = isOpen
+		end
+	end)
+	
+end
