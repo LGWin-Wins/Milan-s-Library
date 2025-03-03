@@ -5,10 +5,12 @@ local ScrollingFrame_2 = Instance.new("ScrollingFrame")
 local TextRender = Instance.new("TextLabel")
 local Esp = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
+local linestopeople = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
 local ScrollingFrame_3 = Instance.new("ScrollingFrame")
 local TextWorld = Instance.new("TextLabel")
 local OpenClose = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
 
 --Properties:
 
@@ -64,9 +66,23 @@ Esp.Size = UDim2.new(0, 172, 0, 50)
 Esp.Font = Enum.Font.SourceSans
 Esp.Text = "Esp"
 Esp.TextColor3 = Color3.fromRGB(0, 0, 0)
-Esp.TextSize = 14.000
+Esp.TextSize = 55.000
 
 UICorner.Parent = Esp
+
+linestopeople.Name = "lines to people"
+linestopeople.Parent = Esp
+linestopeople.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+linestopeople.BorderColor3 = Color3.fromRGB(0, 0, 0)
+linestopeople.BorderSizePixel = 0
+linestopeople.Position = UDim2.new(0.0348837227, 0, 1, 0)
+linestopeople.Size = UDim2.new(0, 166, 0, 50)
+linestopeople.Font = Enum.Font.SourceSans
+linestopeople.Text = "Draw Lines To People"
+linestopeople.TextColor3 = Color3.fromRGB(0, 0, 0)
+linestopeople.TextSize = 20.000
+
+UICorner_2.Parent = linestopeople
 
 ScrollingFrame_3.Parent = ScreenGui
 ScrollingFrame_3.Active = true
@@ -99,11 +115,11 @@ OpenClose.Text = "Open"
 OpenClose.TextColor3 = Color3.fromRGB(0, 0, 0)
 OpenClose.TextSize = 14.000
 
-UICorner_2.Parent = OpenClose
+UICorner_3.Parent = OpenClose
 
 -- Scripts:
 
-local function THFQFLH_fake_script() -- ScrollingFrame.LocalScript 
+local function YARZXS_fake_script() -- ScrollingFrame.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	local Gui = script.Parent
@@ -121,8 +137,8 @@ local function THFQFLH_fake_script() -- ScrollingFrame.LocalScript
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(THFQFLH_fake_script)()
-local function IVEDHON_fake_script() -- ScrollingFrame_2.LocalScript 
+coroutine.wrap(YARZXS_fake_script)()
+local function XOJQT_fake_script() -- ScrollingFrame_2.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame_2)
 
 	local Gui = script.Parent
@@ -140,8 +156,8 @@ local function IVEDHON_fake_script() -- ScrollingFrame_2.LocalScript
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(IVEDHON_fake_script)()
-local function DCCDC_fake_script() -- Esp.LocalScript 
+coroutine.wrap(XOJQT_fake_script)()
+local function MVQGTYB_fake_script() -- Esp.LocalScript 
 	local script = Instance.new('LocalScript', Esp)
 
 	local Players = game:GetService("Players")
@@ -211,8 +227,89 @@ local function DCCDC_fake_script() -- Esp.LocalScript
 	end)
 	
 end
-coroutine.wrap(DCCDC_fake_script)()
-local function GAQB_fake_script() -- ScrollingFrame_3.LocalScript 
+coroutine.wrap(MVQGTYB_fake_script)()
+local function WWFV_fake_script() -- linestopeople.ESPController 
+	local script = Instance.new('LocalScript', linestopeople)
+
+	local button = script.Parent
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local LocalPlayer = Players.LocalPlayer
+	
+	local espEnabled = false
+	local connections = {}
+	local activeParts = {}
+	
+	local function cleanUpLines()
+		for _, part in activeParts do
+			if part and part.Parent then
+				part:Destroy()
+			end
+		end
+		activeParts = {}
+	end
+	
+	local function drawLines()
+		local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	
+		while espEnabled do
+			cleanUpLines()
+	
+			for _, player in Players:GetPlayers() do
+				if player ~= LocalPlayer and player.Character then
+					local targetChar = player.Character
+					local targetRoot = targetChar:FindFirstChild("HumanoidRootPart")
+	
+					if targetRoot and targetRoot:IsDescendantOf(workspace) then
+						local raycastParams = RaycastParams.new()
+						raycastParams.FilterDescendantsInstances = {character, targetChar}
+						raycastParams.FilterType = Enum.RaycastFilterType.Blacklist
+	
+						local result = workspace:Raycast(
+							humanoidRootPart.Position,
+							(targetRoot.Position - humanoidRootPart.Position),
+							raycastParams
+						)
+	
+						if result then
+							local part = Instance.new("Part")
+							part.Material = Enum.Material.Neon
+							part.Color = Color3.new(1, 1, 1)
+							part.Size = Vector3.new(0.2, 0.2, (humanoidRootPart.Position - targetRoot.Position).Magnitude)
+							part.Anchored = true
+							part.CanCollide = false
+							part.Transparency = 0.5
+							part.CFrame = CFrame.new(humanoidRootPart.Position, targetRoot.Position) * CFrame.new(0, 0, -part.Size.Z/2)
+							part.Parent = workspace
+							table.insert(activeParts, part)
+						end
+					end
+				end
+			end
+			task.wait(0.1)
+		end
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		espEnabled = not espEnabled
+	
+		if espEnabled then
+			drawLines()
+		else
+			cleanUpLines()
+		end
+	end)
+	
+	LocalPlayer.CharacterAdded:Connect(function()
+		if espEnabled then
+			cleanUpLines()
+		end
+	end)
+	
+end
+coroutine.wrap(WWFV_fake_script)()
+local function ZFRVCC_fake_script() -- ScrollingFrame_3.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame_3)
 
 	local Gui = script.Parent
@@ -230,8 +327,8 @@ local function GAQB_fake_script() -- ScrollingFrame_3.LocalScript
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(GAQB_fake_script)()
-local function KRAXAZM_fake_script() -- nil.ToggleScrollingFrames 
+coroutine.wrap(ZFRVCC_fake_script)()
+local function DDFD_fake_script() -- nil.ToggleScrollingFrames 
 	local script = Instance.new('LocalScript', nil)
 
 	local button = script.Parent
@@ -258,8 +355,8 @@ local function KRAXAZM_fake_script() -- nil.ToggleScrollingFrames
 	
 	
 end
-coroutine.wrap(KRAXAZM_fake_script)()
-local function ZYWWSRO_fake_script() -- OpenClose.LocalScript 
+coroutine.wrap(DDFD_fake_script)()
+local function LLXFTM_fake_script() -- OpenClose.LocalScript 
 	local script = Instance.new('LocalScript', OpenClose)
 
 	local button = script.Parent
