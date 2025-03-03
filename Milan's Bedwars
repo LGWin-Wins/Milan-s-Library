@@ -1,16 +1,18 @@
 local ScreenGui = Instance.new("ScreenGui")
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local TextCombat = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
 local ScrollingFrame_2 = Instance.new("ScrollingFrame")
 local TextRender = Instance.new("TextLabel")
 local Esp = Instance.new("TextButton")
-local UICorner = Instance.new("UICorner")
-local linestopeople = Instance.new("TextButton")
 local UICorner_2 = Instance.new("UICorner")
+local linestopeople = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
 local ScrollingFrame_3 = Instance.new("ScrollingFrame")
 local TextWorld = Instance.new("TextLabel")
 local OpenClose = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
+local UICorner_4 = Instance.new("UICorner")
 
 --Properties:
 
@@ -37,11 +39,27 @@ TextCombat.Text = "Combat"
 TextCombat.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextCombat.TextSize = 50.000
 
+TextButton.Parent = TextCombat
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(8.57235364e-07, 0, 1.02000034, 0)
+TextButton.Size = UDim2.new(0.999999225, 0, 1.00033629, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "InfJump"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+UICorner.Parent = TextButton
+
 ScrollingFrame_2.Parent = ScreenGui
 ScrollingFrame_2.Active = true
 ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ScrollingFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame_2.BorderSizePixel = 0
+ScrollingFrame_2.Draggable = true
 ScrollingFrame_2.Position = UDim2.new(0.464135081, 0, 0.198492467, 0)
 ScrollingFrame_2.Size = UDim2.new(0.16624473, 0, 0.376884431, 0)
 
@@ -61,14 +79,14 @@ Esp.Parent = ScrollingFrame_2
 Esp.BackgroundColor3 = Color3.fromRGB(85, 255, 127)
 Esp.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Esp.BorderSizePixel = 0
-Esp.Position = UDim2.new(-0.0304568522, 0, 0.0344210826, 0)
+Esp.Position = UDim2.new(-0.0304568522, 0, 0.0285010207, 0)
 Esp.Size = UDim2.new(0, 172, 0, 50)
 Esp.Font = Enum.Font.SourceSans
 Esp.Text = "Esp"
 Esp.TextColor3 = Color3.fromRGB(0, 0, 0)
 Esp.TextSize = 55.000
 
-UICorner.Parent = Esp
+UICorner_2.Parent = Esp
 
 linestopeople.Name = "lines to people"
 linestopeople.Parent = Esp
@@ -82,7 +100,7 @@ linestopeople.Text = "Draw Lines To People"
 linestopeople.TextColor3 = Color3.fromRGB(0, 0, 0)
 linestopeople.TextSize = 20.000
 
-UICorner_2.Parent = linestopeople
+UICorner_3.Parent = linestopeople
 
 ScrollingFrame_3.Parent = ScreenGui
 ScrollingFrame_3.Active = true
@@ -115,11 +133,11 @@ OpenClose.Text = "Open"
 OpenClose.TextColor3 = Color3.fromRGB(0, 0, 0)
 OpenClose.TextSize = 14.000
 
-UICorner_3.Parent = OpenClose
+UICorner_4.Parent = OpenClose
 
 -- Scripts:
 
-local function YARZXS_fake_script() -- ScrollingFrame.LocalScript 
+local function QSYVVWF_fake_script() -- ScrollingFrame.rightshift to open 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	local Gui = script.Parent
@@ -137,8 +155,112 @@ local function YARZXS_fake_script() -- ScrollingFrame.LocalScript
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(YARZXS_fake_script)()
-local function XOJQT_fake_script() -- ScrollingFrame_2.LocalScript 
+coroutine.wrap(QSYVVWF_fake_script)()
+local function ARBOIJ_fake_script() -- TextButton.Neon Red 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local button = script.Parent
+	local stroke = Instance.new("UIStroke")
+	stroke.Color = Color3.fromRGB(255, 0, 0)  -- Red color
+	stroke.Thickness = 3
+	stroke.Transparency = 0.3
+	stroke.Parent = button
+	
+end
+coroutine.wrap(ARBOIJ_fake_script)()
+local function ZXNI_fake_script() -- TextButton.infjump 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local button = script.Parent
+	local Players = game:GetService("Players")
+	local TAG = "InfJumpEnabled"
+	
+	local infJumpEnabled = false
+	local connections = {}
+	
+	local function handleCharacter(character)
+		local humanoid = character:WaitForChild("Humanoid")
+	
+		if infJumpEnabled then
+			local connection
+			connection = humanoid.StateChanged:Connect(function(oldState, newState)
+				if newState == Enum.HumanoidStateType.Freefall then
+					humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+				end
+			end)
+			table.insert(connections, connection)
+		end
+	end
+	
+	local function toggleInfJump()
+		infJumpEnabled = not infJumpEnabled
+		button.Text = "InfJump: " .. (infJumpEnabled and "On" or "Off")
+	
+		for _, connection in connections do
+			connection:Disconnect()
+		end
+		connections = {}
+	
+		local player = Players.LocalPlayer
+		if player.Character then
+			handleCharacter(player.Character)
+		end
+	end
+	
+	Players.LocalPlayer.CharacterAdded:Connect(handleCharacter)
+	if Players.LocalPlayer.Character then
+		handleCharacter(Players.LocalPlayer.Character)
+	end
+	
+	button.MouseButton1Click:Connect(toggleInfJump)
+	
+end
+coroutine.wrap(ZXNI_fake_script)()
+local function XXXAV_fake_script() -- ScrollingFrame.DragScript 
+	local script = Instance.new('LocalScript', ScrollingFrame)
+
+	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
+	--Put this inside of your Frame and configure the speed if you would like.
+	--Enjoy! Credits go to: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
+	
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(XXXAV_fake_script)()
+local function SILEKS_fake_script() -- ScrollingFrame_2.rightshift to open 
 	local script = Instance.new('LocalScript', ScrollingFrame_2)
 
 	local Gui = script.Parent
@@ -156,79 +278,71 @@ local function XOJQT_fake_script() -- ScrollingFrame_2.LocalScript
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(XOJQT_fake_script)()
-local function MVQGTYB_fake_script() -- Esp.LocalScript 
+coroutine.wrap(SILEKS_fake_script)()
+local function AMIP_fake_script() -- Esp.ESP SCRIPT 
 	local script = Instance.new('LocalScript', Esp)
 
-	local Players = game:GetService("Players")
-	local player = Players.LocalPlayer
 	local button = script.Parent
+	local Players = game:GetService("Players")
+	local CollectionService = game:GetService("CollectionService")
+	local ESP_TAG = "ESP"
+	
 	local espEnabled = false
-	local playerESPs = {}
 	
-	local function createESP(character)
-		local humanoid = character:FindFirstChild("Humanoid")
-		if not humanoid then return end
+	local function createESP(player)
+		local character = player.Character or player.CharacterAdded:Wait()
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 	
-		local billboard = Instance.new("BillboardGui")
-		billboard.Name = "ESP"
-		billboard.Size = UDim2.new(0, 200, 0, 50)
-		billboard.StudsOffset = Vector3.new(0, 2.5, 0)
-		billboard.Adornee = character:WaitForChild("Head")
+		local esp = Instance.new("BillboardGui")
+		esp.Name = "PlayerESP"
+		esp.Size = UDim2.new(0, 200, 0, 50)
+		esp.StudsOffset = Vector3.new(0, 3, 0)
+		esp.Adornee = humanoidRootPart
+		esp.AlwaysOnTop = true
 	
 		local textLabel = Instance.new("TextLabel")
 		textLabel.Size = UDim2.new(1, 0, 1, 0)
-		textLabel.Text = humanoid.DisplayName
+		textLabel.Text = player.Name
 		textLabel.BackgroundTransparency = 1
 		textLabel.TextColor3 = Color3.new(1, 1, 1)
 		textLabel.Font = Enum.Font.SourceSansBold
 		textLabel.TextScaled = true
-		textLabel.Parent = billboard
+		textLabel.Parent = esp
 	
-		billboard.Parent = character
-		return billboard
+		CollectionService:AddTag(esp, ESP_TAG)
+		esp.Parent = humanoidRootPart
 	end
 	
-	local function handleCharacter(character)
-		if espEnabled then
-			playerESPs[character] = createESP(character)
-		end
-	end
-	
-	local function onCharacterAdded(character)
-		handleCharacter(character)
-		character.ChildAdded:Connect(function(child)
-			if child:IsA("Humanoid") then
-				handleCharacter(character)
-			end
-		end)
-	end
-	
-	player.CharacterAdded:Connect(onCharacterAdded)
-	if player.Character then
-		onCharacterAdded(player.Character)
-	end
-	
-	button.Activated:Connect(function()
+	local function toggleESP()
 		espEnabled = not espEnabled
-		button.Text = espEnabled and "ESP: ON" or "ESP: OFF"
+		button.Text = "ESP: " .. (espEnabled and "On" or "Off")
 	
-		for character, esp in playerESPs do
-			if esp then
-				esp:Destroy()
-			end
+		for _, esp in CollectionService:GetTagged(ESP_TAG) do
+			esp.Enabled = espEnabled
 		end
+	end
 	
-		playerESPs = {}
+	Players.PlayerAdded:Connect(function(player)
+		player.CharacterAdded:Connect(function()
+			createESP(player)
+		end)
 	
-		if espEnabled and player.Character then
-			playerESPs[player.Character] = createESP(player.Character)
+		if player.Character then
+			createESP(player)
 		end
 	end)
 	
+	for _, player in Players:GetPlayers() do
+		if player.Character then
+			createESP(player)
+		end
+	end
+	
+	button.MouseButton1Click:Connect(toggleESP)
+	
 end
-coroutine.wrap(MVQGTYB_fake_script)()
-local function WWFV_fake_script() -- linestopeople.ESPController 
+coroutine.wrap(AMIP_fake_script)()
+local function AOOF_fake_script() -- linestopeople.ESPController 
 	local script = Instance.new('LocalScript', linestopeople)
 
 	local button = script.Parent
@@ -308,8 +422,76 @@ local function WWFV_fake_script() -- linestopeople.ESPController
 	end)
 	
 end
-coroutine.wrap(WWFV_fake_script)()
-local function ZFRVCC_fake_script() -- ScrollingFrame_3.LocalScript 
+coroutine.wrap(AOOF_fake_script)()
+local function NASHI_fake_script() -- linestopeople.neon cyan 
+	local script = Instance.new('LocalScript', linestopeople)
+
+	local button = script.Parent
+	local stroke = Instance.new("UIStroke")
+	stroke.Color = Color3.fromRGB(0, 255, 255)  -- Cyan color
+	stroke.Thickness = 3
+	stroke.Transparency = 0.3
+	stroke.Parent = button
+	
+end
+coroutine.wrap(NASHI_fake_script)()
+local function UVCQJYE_fake_script() -- Esp.neon cyan 
+	local script = Instance.new('LocalScript', Esp)
+
+	local button = script.Parent
+	local stroke = Instance.new("UIStroke")
+	stroke.Color = Color3.fromRGB(0, 255, 255)  -- Cyan color
+	stroke.Thickness = 3
+	stroke.Transparency = 0.3
+	stroke.Parent = button
+	
+end
+coroutine.wrap(UVCQJYE_fake_script)()
+local function YLYLPOB_fake_script() -- ScrollingFrame_2.DragScript 
+	local script = Instance.new('LocalScript', ScrollingFrame_2)
+
+	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
+	--Put this inside of your Frame and configure the speed if you would like.
+	--Enjoy! Credits go to: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
+	
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(YLYLPOB_fake_script)()
+local function IKEONPA_fake_script() -- ScrollingFrame_3.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame_3)
 
 	local Gui = script.Parent
@@ -327,8 +509,8 @@ local function ZFRVCC_fake_script() -- ScrollingFrame_3.LocalScript
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(ZFRVCC_fake_script)()
-local function DDFD_fake_script() -- nil.ToggleScrollingFrames 
+coroutine.wrap(IKEONPA_fake_script)()
+local function CWYTY_fake_script() -- nil.ToggleScrollingFrames 
 	local script = Instance.new('LocalScript', nil)
 
 	local button = script.Parent
@@ -355,8 +537,52 @@ local function DDFD_fake_script() -- nil.ToggleScrollingFrames
 	
 	
 end
-coroutine.wrap(DDFD_fake_script)()
-local function LLXFTM_fake_script() -- OpenClose.LocalScript 
+coroutine.wrap(CWYTY_fake_script)()
+local function IDUE_fake_script() -- ScrollingFrame_3.DragScript 
+	local script = Instance.new('LocalScript', ScrollingFrame_3)
+
+	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
+	--Put this inside of your Frame and configure the speed if you would like.
+	--Enjoy! Credits go to: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
+	
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(IDUE_fake_script)()
+local function TRPYZFI_fake_script() -- OpenClose.LocalScript 
 	local script = Instance.new('LocalScript', OpenClose)
 
 	local button = script.Parent
