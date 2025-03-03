@@ -1,14 +1,14 @@
 local ScreenGui = Instance.new("ScreenGui")
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local TextCombat = Instance.new("TextLabel")
-local AUTOCLICKER = Instance.new("TextButton")
 local ScrollingFrame_2 = Instance.new("ScrollingFrame")
 local TextRender = Instance.new("TextLabel")
-local esptext = Instance.new("TextButton")
+local Esp = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
 local ScrollingFrame_3 = Instance.new("ScrollingFrame")
 local TextWorld = Instance.new("TextLabel")
 local OpenClose = Instance.new("TextButton")
-local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
 
 --Properties:
 
@@ -20,40 +20,28 @@ ScrollingFrame.Active = true
 ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame.BorderSizePixel = 0
-ScrollingFrame.Position = UDim2.new(0.229535922, 0, 0.198492467, 0)
-ScrollingFrame.Size = UDim2.new(0.141772151, 0, 0.301507533, 0)
+ScrollingFrame.Position = UDim2.new(0.212658286, 0, 0.198492467, 0)
+ScrollingFrame.Size = UDim2.new(0.16624473, 0, 0.376884431, 0)
 
 TextCombat.Name = "Text Combat"
 TextCombat.Parent = ScrollingFrame
 TextCombat.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 TextCombat.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextCombat.BorderSizePixel = 0
-TextCombat.Position = UDim2.new(-0.0604026429, 0, 0, 0)
+TextCombat.Position = UDim2.new(-0.000101214078, 0, 0, 0)
 TextCombat.Size = UDim2.new(0, 178, 0, 50)
 TextCombat.Font = Enum.Font.SourceSans
 TextCombat.Text = "Combat"
 TextCombat.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextCombat.TextSize = 50.000
 
-AUTOCLICKER.Name = "AUTOCLICKER"
-AUTOCLICKER.Parent = TextCombat
-AUTOCLICKER.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
-AUTOCLICKER.BorderColor3 = Color3.fromRGB(0, 0, 0)
-AUTOCLICKER.BorderSizePixel = 0
-AUTOCLICKER.Position = UDim2.new(0.0561797768, 0, 1, 0)
-AUTOCLICKER.Size = UDim2.new(0, 168, 0, 50)
-AUTOCLICKER.Font = Enum.Font.SourceSans
-AUTOCLICKER.Text = "AUTOCLICKER"
-AUTOCLICKER.TextColor3 = Color3.fromRGB(0, 0, 0)
-AUTOCLICKER.TextSize = 30.000
-
 ScrollingFrame_2.Parent = ScreenGui
 ScrollingFrame_2.Active = true
 ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ScrollingFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame_2.BorderSizePixel = 0
-ScrollingFrame_2.Position = UDim2.new(0.429535925, 0, 0.198492467, 0)
-ScrollingFrame_2.Size = UDim2.new(0.140084386, 0, 0.301507533, 0)
+ScrollingFrame_2.Position = UDim2.new(0.464135081, 0, 0.198492467, 0)
+ScrollingFrame_2.Size = UDim2.new(0.16624473, 0, 0.376884431, 0)
 
 TextRender.Name = "Text Render"
 TextRender.Parent = ScrollingFrame_2
@@ -66,25 +54,27 @@ TextRender.Text = "Render"
 TextRender.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextRender.TextSize = 50.000
 
-esptext.Name = "esp text"
-esptext.Parent = TextRender
-esptext.BackgroundColor3 = Color3.fromRGB(85, 255, 127)
-esptext.BorderColor3 = Color3.fromRGB(0, 0, 0)
-esptext.BorderSizePixel = 0
-esptext.Position = UDim2.new(0, 0, 1, 0)
-esptext.Size = UDim2.new(0, 155, 0, 40)
-esptext.Font = Enum.Font.SourceSans
-esptext.Text = "ESP"
-esptext.TextColor3 = Color3.fromRGB(0, 0, 0)
-esptext.TextSize = 50.000
+Esp.Name = "Esp"
+Esp.Parent = ScrollingFrame_2
+Esp.BackgroundColor3 = Color3.fromRGB(85, 255, 127)
+Esp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Esp.BorderSizePixel = 0
+Esp.Position = UDim2.new(-0.0304568522, 0, 0.0344210826, 0)
+Esp.Size = UDim2.new(0, 172, 0, 50)
+Esp.Font = Enum.Font.SourceSans
+Esp.Text = "Esp"
+Esp.TextColor3 = Color3.fromRGB(0, 0, 0)
+Esp.TextSize = 14.000
+
+UICorner.Parent = Esp
 
 ScrollingFrame_3.Parent = ScreenGui
 ScrollingFrame_3.Active = true
 ScrollingFrame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ScrollingFrame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame_3.BorderSizePixel = 0
-ScrollingFrame_3.Position = UDim2.new(0.625316501, 0, 0.198492467, 0)
-ScrollingFrame_3.Size = UDim2.new(0.135021091, 0, 0.301507533, 0)
+ScrollingFrame_3.Position = UDim2.new(0.702953577, 0, 0.198492467, 0)
+ScrollingFrame_3.Size = UDim2.new(0.167088553, 0, 0.376884431, 0)
 
 TextWorld.Name = "Text World"
 TextWorld.Parent = ScrollingFrame_3
@@ -109,11 +99,11 @@ OpenClose.Text = "Open"
 OpenClose.TextColor3 = Color3.fromRGB(0, 0, 0)
 OpenClose.TextSize = 14.000
 
-UICorner.Parent = OpenClose
+UICorner_2.Parent = OpenClose
 
 -- Scripts:
 
-local function ZWNX_fake_script() -- ScrollingFrame.LocalScript 
+local function THFQFLH_fake_script() -- ScrollingFrame.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	local Gui = script.Parent
@@ -131,50 +121,8 @@ local function ZWNX_fake_script() -- ScrollingFrame.LocalScript
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(ZWNX_fake_script)()
-local function BGWTC_fake_script() -- AUTOCLICKER.AUTOCLICKER SCRIPT 
-	local script = Instance.new('LocalScript', AUTOCLICKER)
-
-	local UserInputService = game:GetService("UserInputService")
-	local Players = game:GetService("Players")
-	local button = script.Parent
-	local autoclickerEnabled = false
-	local clickConnection = nil
-	
-	local function autoclickerLoop()
-		while autoclickerEnabled do
-			UserInputService:Click()
-			task.wait(0.05) -- 20 CPS (1/0.05 = 20)
-		end
-	end
-	
-	button.MouseButton1Click:Connect(function()
-		autoclickerEnabled = not autoclickerEnabled
-	
-		if autoclickerEnabled then
-			-- Start autoclicker loop
-			clickConnection = task.spawn(autoclickerLoop)
-	
-			-- Handle new players
-			Players.PlayerAdded:Connect(function(newPlayer)
-				if autoclickerEnabled then
-					newPlayer.CharacterAdded:Connect(function(character)
-						-- Auto-clicker logic for new players
-					end)
-				end
-			end)
-		else
-			-- Stop autoclicker
-			if clickConnection then
-				task.cancel(clickConnection)
-				clickConnection = nil
-			end
-		end
-	end)
-	
-end
-coroutine.wrap(BGWTC_fake_script)()
-local function RSCXU_fake_script() -- ScrollingFrame_2.LocalScript 
+coroutine.wrap(THFQFLH_fake_script)()
+local function IVEDHON_fake_script() -- ScrollingFrame_2.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame_2)
 
 	local Gui = script.Parent
@@ -192,81 +140,79 @@ local function RSCXU_fake_script() -- ScrollingFrame_2.LocalScript
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(RSCXU_fake_script)()
-local function CTFX_fake_script() -- esptext.LocalScript 
-	local script = Instance.new('LocalScript', esptext)
+coroutine.wrap(IVEDHON_fake_script)()
+local function DCCDC_fake_script() -- Esp.LocalScript 
+	local script = Instance.new('LocalScript', Esp)
 
 	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
 	local button = script.Parent
-	local remoteEvent = game:GetService("ReplicatedStorage"):WaitForChild("ToggleESP")
 	local espEnabled = false
+	local playerESPs = {}
 	
-	local function createESP(player)
-		local character = player.Character or player.CharacterAdded:Wait()
-		local head = character:WaitForChild("Head")
+	local function createESP(character)
+		local humanoid = character:FindFirstChild("Humanoid")
+		if not humanoid then return end
 	
 		local billboard = Instance.new("BillboardGui")
-		billboard.Name = "PlayerESP"
+		billboard.Name = "ESP"
 		billboard.Size = UDim2.new(0, 200, 0, 50)
 		billboard.StudsOffset = Vector3.new(0, 2.5, 0)
-		billboard.Adornee = head
-		billboard.AlwaysOnTop = true
+		billboard.Adornee = character:WaitForChild("Head")
 	
 		local textLabel = Instance.new("TextLabel")
 		textLabel.Size = UDim2.new(1, 0, 1, 0)
-		textLabel.Text = player.Name
+		textLabel.Text = humanoid.DisplayName
 		textLabel.BackgroundTransparency = 1
 		textLabel.TextColor3 = Color3.new(1, 1, 1)
 		textLabel.Font = Enum.Font.SourceSansBold
 		textLabel.TextScaled = true
 		textLabel.Parent = billboard
 	
+		billboard.Parent = character
 		return billboard
 	end
 	
-	local function toggleESP(state)
-		espEnabled = state
-	
+	local function handleCharacter(character)
 		if espEnabled then
-			for _, player in Players:GetPlayers() do
-				if player ~= Players.LocalPlayer then
-					local esp = createESP(player)
-					esp.Parent = player.Character:WaitForChild("Head")
-				end
-			end
-	
-			Players.PlayerAdded:Connect(function(newPlayer)
-				newPlayer.CharacterAdded:Connect(function(character)
-					if espEnabled then
-						local esp = createESP(newPlayer)
-						esp.Parent = character:WaitForChild("Head")
-					end
-				end)
-			end)
-		else
-			for _, player in Players:GetPlayers() do
-				if player ~= Players.LocalPlayer then
-					local head = player.Character and player.Character:FindFirstChild("Head")
-					if head then
-						local esp = head:FindFirstChild("PlayerESP")
-						if esp then
-							esp:Destroy()
-						end
-					end
-				end
-			end
+			playerESPs[character] = createESP(character)
 		end
 	end
 	
-	button.MouseButton1Click:Connect(function()
+	local function onCharacterAdded(character)
+		handleCharacter(character)
+		character.ChildAdded:Connect(function(child)
+			if child:IsA("Humanoid") then
+				handleCharacter(character)
+			end
+		end)
+	end
+	
+	player.CharacterAdded:Connect(onCharacterAdded)
+	if player.Character then
+		onCharacterAdded(player.Character)
+	end
+	
+	button.Activated:Connect(function()
 		espEnabled = not espEnabled
-		remoteEvent:FireServer(espEnabled)
-		toggleESP(espEnabled)
+		button.Text = espEnabled and "ESP: ON" or "ESP: OFF"
+	
+		for character, esp in playerESPs do
+			if esp then
+				esp:Destroy()
+			end
+		end
+	
+		playerESPs = {}
+	
+		if espEnabled and player.Character then
+			playerESPs[player.Character] = createESP(player.Character)
+		end
 	end)
 	
 end
-coroutine.wrap(CTFX_fake_script)()
-local function FGVWCGG_fake_script() -- ScrollingFrame_3.LocalScript 
+coroutine.wrap(DCCDC_fake_script)()
+local function GAQB_fake_script() -- ScrollingFrame_3.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame_3)
 
 	local Gui = script.Parent
@@ -284,8 +230,8 @@ local function FGVWCGG_fake_script() -- ScrollingFrame_3.LocalScript
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(FGVWCGG_fake_script)()
-local function UAJBP_fake_script() -- nil.ToggleScrollingFrames 
+coroutine.wrap(GAQB_fake_script)()
+local function KRAXAZM_fake_script() -- nil.ToggleScrollingFrames 
 	local script = Instance.new('LocalScript', nil)
 
 	local button = script.Parent
@@ -312,8 +258,8 @@ local function UAJBP_fake_script() -- nil.ToggleScrollingFrames
 	
 	
 end
-coroutine.wrap(UAJBP_fake_script)()
-local function YFCM_fake_script() -- OpenClose.LocalScript 
+coroutine.wrap(KRAXAZM_fake_script)()
+local function ZYWWSRO_fake_script() -- OpenClose.LocalScript 
 	local script = Instance.new('LocalScript', OpenClose)
 
 	local button = script.Parent
