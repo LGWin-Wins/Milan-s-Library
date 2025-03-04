@@ -159,7 +159,7 @@ UICorner_5.Parent = Close
 
 -- Scripts:
 
-local function DZGHBWS_fake_script() -- ScrollingFrame1.rightshift to open 
+local function MOMGS_fake_script() -- ScrollingFrame1.rightshift to open 
 	local script = Instance.new('LocalScript', ScrollingFrame1)
 
 	local Gui = script.Parent
@@ -177,8 +177,8 @@ local function DZGHBWS_fake_script() -- ScrollingFrame1.rightshift to open
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(DZGHBWS_fake_script)()
-local function PWRJAY_fake_script() -- ScrollingFrame1.DragScript 
+coroutine.wrap(MOMGS_fake_script)()
+local function DATOB_fake_script() -- ScrollingFrame1.DragScript 
 	local script = Instance.new('LocalScript', ScrollingFrame1)
 
 	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
@@ -221,8 +221,8 @@ local function PWRJAY_fake_script() -- ScrollingFrame1.DragScript
 	end)
 	
 end
-coroutine.wrap(PWRJAY_fake_script)()
-local function ARLFXC_fake_script() -- ScrollingFrame3.LocalScript 
+coroutine.wrap(DATOB_fake_script)()
+local function VSXA_fake_script() -- ScrollingFrame3.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame3)
 
 	local Gui = script.Parent
@@ -240,8 +240,8 @@ local function ARLFXC_fake_script() -- ScrollingFrame3.LocalScript
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(ARLFXC_fake_script)()
-local function WBELA_fake_script() -- nil.ToggleScrollingFrames 
+coroutine.wrap(VSXA_fake_script)()
+local function NONPXS_fake_script() -- nil.ToggleScrollingFrames 
 	local script = Instance.new('LocalScript', nil)
 
 	local button = script.Parent
@@ -268,8 +268,8 @@ local function WBELA_fake_script() -- nil.ToggleScrollingFrames
 	
 	
 end
-coroutine.wrap(WBELA_fake_script)()
-local function PNECPX_fake_script() -- infjump.Neon Red 
+coroutine.wrap(NONPXS_fake_script)()
+local function EVTM_fake_script() -- infjump.Neon Red 
 	local script = Instance.new('LocalScript', infjump)
 
 	local button = script.Parent
@@ -280,8 +280,8 @@ local function PNECPX_fake_script() -- infjump.Neon Red
 	stroke.Parent = button
 	
 end
-coroutine.wrap(PNECPX_fake_script)()
-local function LFIMH_fake_script() -- infjump.InfJumpCombined 
+coroutine.wrap(EVTM_fake_script)()
+local function QDVZLBY_fake_script() -- infjump.InfJumpCombined 
 	local script = Instance.new('LocalScript', infjump)
 
 	local button = script.Parent
@@ -302,8 +302,8 @@ local function LFIMH_fake_script() -- infjump.InfJumpCombined
 		end
 	end)
 end
-coroutine.wrap(LFIMH_fake_script)()
-local function GNHUUSI_fake_script() -- ScrollingFrame3.DragScript 
+coroutine.wrap(QDVZLBY_fake_script)()
+local function HXONYSQ_fake_script() -- ScrollingFrame3.DragScript 
 	local script = Instance.new('LocalScript', ScrollingFrame3)
 
 	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
@@ -346,8 +346,8 @@ local function GNHUUSI_fake_script() -- ScrollingFrame3.DragScript
 	end)
 	
 end
-coroutine.wrap(GNHUUSI_fake_script)()
-local function IMDHR_fake_script() -- Open.Open 
+coroutine.wrap(HXONYSQ_fake_script)()
+local function EJLMEDI_fake_script() -- Open.Open 
 	local script = Instance.new('LocalScript', Open)
 
 	local ScrollingFrame1 = script.Parent.Parent.ScrollingFrame1
@@ -366,8 +366,8 @@ local function IMDHR_fake_script() -- Open.Open
 		ScrollingFrame3.Visible = true
 	end)
 end
-coroutine.wrap(IMDHR_fake_script)()
-local function XGSUBM_fake_script() -- ScrollingFrame2.rightshift to open 
+coroutine.wrap(EJLMEDI_fake_script)()
+local function UNPG_fake_script() -- ScrollingFrame2.rightshift to open 
 	local script = Instance.new('LocalScript', ScrollingFrame2)
 
 	local Gui = script.Parent
@@ -385,70 +385,90 @@ local function XGSUBM_fake_script() -- ScrollingFrame2.rightshift to open
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(XGSUBM_fake_script)()
-local function JJNB_fake_script() -- Esp.ESP SCRIPT 
+coroutine.wrap(UNPG_fake_script)()
+local function KPDQXD_fake_script() -- Esp.ESP SCRIPT 
 	local script = Instance.new('LocalScript', Esp)
 
-	local button = script.Parent
 	local Players = game:GetService("Players")
-	local CollectionService = game:GetService("CollectionService")
-	local ESP_TAG = "ESP"
+	local LocalPlayer = Players.LocalPlayer
+	local ESPEnabled = false
+	local PlayerESP = {}
 	
-	local espEnabled = false
+	local function CreateESP(character, player)
+	    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	    local billboard = Instance.new("BillboardGui")
+	    billboard.Adornee = humanoidRootPart
+	    billboard.Size = UDim2.new(4, 0, 2, 0)
+	    billboard.StudsOffset = Vector3.new(0, 3.5, 0)  -- Increased offset for perfect positioning
+	    billboard.AlwaysOnTop = true
 	
-	local function createESP(player)
-		local character = player.Character or player.CharacterAdded:Wait()
-		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	    local background = Instance.new("Frame")
+	    background.Size = UDim2.new(1, 0, 1, 0)
+	    background.BackgroundColor3 = Color3.new(0, 0, 0)
+	    background.BackgroundTransparency = 1
+	    background.BorderSizePixel = 0
 	
-		local esp = Instance.new("BillboardGui")
-		esp.Name = "PlayerESP"
-		esp.Size = UDim2.new(0, 200, 0, 50)
-		esp.StudsOffset = Vector3.new(0, 3, 0)
-		esp.Adornee = humanoidRootPart
-		esp.AlwaysOnTop = true
+	    local textLabel = Instance.new("TextLabel")
+	    textLabel.Size = UDim2.new(1, 0, 1, 0)
+	    textLabel.Text = player.Name
+	    textLabel.TextColor3 = Color3.new(0, 1, 1)
+	    textLabel.BackgroundTransparency = 1
+	    textLabel.Font = Enum.Font.SourceSansBold
+	    textLabel.TextSize = 24  -- Added explicit text size
 	
-		local textLabel = Instance.new("TextLabel")
-		textLabel.Size = UDim2.new(1, 0, 1, 0)
-		textLabel.Text = player.Name
-		textLabel.BackgroundTransparency = 1
-		textLabel.TextColor3 = Color3.new(1, 1, 1)
-		textLabel.Font = Enum.Font.SourceSansBold
-		textLabel.TextScaled = true
-		textLabel.Parent = esp
+	    background.Parent = billboard
+	    textLabel.Parent = background
+	    billboard.Parent = humanoidRootPart
 	
-		CollectionService:AddTag(esp, ESPTAG)
-		esp.Parent = humanoidRootPart
+	    return billboard
 	end
 	
-	local function toggleESP()
-		espEnabled = not espEnabled
-		button.Text = "ESP: " .. (espEnabled and "On" or "Off")
-	
-		for , esp in CollectionService:GetTagged(ESPTAG) do
-			esp.Enabled = espEnabled
-		end
+	local function ToggleESP(state)
+	    ESPEnabled = state
+	    for _, player in Players:GetPlayers() do
+	        if player.Character then
+	            local esp = PlayerESP[player]
+	            if esp then
+	                esp.Enabled = ESPEnabled
+	            end
+	        end
+	    end
 	end
 	
-	Players.PlayerAdded:Connect(function(player)
-		player.CharacterAdded:Connect(function()
-			createESP(player)
-		end)
+	local function PlayerAdded(player)
+	    player.CharacterAdded:Connect(function(character)
+	        if ESPEnabled then
+	            PlayerESP[player] = CreateESP(character, player)
+	        end
+	    end)
 	
-		if player.Character then
-			createESP(player)
-		end
+	    if player.Character then
+	        PlayerESP[player] = CreateESP(player.Character, player)
+	    end
+	end
+	
+	local function PlayerRemoved(player)
+	    if PlayerESP[player] then
+	        PlayerESP[player]:Destroy()
+	        PlayerESP[player] = nil
+	    end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+	    ToggleESP(not ESPEnabled)
 	end)
 	
-	for , player in Players:GetPlayers() do
-		if player.Character then
-			createESP(player)
-		end
+	Players.PlayerAdded:Connect(PlayerAdded)
+	Players.PlayerRemoving:Connect(PlayerRemoved)
+	
+	for _, player in Players:GetPlayers() do
+	    PlayerAdded(player)
 	end
 	
-	button.MouseButton1Click:Connect(toggleESP)
+	
 end
-coroutine.wrap(JJNB_fake_script)()
-local function RIURMK_fake_script() -- linestopeople.ESPController 
+coroutine.wrap(KPDQXD_fake_script)()
+local function IEVS_fake_script() -- linestopeople.ESPController 
 	local script = Instance.new('LocalScript', linestopeople)
 
 	local button = script.Parent
@@ -527,8 +547,8 @@ local function RIURMK_fake_script() -- linestopeople.ESPController
 		end
 	end)
 end
-coroutine.wrap(RIURMK_fake_script)()
-local function UFIY_fake_script() -- linestopeople.neon cyan 
+coroutine.wrap(IEVS_fake_script)()
+local function BNNW_fake_script() -- linestopeople.neon cyan 
 	local script = Instance.new('LocalScript', linestopeople)
 
 	local button = script.Parent
@@ -539,8 +559,8 @@ local function UFIY_fake_script() -- linestopeople.neon cyan
 	stroke.Parent = button
 	
 end
-coroutine.wrap(UFIY_fake_script)()
-local function RCUV_fake_script() -- Esp.neon cyan 
+coroutine.wrap(BNNW_fake_script)()
+local function PTGZS_fake_script() -- Esp.neon cyan 
 	local script = Instance.new('LocalScript', Esp)
 
 	local button = script.Parent
@@ -551,8 +571,8 @@ local function RCUV_fake_script() -- Esp.neon cyan
 	stroke.Parent = button
 	
 end
-coroutine.wrap(RCUV_fake_script)()
-local function CAIPL_fake_script() -- ScrollingFrame2.DragScript 
+coroutine.wrap(PTGZS_fake_script)()
+local function CPLQFN_fake_script() -- ScrollingFrame2.DragScript 
 	local script = Instance.new('LocalScript', ScrollingFrame2)
 
 	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
@@ -595,8 +615,8 @@ local function CAIPL_fake_script() -- ScrollingFrame2.DragScript
 	end)
 	
 end
-coroutine.wrap(CAIPL_fake_script)()
-local function TRQDAC_fake_script() -- Close.Close 
+coroutine.wrap(CPLQFN_fake_script)()
+local function KTMUQ_fake_script() -- Close.Close 
 	local script = Instance.new('LocalScript', Close)
 
 	local ScrollingFrame1 = script.Parent.Parent.ScrollingFrame1
