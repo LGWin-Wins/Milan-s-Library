@@ -1,3 +1,4 @@
+RespawnOnSpawn = false
 local ScreenGui = Instance.new("ScreenGui")
 local CombatFrame = Instance.new("Frame")
 local Combat = Instance.new("TextLabel")
