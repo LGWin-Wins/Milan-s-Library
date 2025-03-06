@@ -1,227 +1,300 @@
 local ScreenGui = Instance.new("ScreenGui")
-local ScrollingFrame1 = Instance.new("ScrollingFrame")
-local TextCombat = Instance.new("TextLabel")
-local ScrollingFrame3 = Instance.new("ScrollingFrame")
-local TextWorld = Instance.new("TextLabel")
-local infjump = Instance.new("TextButton")
+local CombatFrame = Instance.new("Frame")
+local Combat = Instance.new("TextLabel")
 local UICorner = Instance.new("UICorner")
-local Open = Instance.new("TextButton")
 local UICorner_2 = Instance.new("UICorner")
-local ScrollingFrame2 = Instance.new("ScrollingFrame")
-local TextRender = Instance.new("TextLabel")
-local Esp = Instance.new("TextButton")
+local RenderFrame = Instance.new("Frame")
+local TEXTRENDER = Instance.new("TextLabel")
 local UICorner_3 = Instance.new("UICorner")
-local linestopeople = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
-local Close = Instance.new("TextButton")
+local LINES = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
+local ESPBUTTON = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local WorldFrame = Instance.new("Frame")
+local TextWorld = Instance.new("TextLabel")
+local UICorner_7 = Instance.new("UICorner")
+local UICorner_8 = Instance.new("UICorner")
+local infjump = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
 
 --Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-ScrollingFrame1.Name = "ScrollingFrame1"
-ScrollingFrame1.Parent = ScreenGui
-ScrollingFrame1.Active = true
-ScrollingFrame1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ScrollingFrame1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ScrollingFrame1.BorderSizePixel = 0
-ScrollingFrame1.Position = UDim2.new(0.212658286, 0, 0.198492467, 0)
-ScrollingFrame1.Size = UDim2.new(0.16624473, 0, 0.376884431, 0)
+CombatFrame.Name = "Combat Frame"
+CombatFrame.Parent = ScreenGui
+CombatFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CombatFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CombatFrame.BorderSizePixel = 0
+CombatFrame.Position = UDim2.new(0.165991887, 0, 0.219999969, 0)
+CombatFrame.Size = UDim2.new(0, 203, 0, 332)
 
-TextCombat.Name = "Text Combat"
-TextCombat.Parent = ScrollingFrame1
-TextCombat.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-TextCombat.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextCombat.BorderSizePixel = 0
-TextCombat.Position = UDim2.new(-0.000101312165, 0, 0, 0)
-TextCombat.Size = UDim2.new(0, 178, 0, 50)
-TextCombat.Font = Enum.Font.SourceSans
-TextCombat.Text = "Combat"
-TextCombat.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextCombat.TextSize = 50.000
+Combat.Name = "Combat"
+Combat.Parent = CombatFrame
+Combat.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Combat.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Combat.BorderSizePixel = 0
+Combat.Size = UDim2.new(0, 203, 0, 50)
+Combat.Font = Enum.Font.SourceSansBold
+Combat.Text = "Combat"
+Combat.TextColor3 = Color3.fromRGB(85, 255, 255)
+Combat.TextScaled = true
+Combat.TextSize = 14.000
+Combat.TextStrokeColor3 = Color3.fromRGB(85, 255, 255)
+Combat.TextWrapped = true
 
-ScrollingFrame3.Name = "ScrollingFrame3"
-ScrollingFrame3.Parent = ScreenGui
-ScrollingFrame3.Active = true
-ScrollingFrame3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ScrollingFrame3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ScrollingFrame3.BorderSizePixel = 0
-ScrollingFrame3.Position = UDim2.new(0.702953577, 0, 0.198492467, 0)
-ScrollingFrame3.Size = UDim2.new(0.167088553, 0, 0.376884431, 0)
+UICorner.Parent = Combat
+
+UICorner_2.Parent = CombatFrame
+
+RenderFrame.Name = "Render Frame"
+RenderFrame.Parent = ScreenGui
+RenderFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RenderFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RenderFrame.BorderSizePixel = 0
+RenderFrame.Position = UDim2.new(0.425948441, 0, 0.219999969, 0)
+RenderFrame.Size = UDim2.new(0, 203, 0, 332)
+
+TEXTRENDER.Name = "TEXT RENDER"
+TEXTRENDER.Parent = RenderFrame
+TEXTRENDER.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TEXTRENDER.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TEXTRENDER.BorderSizePixel = 0
+TEXTRENDER.Size = UDim2.new(0, 203, 0, 50)
+TEXTRENDER.Font = Enum.Font.SourceSansBold
+TEXTRENDER.Text = "Render"
+TEXTRENDER.TextColor3 = Color3.fromRGB(85, 255, 255)
+TEXTRENDER.TextScaled = true
+TEXTRENDER.TextSize = 14.000
+TEXTRENDER.TextStrokeColor3 = Color3.fromRGB(85, 255, 255)
+TEXTRENDER.TextWrapped = true
+
+UICorner_3.Parent = TEXTRENDER
+
+UICorner_4.Parent = RenderFrame
+
+LINES.Name = "LINES"
+LINES.Parent = RenderFrame
+LINES.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LINES.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LINES.BorderSizePixel = 0
+LINES.Position = UDim2.new(0, 0, 0.150602415, 0)
+LINES.Size = UDim2.new(0, 175, 0, 50)
+LINES.Font = Enum.Font.SourceSansBold
+LINES.Text = "Lines"
+LINES.TextColor3 = Color3.fromRGB(255, 255, 127)
+LINES.TextScaled = true
+LINES.TextSize = 14.000
+LINES.TextStrokeColor3 = Color3.fromRGB(255, 255, 127)
+LINES.TextWrapped = true
+
+UICorner_5.Parent = LINES
+
+ESPBUTTON.Name = "ESP BUTTON"
+ESPBUTTON.Parent = RenderFrame
+ESPBUTTON.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ESPBUTTON.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ESPBUTTON.BorderSizePixel = 0
+ESPBUTTON.Position = UDim2.new(0, 0, 0.30120483, 0)
+ESPBUTTON.Size = UDim2.new(0, 175, 0, 50)
+ESPBUTTON.Font = Enum.Font.SourceSansBold
+ESPBUTTON.Text = "ESP"
+ESPBUTTON.TextColor3 = Color3.fromRGB(255, 255, 127)
+ESPBUTTON.TextScaled = true
+ESPBUTTON.TextSize = 14.000
+ESPBUTTON.TextWrapped = true
+
+UICorner_6.Parent = ESPBUTTON
+
+WorldFrame.Name = "World Frame"
+WorldFrame.Parent = ScreenGui
+WorldFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WorldFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WorldFrame.BorderSizePixel = 0
+WorldFrame.Position = UDim2.new(0.72428304, 0, 0.219999954, 0)
+WorldFrame.Size = UDim2.new(0, 203, 0, 332)
 
 TextWorld.Name = "Text World"
-TextWorld.Parent = ScrollingFrame3
-TextWorld.BackgroundColor3 = Color3.fromRGB(85, 255, 127)
-TextWorld.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextWorld.Parent = WorldFrame
+TextWorld.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextWorld.BorderColor3 = Color3.fromRGB(255, 255, 255)
 TextWorld.BorderSizePixel = 0
-TextWorld.Size = UDim2.new(0, 160, 0, 50)
-TextWorld.Font = Enum.Font.SourceSans
+TextWorld.Size = UDim2.new(0, 203, 0, 50)
+TextWorld.Font = Enum.Font.SourceSansBold
 TextWorld.Text = "World"
-TextWorld.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextWorld.TextSize = 50.000
+TextWorld.TextColor3 = Color3.fromRGB(85, 255, 255)
+TextWorld.TextScaled = true
+TextWorld.TextSize = 14.000
+TextWorld.TextStrokeColor3 = Color3.fromRGB(85, 255, 255)
+TextWorld.TextWrapped = true
+
+UICorner_7.Parent = TextWorld
+
+UICorner_8.Parent = WorldFrame
 
 infjump.Name = "inf jump"
-infjump.Parent = TextWorld
-infjump.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+infjump.Parent = WorldFrame
+infjump.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 infjump.BorderColor3 = Color3.fromRGB(0, 0, 0)
 infjump.BorderSizePixel = 0
-infjump.Position = UDim2.new(8.57235364e-07, 0, 1.02000034, 0)
-infjump.Size = UDim2.new(0.999999225, 0, 1.00033629, 0)
-infjump.Font = Enum.Font.SourceSans
-infjump.Text = "InfJump"
-infjump.TextColor3 = Color3.fromRGB(0, 0, 0)
+infjump.Position = UDim2.new(0, 0, 0.150602415, 0)
+infjump.Size = UDim2.new(0, 175, 0, 50)
+infjump.Font = Enum.Font.SourceSansBold
+infjump.Text = "INF JUMP"
+infjump.TextColor3 = Color3.fromRGB(255, 255, 127)
 infjump.TextScaled = true
 infjump.TextSize = 14.000
 infjump.TextWrapped = true
 
-UICorner.Parent = infjump
-
-Open.Name = "Open"
-Open.Parent = ScreenGui
-Open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Open.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Open.BorderSizePixel = 0
-Open.Position = UDim2.new(0, 0, 0.463567853, 0)
-Open.Size = UDim2.new(0.0312236287, 0, 0.0515075363, 0)
-Open.Font = Enum.Font.SourceSans
-Open.Text = "Open"
-Open.TextColor3 = Color3.fromRGB(0, 0, 0)
-Open.TextSize = 14.000
-
-UICorner_2.Parent = Open
-
-ScrollingFrame2.Name = "ScrollingFrame2"
-ScrollingFrame2.Parent = ScreenGui
-ScrollingFrame2.Active = true
-ScrollingFrame2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ScrollingFrame2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ScrollingFrame2.BorderSizePixel = 0
-ScrollingFrame2.Draggable = true
-ScrollingFrame2.Position = UDim2.new(0.464135081, 0, 0.198492467, 0)
-ScrollingFrame2.Size = UDim2.new(0.16624473, 0, 0.376884431, 0)
-
-TextRender.Name = "Text Render"
-TextRender.Parent = ScrollingFrame2
-TextRender.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
-TextRender.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextRender.BorderSizePixel = 0
-TextRender.Size = UDim2.new(0, 166, 0, 50)
-TextRender.Font = Enum.Font.SourceSans
-TextRender.Text = "Render"
-TextRender.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextRender.TextSize = 50.000
-
-Esp.Name = "Esp"
-Esp.Parent = ScrollingFrame2
-Esp.BackgroundColor3 = Color3.fromRGB(85, 255, 127)
-Esp.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Esp.BorderSizePixel = 0
-Esp.Position = UDim2.new(-0.0304568522, 0, 0.0285010207, 0)
-Esp.Size = UDim2.new(0, 172, 0, 50)
-Esp.Font = Enum.Font.SourceSans
-Esp.Text = "Esp"
-Esp.TextColor3 = Color3.fromRGB(0, 0, 0)
-Esp.TextSize = 55.000
-
-UICorner_3.Parent = Esp
-
-linestopeople.Name = "lines to people"
-linestopeople.Parent = Esp
-linestopeople.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-linestopeople.BorderColor3 = Color3.fromRGB(0, 0, 0)
-linestopeople.BorderSizePixel = 0
-linestopeople.Position = UDim2.new(0.0348837227, 0, 1, 0)
-linestopeople.Size = UDim2.new(0, 166, 0, 50)
-linestopeople.Font = Enum.Font.SourceSans
-linestopeople.Text = "Draw Lines To People"
-linestopeople.TextColor3 = Color3.fromRGB(0, 0, 0)
-linestopeople.TextSize = 20.000
-
-UICorner_4.Parent = linestopeople
-
-Close.Name = "Close"
-Close.Parent = ScreenGui
-Close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-Close.BorderColor3 = Color3.fromRGB(255, 255, 255)
-Close.BorderSizePixel = 0
-Close.Position = UDim2.new(0.880168796, 0, -0.0213567074, 0)
-Close.Size = UDim2.new(0, 40, 0, 32)
-Close.Font = Enum.Font.SourceSans
-Close.Text = "Close"
-Close.TextColor3 = Color3.fromRGB(255, 255, 255)
-Close.TextScaled = true
-Close.TextSize = 14.000
-Close.TextWrapped = true
-
-UICorner_5.Parent = Close
+UICorner_9.Parent = infjump
 
 -- Scripts:
 
-local function YUYBPQJ_fake_script() -- ScrollingFrame1.rightshift to open 
-	local script = Instance.new('LocalScript', ScrollingFrame1)
+local function PHIAC_fake_script() -- LINES.LINES SCRIPT 
+	local script = Instance.new('LocalScript', LINES)
 
-	local Gui = script.Parent
+	local button = script.Parent
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local LocalPlayer = Players.LocalPlayer
 	
-	local function onKeyPress(input)
-		if input.KeyCode == Enum.KeyCode.RightShift then
-			if Gui.Visible == true then
-				Gui.Visible = false
-			else
-				Gui.Visible = true
+	local espEnabled = false
+	local connections = {}
+	local activeParts = {}
+	
+	local function cleanUpLines()
+		for _, part in activeParts do
+			if part and part.Parent then
+				part:Destroy()
 			end
+		end
+		activeParts = {}
+	end
+	
+	local function drawLines()
+		local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	
+		while espEnabled do
+			cleanUpLines()
+	
+			for _, player in Players:GetPlayers() do
+				if player ~= LocalPlayer and player.Character then
+					local targetChar = player.Character
+					local targetRoot = targetChar:FindFirstChild("HumanoidRootPart")
+	
+					if targetRoot and targetRoot:IsDescendantOf(workspace) then
+						local raycastParams = RaycastParams.new()
+						raycastParams.FilterDescendantsInstances = {character, targetChar}
+						raycastParams.FilterType = Enum.RaycastFilterType.Blacklist
+	
+						local result = workspace:Raycast(
+							humanoidRootPart.Position,
+							(targetRoot.Position - humanoidRootPart.Position),
+							raycastParams
+						)
+	
+						if result then
+							local part = Instance.new("Part")
+							part.Material = Enum.Material.Neon
+							part.Color = Color3.new(1, 1, 1)
+							part.Size = Vector3.new(0.2, 0.2, (humanoidRootPart.Position - targetRoot.Position).Magnitude)
+							part.Anchored = true
+							part.CanCollide = false
+							part.Transparency = 0.5
+							part.CFrame = CFrame.new(humanoidRootPart.Position, targetRoot.Position) * CFrame.new(0, 0, -part.Size.Z/2)
+							part.Parent = workspace
+							table.insert(activeParts, part)
+						end
+					end
+				end
+			end
+			task.wait(0.1)
 		end
 	end
 	
-	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
+	button.MouseButton1Click:Connect(function()
+		espEnabled = not espEnabled
 	
-end
-coroutine.wrap(YUYBPQJ_fake_script)()
-local function HVJXMD_fake_script() -- ScrollingFrame1.DRAG SCRIPT 
-	local script = Instance.new('LocalScript', ScrollingFrame1)
-
-	local scrollingFrame = script.Parent
-	local mouse = game.Players.LocalPlayer:GetMouse()
-	local dragging = false
-	local startPos
-	
-	scrollingFrame.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 then
-			dragging = true
-			startPos = Vector2.new(mouse.X, mouse.Y)
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
+		if espEnabled then
+			drawLines()
+		else
+			cleanUpLines()
 		end
 	end)
 	
-	mouse.Move:Connect(function()
-		if dragging then
-			local currentPos = Vector2.new(mouse.X, mouse.Y)
-			local delta = currentPos - startPos
-			scrollingFrame.Position += UDim2.new(0, delta.X, 0, delta.Y)
-			startPos = currentPos
+	LocalPlayer.CharacterAdded:Connect(function()
+		if espEnabled then
+			cleanUpLines()
 		end
 	end)
-	
 end
-coroutine.wrap(HVJXMD_fake_script)()
-local function FSWNONV_fake_script() -- infjump.Neon Red 
-	local script = Instance.new('LocalScript', infjump)
+coroutine.wrap(PHIAC_fake_script)()
+local function LTBP_fake_script() -- ESPBUTTON.ESP SCRIPT 
+	local script = Instance.new('LocalScript', ESPBUTTON)
 
 	local button = script.Parent
-	local stroke = Instance.new("UIStroke")
-	stroke.Color = Color3.fromRGB(255, 0, 0)  -- Red color
-	stroke.Thickness = 3
-	stroke.Transparency = 0.3
-	stroke.Parent = button
+	local Players = game:GetService("Players")
+	local CollectionService = game:GetService("CollectionService")
+	local ESP_TAG = "ESP"
 	
+	local espEnabled = false
+	
+	local function createESP(player)
+		local character = player.Character or player.CharacterAdded:Wait()
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	
+		local esp = Instance.new("BillboardGui")
+		esp.Name = "PlayerESP"
+		esp.Size = UDim2.new(0, 200, 0, 50)
+		esp.StudsOffset = Vector3.new(0, 3, 0)
+		esp.Adornee = humanoidRootPart
+		esp.AlwaysOnTop = true
+	
+		local textLabel = Instance.new("TextLabel")
+		textLabel.Size = UDim2.new(1, 0, 1, 0)
+		textLabel.Text = player.Name
+		textLabel.BackgroundTransparency = 1
+		textLabel.TextColor3 = Color3.new(1, 1, 1)
+		textLabel.Font = Enum.Font.SourceSansBold
+		textLabel.TextScaled = true
+		textLabel.Parent = esp
+	
+		CollectionService:AddTag(esp, ESPTAG)
+		esp.Parent = humanoidRootPart
+	end
+	
+	local function toggleESP()
+		espEnabled = not espEnabled
+		button.Text = "ESP: " .. (espEnabled and "On" or "Off")
+	
+		for , esp in CollectionService:GetTagged(ESPTAG) do
+			esp.Enabled = espEnabled
+		end
+	end
+	
+	Players.PlayerAdded:Connect(function(player)
+		player.CharacterAdded:Connect(function()
+			createESP(player)
+		end)
+	
+		if player.Character then
+			createESP(player)
+		end
+	end)
+	
+	for , player in Players:GetPlayers() do
+		if player.Character then
+			createESP(player)
+		end
+	end
+	
+	button.MouseButton1Click:Connect(toggleESP)
 end
-coroutine.wrap(FSWNONV_fake_script)()
-local function DBINJ_fake_script() -- infjump.InfJumpCombined 
+coroutine.wrap(LTBP_fake_script)()
+local function RWBT_fake_script() -- infjump.INF JUMP SCRIPT 
 	local script = Instance.new('LocalScript', infjump)
 
 	local button = script.Parent
@@ -232,220 +305,12 @@ local function DBINJ_fake_script() -- infjump.InfJumpCombined
 	-- Toggle infinite jump when button is clicked
 	button.MouseButton1Click:Connect(function()
 		infJumpEnabled = not infJumpEnabled
-		button.Text = infJumpEnabled and "Infinite Jump: ON" or "Infinite Jump: OFF"
+		button.Text =  "Infinite Jump: "..infJumpEnabled
 	end)
 	
-	-- Infinite jump logic
 	UIS.JumpRequest:Connect(function()
 		if infJumpEnabled and player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
 			player.Character:FindFirstChildOfClass("Humanoid"):ChangeState(Enum.HumanoidStateType.Jumping)
 		end
 	end)
 end
-coroutine.wrap(DBINJ_fake_script)()
-local function QIPFR_fake_script() -- ScrollingFrame3.DRAG SCRIPT| 
-	local script = Instance.new('LocalScript', ScrollingFrame3)
-
-	local scrollingFrame = script.Parent
-	local mouse = game.Players.LocalPlayer:GetMouse()
-	local dragging = false
-	local startPos
-	
-	scrollingFrame.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 then
-			dragging = true
-			startPos = Vector2.new(mouse.X, mouse.Y)
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
-		end
-	end)
-	
-	mouse.Move:Connect(function()
-		if dragging then
-			local currentPos = Vector2.new(mouse.X, mouse.Y)
-			local delta = currentPos - startPos
-			scrollingFrame.Position += UDim2.new(0, delta.X, 0, delta.Y)
-			startPos = currentPos
-		end
-	end)
-	
-end
-coroutine.wrap(QIPFR_fake_script)()
-local function NKAMZ_fake_script() -- Open.Open 
-	local script = Instance.new('LocalScript', Open)
-
-	local ScrollingFrame1 = script.Parent.Parent.ScrollingFrame1
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		ScrollingFrame1.Visible = true
-	end)
-	local ScrollingFrame2 = script.Parent.Parent.ScrollingFrame2
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		ScrollingFrame2.Visible = true
-	end)
-	local ScrollingFrame3 = script.Parent.Parent.ScrollingFrame3
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		ScrollingFrame3.Visible = true
-	end)
-end
-coroutine.wrap(NKAMZ_fake_script)()
-local function YLFNYZ_fake_script() -- ScrollingFrame2.rightshift to open 
-	local script = Instance.new('LocalScript', ScrollingFrame2)
-
-	local Gui = script.Parent
-	
-	local function onKeyPress(input)
-		if input.KeyCode == Enum.KeyCode.RightShift then
-			if Gui.Visible == true then
-				Gui.Visible = false
-			else
-				Gui.Visible = true
-			end
-		end
-	end
-	
-	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
-	
-end
-coroutine.wrap(YLFNYZ_fake_script)()
-local function VLDM_fake_script() -- Esp.ESP SCRIPT 
-	local script = Instance.new('LocalScript', Esp)
-
-	local players = game:GetService("Players")
-	local localPlayer = players.LocalPlayer
-	local runService = game:GetService("RunService")
-	
-	script.Parent.MouseButton1Up:Connect(function()
-		local function createESP(player)
-			-- Create highlight
-			local highlight = Instance.new("Highlight")
-			highlight.Name = player.Name .. "_ESP"
-			highlight.Adornee = player.Character
-			highlight.FillTransparency = 1
-			highlight.OutlineColor = Color3.new(1, 1, 1) -- White color
-			highlight.OutlineTransparency = 0
-			highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-			highlight.Parent = player.Character
-	
-			-- Create name tag
-			local billboardGui = Instance.new("BillboardGui")
-			billboardGui.Name = player.Name .. "_NameTag"
-			billboardGui.Adornee = player.Character:FindFirstChild("HumanoidRootPart")
-			billboardGui.Size = UDim2.new(0, 100, 0, 50)
-			billboardGui.StudsOffset = Vector3.new(0, 2, 0)
-			billboardGui.AlwaysOnTop = true
-			billboardGui.Parent = player.Character
-	
-			local textLabel = Instance.new("TextLabel")
-			textLabel.Size = UDim2.new(1, 0, 1, 0)
-			textLabel.BackgroundTransparency = 1
-			textLabel.Text = player.Name
-			textLabel.TextColor3 = Color3.new(1, 1, 1) -- White color
-			textLabel.TextStrokeTransparency = 0
-			textLabel.Parent = billboardGui
-		end
-	
-		local function addESP()
-			for _, player in pairs(players:GetPlayers()) do
-				if player ~= localPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
-					if not player.Character:FindFirstChild(player.Name .. "_ESP") then
-						createESP(player)
-					end
-				end
-			end
-		end
-	
-		runService.RenderStepped:Connect(function()
-			addESP()
-		end)
-	
-		players.PlayerRemoving:Connect(function(player)
-			if player.Character and player.Character:FindFirstChild(player.Name .. "_ESP") then
-				player.Character[player.Name .. "_ESP"]:Destroy()
-				player.Character[player.Name .. "_NameTag"]:Destroy()
-			end
-		end)
-	end)
-	
-end
-coroutine.wrap(VLDM_fake_script)()
-local function QISRQY_fake_script() -- linestopeople.neon cyan 
-	local script = Instance.new('LocalScript', linestopeople)
-
-	local button = script.Parent
-	local stroke = Instance.new("UIStroke")
-	stroke.Color = Color3.fromRGB(0, 255, 255)  -- Cyan color
-	stroke.Thickness = 3
-	stroke.Transparency = 0.3
-	stroke.Parent = button
-	
-end
-coroutine.wrap(QISRQY_fake_script)()
-local function IUGBEXV_fake_script() -- Esp.neon cyan 
-	local script = Instance.new('LocalScript', Esp)
-
-	local button = script.Parent
-	local stroke = Instance.new("UIStroke")
-	stroke.Color = Color3.fromRGB(0, 255, 255)  -- Cyan color
-	stroke.Thickness = 3
-	stroke.Transparency = 0.3
-	stroke.Parent = button
-	
-end
-coroutine.wrap(IUGBEXV_fake_script)()
-local function ZWKIJZI_fake_script() -- ScrollingFrame2.DRAG SCRIPT 
-	local script = Instance.new('LocalScript', ScrollingFrame2)
-
-	local scrollingFrame = script.Parent
-	local mouse = game.Players.LocalPlayer:GetMouse()
-	local dragging = false
-	local startPos
-	
-	scrollingFrame.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 then
-			dragging = true
-			startPos = Vector2.new(mouse.X, mouse.Y)
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
-		end
-	end)
-	
-	mouse.Move:Connect(function()
-		if dragging then
-			local currentPos = Vector2.new(mouse.X, mouse.Y)
-			local delta = currentPos - startPos
-			scrollingFrame.Position += UDim2.new(0, delta.X, 0, delta.Y)
-			startPos = currentPos
-		end
-	end)
-	
-end
-coroutine.wrap(ZWKIJZI_fake_script)()
-local function KLHNRZ_fake_script() -- Close.Close 
-	local script = Instance.new('LocalScript', Close)
-
-	local ScrollingFrame1 = script.Parent.Parent.ScrollingFrame1
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		ScrollingFrame1.Visible = false
-	end)
-	local ScrollingFrame2 = script.Parent.Parent.ScrollingFrame2
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		ScrollingFrame2.Visible = false
-	end)
-	local ScrollingFrame3 = script.Parent.Parent.ScrollingFrame3
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		ScrollingFrame3.Visible = false
-	end)
-end
-ResetOnSpawn = false
