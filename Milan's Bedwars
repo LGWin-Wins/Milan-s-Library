@@ -1,3 +1,112 @@
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+
+--Properties:
+
+Frame.Parent = v1
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BackgroundTransparency = 0.200
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.499673396, 0, 0.499301672, 0)
+Frame.Size = UDim2.new(0.5, 0, 0.5, 0)
+
+TextLabel.Parent = Frame
+TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.499673396, 0, 0.0872905031, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Sapien V1"
+TextLabel.TextColor3 = Color3.fromRGB(0, 4, 253)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = Frame
+TextLabel_2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.163291961, 0, 0.394553035, 0)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 127)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Join our discord Server for more OP Scripts Link will copied into clipboard"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 4, 253)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+TextLabel_3.Parent = Frame
+TextLabel_3.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.836054862, 0, 0.394553035, 0)
+TextLabel_3.Size = UDim2.new(0, 200, 0, 127)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "CLICK RIGHTSHIFT TO UNLOCK YOUR MOUSE"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 4, 253)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 17, 255)
+TextButton.BackgroundTransparency = 0.750
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.400065303, 0, 0.338687152, 0)
+TextButton.Size = UDim2.new(0.200000003, 0, 0.200000003, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "PLAY"
+TextButton.TextColor3 = Color3.fromRGB(9, 1, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+TextLabel_4.Parent = Frame
+TextLabel_4.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.498040468, 0, 0.587569833, 0)
+TextLabel_4.Size = UDim2.new(0.100000001, 0, 0.100000001, 0)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = "CREDITS:"
+TextLabel_4.TextColor3 = Color3.fromRGB(0, 25, 249)
+TextLabel_4.TextSize = 14.000
+
+TextLabel_5.Parent = Frame
+TextLabel_5.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.499673337, 0, 0.736731827, 0)
+TextLabel_5.Size = UDim2.new(0.300000012, 0, 0.400000006, 0)
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = "URAVGSCRIPTER"
+TextLabel_5.TextColor3 = Color3.fromRGB(0, 4, 254)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextWrapped = true
+
+local s1 = Instance.new("ScreenGui",game.Players.LocalPlayer.PlayerGui)
+s1.Enabled = false
+s1.ResetOnSpawn = false
 local ScreenGui = Instance.new("ScreenGui")
 local CombatFrame = Instance.new("Frame")
 local Combat = Instance.new("TextLabel")
