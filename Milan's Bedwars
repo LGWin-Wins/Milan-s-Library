@@ -4,28 +4,33 @@ local Combat = Instance.new("TextLabel")
 local UICorner = Instance.new("UICorner")
 local UICorner_2 = Instance.new("UICorner")
 local Close = Instance.new("TextButton")
+local KillAura = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
 local RenderFrame = Instance.new("Frame")
 local TEXTRENDER = Instance.new("TextLabel")
-local UICorner_3 = Instance.new("UICorner")
 local UICorner_4 = Instance.new("UICorner")
-local LINES = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
-local ESPBUTTON = Instance.new("TextButton")
+local LINES = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
+local ESPBUTTON = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
 local Close_2 = Instance.new("TextButton")
 local WorldFrame = Instance.new("Frame")
 local TextWorld = Instance.new("TextLabel")
-local UICorner_7 = Instance.new("UICorner")
 local UICorner_8 = Instance.new("UICorner")
-local infjump = Instance.new("TextButton")
 local UICorner_9 = Instance.new("UICorner")
+local infjump = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
 local Close_3 = Instance.new("TextButton")
 local OPEN = Instance.new("TextButton")
+local OPEN_2 = Instance.new("TextButton")
+local OPEN_3 = Instance.new("TextButton")
 
 --Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
 
 CombatFrame.Name = "CombatFrame"
 CombatFrame.Parent = ScreenGui
@@ -67,6 +72,22 @@ Close.TextScaled = true
 Close.TextSize = 14.000
 Close.TextWrapped = true
 
+KillAura.Name = "Kill Aura"
+KillAura.Parent = CombatFrame
+KillAura.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+KillAura.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KillAura.BorderSizePixel = 0
+KillAura.Position = UDim2.new(1.50332895e-07, 0, 0.150602415, 0)
+KillAura.Size = UDim2.new(0, 174, 0, 50)
+KillAura.Font = Enum.Font.SourceSansBold
+KillAura.Text = "Kill Aura"
+KillAura.TextColor3 = Color3.fromRGB(255, 255, 127)
+KillAura.TextScaled = true
+KillAura.TextSize = 14.000
+KillAura.TextWrapped = true
+
+UICorner_3.Parent = KillAura
+
 RenderFrame.Name = "RenderFrame"
 RenderFrame.Parent = ScreenGui
 RenderFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -89,9 +110,9 @@ TEXTRENDER.TextSize = 14.000
 TEXTRENDER.TextStrokeColor3 = Color3.fromRGB(85, 255, 255)
 TEXTRENDER.TextWrapped = true
 
-UICorner_3.Parent = TEXTRENDER
+UICorner_4.Parent = TEXTRENDER
 
-UICorner_4.Parent = RenderFrame
+UICorner_5.Parent = RenderFrame
 
 LINES.Name = "LINES"
 LINES.Parent = RenderFrame
@@ -108,7 +129,7 @@ LINES.TextSize = 14.000
 LINES.TextStrokeColor3 = Color3.fromRGB(255, 255, 127)
 LINES.TextWrapped = true
 
-UICorner_5.Parent = LINES
+UICorner_6.Parent = LINES
 
 ESPBUTTON.Name = "ESP BUTTON"
 ESPBUTTON.Parent = RenderFrame
@@ -124,7 +145,7 @@ ESPBUTTON.TextScaled = true
 ESPBUTTON.TextSize = 14.000
 ESPBUTTON.TextWrapped = true
 
-UICorner_6.Parent = ESPBUTTON
+UICorner_7.Parent = ESPBUTTON
 
 Close_2.Name = "Close"
 Close_2.Parent = RenderFrame
@@ -162,9 +183,9 @@ TextWorld.TextSize = 14.000
 TextWorld.TextStrokeColor3 = Color3.fromRGB(85, 255, 255)
 TextWorld.TextWrapped = true
 
-UICorner_7.Parent = TextWorld
+UICorner_8.Parent = TextWorld
 
-UICorner_8.Parent = WorldFrame
+UICorner_9.Parent = WorldFrame
 
 infjump.Name = "inf jump"
 infjump.Parent = WorldFrame
@@ -180,7 +201,7 @@ infjump.TextScaled = true
 infjump.TextSize = 14.000
 infjump.TextWrapped = true
 
-UICorner_9.Parent = infjump
+UICorner_10.Parent = infjump
 
 Close_3.Name = "Close"
 Close_3.Parent = WorldFrame
@@ -204,16 +225,46 @@ OPEN.BorderSizePixel = 0
 OPEN.Position = UDim2.new(0, 0, 0.0403422974, 0)
 OPEN.Size = UDim2.new(0.0631808266, 0, 0.0611246936, 0)
 OPEN.Font = Enum.Font.SourceSansBold
-OPEN.Text = "OPEN"
+OPEN.Text = "OPEN Combat"
 OPEN.TextColor3 = Color3.fromRGB(85, 255, 255)
 OPEN.TextScaled = true
 OPEN.TextSize = 14.000
 OPEN.TextStrokeColor3 = Color3.fromRGB(85, 255, 255)
 OPEN.TextWrapped = true
 
+OPEN_2.Name = "OPEN"
+OPEN_2.Parent = ScreenGui
+OPEN_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OPEN_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OPEN_2.BorderSizePixel = 0
+OPEN_2.Position = UDim2.new(0, 0, 0.101466991, 0)
+OPEN_2.Size = UDim2.new(0.0631808266, 0, 0.0611246936, 0)
+OPEN_2.Font = Enum.Font.SourceSansBold
+OPEN_2.Text = "OPEN Render"
+OPEN_2.TextColor3 = Color3.fromRGB(85, 255, 255)
+OPEN_2.TextScaled = true
+OPEN_2.TextSize = 14.000
+OPEN_2.TextStrokeColor3 = Color3.fromRGB(85, 255, 255)
+OPEN_2.TextWrapped = true
+
+OPEN_3.Name = "OPEN"
+OPEN_3.Parent = ScreenGui
+OPEN_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OPEN_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OPEN_3.BorderSizePixel = 0
+OPEN_3.Position = UDim2.new(0, 0, 0.162591681, 0)
+OPEN_3.Size = UDim2.new(0.0631808266, 0, 0.0611246936, 0)
+OPEN_3.Font = Enum.Font.SourceSansBold
+OPEN_3.Text = "OPEN WORLD"
+OPEN_3.TextColor3 = Color3.fromRGB(85, 255, 255)
+OPEN_3.TextScaled = true
+OPEN_3.TextSize = 14.000
+OPEN_3.TextStrokeColor3 = Color3.fromRGB(85, 255, 255)
+OPEN_3.TextWrapped = true
+
 -- Scripts:
 
-local function TQHKXJ_fake_script() -- CombatFrame.DRAG SCRIPT 
+local function FTKY_fake_script() -- CombatFrame.DRAG SCRIPT 
 	local script = Instance.new('LocalScript', CombatFrame)
 
 	local parent: Frame = script.Parent
@@ -221,8 +272,8 @@ local function TQHKXJ_fake_script() -- CombatFrame.DRAG SCRIPT
 	parent.Selectable = true
 	parent.Active = true
 end
-coroutine.wrap(TQHKXJ_fake_script)()
-local function FXIPE_fake_script() -- CombatFrame.RIGHTSHIFT TO OPEN 
+coroutine.wrap(FTKY_fake_script)()
+local function SLMDFQ_fake_script() -- CombatFrame.RIGHTSHIFT TO OPEN 
 	local script = Instance.new('LocalScript', CombatFrame)
 
 	local Gui = script.Parent
@@ -240,8 +291,8 @@ local function FXIPE_fake_script() -- CombatFrame.RIGHTSHIFT TO OPEN
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(FXIPE_fake_script)()
-local function OZAE_fake_script() -- Close.LocalScript 
+coroutine.wrap(SLMDFQ_fake_script)()
+local function YPLWDKN_fake_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	local CombatFrame = script.Parent.Parent
@@ -250,8 +301,8 @@ local function OZAE_fake_script() -- Close.LocalScript
 		CombatFrame.Visible = false
 	end)
 end
-coroutine.wrap(OZAE_fake_script)()
-local function SJDORY_fake_script() -- LINES.LINES SCRIPT 
+coroutine.wrap(YPLWDKN_fake_script)()
+local function GLBQVH_fake_script() -- LINES.LINES SCRIPT 
 	local script = Instance.new('LocalScript', LINES)
 
 	local button = script.Parent
@@ -330,98 +381,68 @@ local function SJDORY_fake_script() -- LINES.LINES SCRIPT
 		end
 	end)
 end
-coroutine.wrap(SJDORY_fake_script)()
-local function KFMUFOR_fake_script() -- ESPBUTTON.ESP SCRIPT 
+coroutine.wrap(GLBQVH_fake_script)()
+local function AJJXY_fake_script() -- ESPBUTTON.ESP SCRIPT 
 	local script = Instance.new('LocalScript', ESPBUTTON)
 
-	-- Variables
-	local ESPState = false
-	local ESPs = {}
+	local players = game:GetService("Players")
+	local localPlayer = players.LocalPlayer
+	local runService = game:GetService("RunService")
 	
-	-- UserInputService
-	local UserInputService = game:GetService("UserInputService")
+	script.Parent.MouseButton1Up:Connect(function()
+		local function createESP(player)
+			-- Create highlight
+			local highlight = Instance.new("Highlight")
+			highlight.Name = player.Name .. "_ESP"
+			highlight.Adornee = player.Character
+			highlight.FillTransparency = 1
+			highlight.OutlineColor = Color3.new(1, 1, 1) -- White color
+			highlight.OutlineTransparency = 0
+			highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+			highlight.Parent = player.Character
 	
-	-- Players
-	local Players = game:GetService("Players")
+			-- Create name tag
+			local billboardGui = Instance.new("BillboardGui")
+			billboardGui.Name = player.Name .. "_NameTag"
+			billboardGui.Adornee = player.Character:FindFirstChild("HumanoidRootPart")
+			billboardGui.Size = UDim2.new(0, 100, 0, 50)
+			billboardGui.StudsOffset = Vector3.new(0, 2, 0)
+			billboardGui.AlwaysOnTop = true
+			billboardGui.Parent = player.Character
 	
-	-- RenderStepped
-	local RunService = game:GetService("RunService")
+			local textLabel = Instance.new("TextLabel")
+			textLabel.Size = UDim2.new(1, 0, 1, 0)
+			textLabel.BackgroundTransparency = 1
+			textLabel.Text = player.Name
+			textLabel.TextColor3 = Color3.new(1, 1, 1) -- White color
+			textLabel.TextStrokeTransparency = 0
+			textLabel.Parent = billboardGui
+		end
 	
-	-- Function to render ESP
-	local function renderESP()
-		-- Loop through all players
-		for _, player in pairs(Players:GetPlayers()) do
-			-- Ignore local player
-			if player ~= game.Players.LocalPlayer then
-				-- Create a new ESP if it doesn't exist
-				if not ESPs[player.UserId] then
-					ESPs[player.UserId] = Instance.new("BillboardGui")
-					ESPs[player.UserId].Parent = game.Players.LocalPlayer.PlayerGui
-					ESPs[player.UserId].Adornee = player.Character
-					ESPs[player.UserId].LightInfluence = 0.5
-					ESPs[player.UserId].LightEmission = 1
-					ESPs[player.UserId].Size = UDim2.new(0, 100, 0, 20)
-					ESPs[player.UserId].BackgroundTransparency = 1
-	
-					-- Create a new TextLabel to display the username
-					local usernameGui = Instance.new("TextLabel")
-					usernameGui.Parent = ESPs[player.UserId]
-					usernameGui.Size = UDim2.new(0, 100, 0, 20)
-					usernameGui.BackgroundTransparency = 1
-					usernameGui.Text = player.Name
-					usernameGui.TextSize = 14
-					usernameGui.TextColor3 = Color3.new(1, 1, 1)
-					usernameGui.Font = Enum.Font.SourceSans
-					usernameGui.FontSize = Enum.FontSize.Size14
-	
-					-- Create a new Box to render around the player
-					local box = Instance.new("Part")
-					box.Parent = game.Workspace
-					box.Size = Vector3.new(1, 1, 1)
-					box.Position = player.Character.HumanoidRootPart.Position
-					box.Anchored = true
-					box.Transparency = 0
-					box.CanCollide = false
+		local function addESP()
+			for _, player in pairs(players:GetPlayers()) do
+				if player ~= localPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+					if not player.Character:FindFirstChild(player.Name .. "_ESP") then
+						createESP(player)
+					end
 				end
-	
-				-- Update the ESP position and size
-				ESPs[player.UserId].Adornee = player.Character
-				box.Position = player.Character.HumanoidRootPart.Position
 			end
 		end
-	end
 	
-	-- Function to toggle ESP
-	local function toggleESP()
-		ESPState = not ESPState
-		if ESPState then
-			UserInputService.InputBegan:Connect(function(input)
-				if input.KeyCode == Enum.KeyCode.ButtonX then
-					toggleESP()
-				end
-			end)
-		else
-			UserInputService.InputBegan:Disconnect()
-		end
-	end
+		runService.RenderStepped:Connect(function()
+			addESP()
+		end)
 	
-	-- Render ESP on RenderStepped
-	RunService.RenderStepped:Connect(function()
-		if ESPState then
-			renderESP()
-		end
+		players.PlayerRemoving:Connect(function(player)
+			if player.Character and player.Character:FindFirstChild(player.Name .. "_ESP") then
+				player.Character[player.Name .. "_ESP"]:Destroy()
+				player.Character[player.Name .. "_NameTag"]:Destroy()
+			end
+		end)
 	end)
-	
-	-- Toggle ESP on button click
-	UserInputService.InputBegan:Connect(function(input)
-		if input.KeyCode == Enum.KeyCode.ButtonX then
-			toggleESP()
-		end
-	end)
-	
 end
-coroutine.wrap(KFMUFOR_fake_script)()
-local function BFOOWI_fake_script() -- RenderFrame.DRAG SCRIPT 
+coroutine.wrap(AJJXY_fake_script)()
+local function IPUVB_fake_script() -- RenderFrame.DRAG SCRIPT 
 	local script = Instance.new('LocalScript', RenderFrame)
 
 	local parent: Frame = script.Parent
@@ -429,8 +450,8 @@ local function BFOOWI_fake_script() -- RenderFrame.DRAG SCRIPT
 	parent.Selectable = true
 	parent.Active = true
 end
-coroutine.wrap(BFOOWI_fake_script)()
-local function EOCAMK_fake_script() -- RenderFrame.RIGHTSHIFT TO OPEN 
+coroutine.wrap(IPUVB_fake_script)()
+local function AIIH_fake_script() -- RenderFrame.RIGHTSHIFT TO OPEN 
 	local script = Instance.new('LocalScript', RenderFrame)
 
 	local Gui = script.Parent
@@ -448,8 +469,8 @@ local function EOCAMK_fake_script() -- RenderFrame.RIGHTSHIFT TO OPEN
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(EOCAMK_fake_script)()
-local function TPUHXQE_fake_script() -- Close_2.CLOSE SCRIPT 
+coroutine.wrap(AIIH_fake_script)()
+local function SYRYIM_fake_script() -- Close_2.CLOSE SCRIPT 
 	local script = Instance.new('LocalScript', Close_2)
 
 	local RenderFrame = script.Parent.Parent
@@ -458,8 +479,8 @@ local function TPUHXQE_fake_script() -- Close_2.CLOSE SCRIPT
 		RenderFrame.Visible = false
 	end)
 end
-coroutine.wrap(TPUHXQE_fake_script)()
-local function OTWBODS_fake_script() -- infjump.INF JUMP SCRIPT 
+coroutine.wrap(SYRYIM_fake_script)()
+local function MPTCPG_fake_script() -- infjump.INF JUMP SCRIPT 
 	local script = Instance.new('LocalScript', infjump)
 
 	local button = script.Parent
@@ -479,8 +500,8 @@ local function OTWBODS_fake_script() -- infjump.INF JUMP SCRIPT
 		end
 	end)
 end
-coroutine.wrap(OTWBODS_fake_script)()
-local function JGYF_fake_script() -- WorldFrame.DRAG SCRIPT 
+coroutine.wrap(MPTCPG_fake_script)()
+local function GBMMYDO_fake_script() -- WorldFrame.DRAG SCRIPT 
 	local script = Instance.new('LocalScript', WorldFrame)
 
 	local parent: Frame = script.Parent
@@ -488,8 +509,8 @@ local function JGYF_fake_script() -- WorldFrame.DRAG SCRIPT
 	parent.Selectable = true
 	parent.Active = true
 end
-coroutine.wrap(JGYF_fake_script)()
-local function CYRUT_fake_script() -- WorldFrame.RIGHTSHIFT TO OPEN 
+coroutine.wrap(GBMMYDO_fake_script)()
+local function LSSHOUC_fake_script() -- WorldFrame.RIGHTSHIFT TO OPEN 
 	local script = Instance.new('LocalScript', WorldFrame)
 
 	local Gui = script.Parent
@@ -507,8 +528,8 @@ local function CYRUT_fake_script() -- WorldFrame.RIGHTSHIFT TO OPEN
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(CYRUT_fake_script)()
-local function ZUNVT_fake_script() -- Close_3.CLOSE SCRIPT 
+coroutine.wrap(LSSHOUC_fake_script)()
+local function JTZZW_fake_script() -- Close_3.CLOSE SCRIPT 
 	local script = Instance.new('LocalScript', Close_3)
 
 	local WorldFrame = script.Parent.Parent
@@ -517,8 +538,8 @@ local function ZUNVT_fake_script() -- Close_3.CLOSE SCRIPT
 		WorldFrame.Visible = false
 	end)
 end
-coroutine.wrap(ZUNVT_fake_script)()
-local function JLCAN_fake_script() -- OPEN.LocalScript 
+coroutine.wrap(JTZZW_fake_script)()
+local function HJCRWGL_fake_script() -- OPEN.LocalScript 
 	local script = Instance.new('LocalScript', OPEN)
 
 	local CombatFrame = script.Parent.Parent.CombatFrame
@@ -526,11 +547,21 @@ local function JLCAN_fake_script() -- OPEN.LocalScript
 	script.Parent.MouseButton1Click:Connect(function()
 		CombatFrame.Visible = true
 	end)
+end
+coroutine.wrap(HJCRWGL_fake_script)()
+local function GZPH_fake_script() -- OPEN_2.LocalScript 
+	local script = Instance.new('LocalScript', OPEN_2)
+
 	local RenderFrame = script.Parent.Parent.RenderFrame
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		RenderFrame.Visible = true
 	end)
+end
+coroutine.wrap(GZPH_fake_script)()
+local function CMNKMYW_fake_script() -- OPEN_3.LocalScript 
+	local script = Instance.new('LocalScript', OPEN_3)
+
 	local WorldFrame = script.Parent.Parent.WorldFrame
 	
 	script.Parent.MouseButton1Click:Connect(function()
