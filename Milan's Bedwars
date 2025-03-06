@@ -3,6 +3,7 @@ local CombatFrame = Instance.new("Frame")
 local Combat = Instance.new("TextLabel")
 local UICorner = Instance.new("UICorner")
 local UICorner_2 = Instance.new("UICorner")
+local Close = Instance.new("TextButton")
 local RenderFrame = Instance.new("Frame")
 local TEXTRENDER = Instance.new("TextLabel")
 local UICorner_3 = Instance.new("UICorner")
@@ -11,32 +12,35 @@ local LINES = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
 local ESPBUTTON = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
+local Close_2 = Instance.new("TextButton")
 local WorldFrame = Instance.new("Frame")
 local TextWorld = Instance.new("TextLabel")
 local UICorner_7 = Instance.new("UICorner")
 local UICorner_8 = Instance.new("UICorner")
 local infjump = Instance.new("TextButton")
 local UICorner_9 = Instance.new("UICorner")
+local Close_3 = Instance.new("TextButton")
+local OPEN = Instance.new("TextButton")
 
 --Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-CombatFrame.Name = "Combat Frame"
+CombatFrame.Name = "CombatFrame"
 CombatFrame.Parent = ScreenGui
 CombatFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 CombatFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 CombatFrame.BorderSizePixel = 0
 CombatFrame.Position = UDim2.new(0.165991887, 0, 0.219999969, 0)
-CombatFrame.Size = UDim2.new(0, 203, 0, 332)
+CombatFrame.Size = UDim2.new(0.147421926, 0, 0.405867964, 0)
 
 Combat.Name = "Combat"
 Combat.Parent = CombatFrame
 Combat.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Combat.BorderColor3 = Color3.fromRGB(255, 255, 255)
 Combat.BorderSizePixel = 0
-Combat.Size = UDim2.new(0, 203, 0, 50)
+Combat.Size = UDim2.new(1, 0, 0.150602415, 0)
 Combat.Font = Enum.Font.SourceSansBold
 Combat.Text = "Combat"
 Combat.TextColor3 = Color3.fromRGB(85, 255, 255)
@@ -49,7 +53,21 @@ UICorner.Parent = Combat
 
 UICorner_2.Parent = CombatFrame
 
-RenderFrame.Name = "Render Frame"
+Close.Name = "Close"
+Close.Parent = CombatFrame
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.886699677, 0, 0, 0)
+Close.Size = UDim2.new(0.108374387, 0, 0.0692771077, 0)
+Close.Font = Enum.Font.SourceSansBold
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+
+RenderFrame.Name = "RenderFrame"
 RenderFrame.Parent = ScreenGui
 RenderFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 RenderFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -62,7 +80,7 @@ TEXTRENDER.Parent = RenderFrame
 TEXTRENDER.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 TEXTRENDER.BorderColor3 = Color3.fromRGB(255, 255, 255)
 TEXTRENDER.BorderSizePixel = 0
-TEXTRENDER.Size = UDim2.new(0, 203, 0, 50)
+TEXTRENDER.Size = UDim2.new(1, 0, 0.150602415, 0)
 TEXTRENDER.Font = Enum.Font.SourceSansBold
 TEXTRENDER.Text = "Render"
 TEXTRENDER.TextColor3 = Color3.fromRGB(85, 255, 255)
@@ -81,7 +99,7 @@ LINES.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 LINES.BorderColor3 = Color3.fromRGB(0, 0, 0)
 LINES.BorderSizePixel = 0
 LINES.Position = UDim2.new(0, 0, 0.150602415, 0)
-LINES.Size = UDim2.new(0, 175, 0, 50)
+LINES.Size = UDim2.new(0.862068951, 0, 0.150602415, 0)
 LINES.Font = Enum.Font.SourceSansBold
 LINES.Text = "Lines"
 LINES.TextColor3 = Color3.fromRGB(255, 255, 127)
@@ -98,7 +116,7 @@ ESPBUTTON.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ESPBUTTON.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ESPBUTTON.BorderSizePixel = 0
 ESPBUTTON.Position = UDim2.new(0, 0, 0.30120483, 0)
-ESPBUTTON.Size = UDim2.new(0, 175, 0, 50)
+ESPBUTTON.Size = UDim2.new(0.862068951, 0, 0.150602415, 0)
 ESPBUTTON.Font = Enum.Font.SourceSansBold
 ESPBUTTON.Text = "ESP"
 ESPBUTTON.TextColor3 = Color3.fromRGB(255, 255, 127)
@@ -108,7 +126,21 @@ ESPBUTTON.TextWrapped = true
 
 UICorner_6.Parent = ESPBUTTON
 
-WorldFrame.Name = "World Frame"
+Close_2.Name = "Close"
+Close_2.Parent = RenderFrame
+Close_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Close_2.BorderSizePixel = 0
+Close_2.Position = UDim2.new(0.891439795, 0, 0, 0)
+Close_2.Size = UDim2.new(0.108374387, 0, 0.0692771077, 0)
+Close_2.Font = Enum.Font.SourceSansBold
+Close_2.Text = "X"
+Close_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close_2.TextScaled = true
+Close_2.TextSize = 14.000
+Close_2.TextWrapped = true
+
+WorldFrame.Name = "WorldFrame"
 WorldFrame.Parent = ScreenGui
 WorldFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 WorldFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -121,7 +153,7 @@ TextWorld.Parent = WorldFrame
 TextWorld.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 TextWorld.BorderColor3 = Color3.fromRGB(255, 255, 255)
 TextWorld.BorderSizePixel = 0
-TextWorld.Size = UDim2.new(0, 203, 0, 50)
+TextWorld.Size = UDim2.new(1, 0, 0.150602415, 0)
 TextWorld.Font = Enum.Font.SourceSansBold
 TextWorld.Text = "World"
 TextWorld.TextColor3 = Color3.fromRGB(85, 255, 255)
@@ -140,7 +172,7 @@ infjump.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 infjump.BorderColor3 = Color3.fromRGB(0, 0, 0)
 infjump.BorderSizePixel = 0
 infjump.Position = UDim2.new(0, 0, 0.150602415, 0)
-infjump.Size = UDim2.new(0, 175, 0, 50)
+infjump.Size = UDim2.new(0.862068951, 0, 0.150602415, 0)
 infjump.Font = Enum.Font.SourceSansBold
 infjump.Text = "INF JUMP"
 infjump.TextColor3 = Color3.fromRGB(255, 255, 127)
@@ -150,9 +182,76 @@ infjump.TextWrapped = true
 
 UICorner_9.Parent = infjump
 
+Close_3.Name = "Close"
+Close_3.Parent = WorldFrame
+Close_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Close_3.BorderSizePixel = 0
+Close_3.Position = UDim2.new(0.891439795, 0, 0, 0)
+Close_3.Size = UDim2.new(0.108374387, 0, 0.0692771077, 0)
+Close_3.Font = Enum.Font.SourceSansBold
+Close_3.Text = "X"
+Close_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close_3.TextScaled = true
+Close_3.TextSize = 14.000
+Close_3.TextWrapped = true
+
+OPEN.Name = "OPEN"
+OPEN.Parent = ScreenGui
+OPEN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OPEN.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OPEN.BorderSizePixel = 0
+OPEN.Position = UDim2.new(0, 0, 0.0403422974, 0)
+OPEN.Size = UDim2.new(0.0631808266, 0, 0.0611246936, 0)
+OPEN.Font = Enum.Font.SourceSansBold
+OPEN.Text = "OPEN"
+OPEN.TextColor3 = Color3.fromRGB(85, 255, 255)
+OPEN.TextScaled = true
+OPEN.TextSize = 14.000
+OPEN.TextStrokeColor3 = Color3.fromRGB(85, 255, 255)
+OPEN.TextWrapped = true
+
 -- Scripts:
 
-local function PHIAC_fake_script() -- LINES.LINES SCRIPT 
+local function TQHKXJ_fake_script() -- CombatFrame.DRAG SCRIPT 
+	local script = Instance.new('LocalScript', CombatFrame)
+
+	local parent: Frame = script.Parent
+	parent.Draggable = true
+	parent.Selectable = true
+	parent.Active = true
+end
+coroutine.wrap(TQHKXJ_fake_script)()
+local function FXIPE_fake_script() -- CombatFrame.RIGHTSHIFT TO OPEN 
+	local script = Instance.new('LocalScript', CombatFrame)
+
+	local Gui = script.Parent
+	
+	local function onKeyPress(input)
+		if input.KeyCode == Enum.KeyCode.RightShift then
+			if Gui.Visible == true then
+				Gui.Visible = false
+			else
+				Gui.Visible = true
+			end
+		end
+	end
+	
+	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
+	
+end
+coroutine.wrap(FXIPE_fake_script)()
+local function OZAE_fake_script() -- Close.LocalScript 
+	local script = Instance.new('LocalScript', Close)
+
+	local CombatFrame = script.Parent.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		CombatFrame.Visible = false
+	end)
+end
+coroutine.wrap(OZAE_fake_script)()
+local function SJDORY_fake_script() -- LINES.LINES SCRIPT 
 	local script = Instance.new('LocalScript', LINES)
 
 	local button = script.Parent
@@ -231,70 +330,136 @@ local function PHIAC_fake_script() -- LINES.LINES SCRIPT
 		end
 	end)
 end
-coroutine.wrap(PHIAC_fake_script)()
-local function LTBP_fake_script() -- ESPBUTTON.ESP SCRIPT 
+coroutine.wrap(SJDORY_fake_script)()
+local function KFMUFOR_fake_script() -- ESPBUTTON.ESP SCRIPT 
 	local script = Instance.new('LocalScript', ESPBUTTON)
 
-	local button = script.Parent
+	-- Variables
+	local ESPState = false
+	local ESPs = {}
+	
+	-- UserInputService
+	local UserInputService = game:GetService("UserInputService")
+	
+	-- Players
 	local Players = game:GetService("Players")
-	local CollectionService = game:GetService("CollectionService")
-	local ESP_TAG = "ESP"
 	
-	local espEnabled = false
+	-- RenderStepped
+	local RunService = game:GetService("RunService")
 	
-	local function createESP(player)
-		local character = player.Character or player.CharacterAdded:Wait()
-		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	-- Function to render ESP
+	local function renderESP()
+		-- Loop through all players
+		for _, player in pairs(Players:GetPlayers()) do
+			-- Ignore local player
+			if player ~= game.Players.LocalPlayer then
+				-- Create a new ESP if it doesn't exist
+				if not ESPs[player.UserId] then
+					ESPs[player.UserId] = Instance.new("BillboardGui")
+					ESPs[player.UserId].Parent = game.Players.LocalPlayer.PlayerGui
+					ESPs[player.UserId].Adornee = player.Character
+					ESPs[player.UserId].LightInfluence = 0.5
+					ESPs[player.UserId].LightEmission = 1
+					ESPs[player.UserId].Size = UDim2.new(0, 100, 0, 20)
+					ESPs[player.UserId].BackgroundTransparency = 1
 	
-		local esp = Instance.new("BillboardGui")
-		esp.Name = "PlayerESP"
-		esp.Size = UDim2.new(0, 200, 0, 50)
-		esp.StudsOffset = Vector3.new(0, 3, 0)
-		esp.Adornee = humanoidRootPart
-		esp.AlwaysOnTop = true
+					-- Create a new TextLabel to display the username
+					local usernameGui = Instance.new("TextLabel")
+					usernameGui.Parent = ESPs[player.UserId]
+					usernameGui.Size = UDim2.new(0, 100, 0, 20)
+					usernameGui.BackgroundTransparency = 1
+					usernameGui.Text = player.Name
+					usernameGui.TextSize = 14
+					usernameGui.TextColor3 = Color3.new(1, 1, 1)
+					usernameGui.Font = Enum.Font.SourceSans
+					usernameGui.FontSize = Enum.FontSize.Size14
 	
-		local textLabel = Instance.new("TextLabel")
-		textLabel.Size = UDim2.new(1, 0, 1, 0)
-		textLabel.Text = player.Name
-		textLabel.BackgroundTransparency = 1
-		textLabel.TextColor3 = Color3.new(1, 1, 1)
-		textLabel.Font = Enum.Font.SourceSansBold
-		textLabel.TextScaled = true
-		textLabel.Parent = esp
+					-- Create a new Box to render around the player
+					local box = Instance.new("Part")
+					box.Parent = game.Workspace
+					box.Size = Vector3.new(1, 1, 1)
+					box.Position = player.Character.HumanoidRootPart.Position
+					box.Anchored = true
+					box.Transparency = 0
+					box.CanCollide = false
+				end
 	
-		CollectionService:AddTag(esp, ESPTAG)
-		esp.Parent = humanoidRootPart
-	end
-	
-	local function toggleESP()
-		espEnabled = not espEnabled
-		button.Text = "ESP: " .. (espEnabled and "On" or "Off")
-	
-		for , esp in CollectionService:GetTagged(ESPTAG) do
-			esp.Enabled = espEnabled
+				-- Update the ESP position and size
+				ESPs[player.UserId].Adornee = player.Character
+				box.Position = player.Character.HumanoidRootPart.Position
+			end
 		end
 	end
 	
-	Players.PlayerAdded:Connect(function(player)
-		player.CharacterAdded:Connect(function()
-			createESP(player)
-		end)
+	-- Function to toggle ESP
+	local function toggleESP()
+		ESPState = not ESPState
+		if ESPState then
+			UserInputService.InputBegan:Connect(function(input)
+				if input.KeyCode == Enum.KeyCode.ButtonX then
+					toggleESP()
+				end
+			end)
+		else
+			UserInputService.InputBegan:Disconnect()
+		end
+	end
 	
-		if player.Character then
-			createESP(player)
+	-- Render ESP on RenderStepped
+	RunService.RenderStepped:Connect(function()
+		if ESPState then
+			renderESP()
 		end
 	end)
 	
-	for , player in Players:GetPlayers() do
-		if player.Character then
-			createESP(player)
+	-- Toggle ESP on button click
+	UserInputService.InputBegan:Connect(function(input)
+		if input.KeyCode == Enum.KeyCode.ButtonX then
+			toggleESP()
+		end
+	end)
+	
+end
+coroutine.wrap(KFMUFOR_fake_script)()
+local function BFOOWI_fake_script() -- RenderFrame.DRAG SCRIPT 
+	local script = Instance.new('LocalScript', RenderFrame)
+
+	local parent: Frame = script.Parent
+	parent.Draggable = true
+	parent.Selectable = true
+	parent.Active = true
+end
+coroutine.wrap(BFOOWI_fake_script)()
+local function EOCAMK_fake_script() -- RenderFrame.RIGHTSHIFT TO OPEN 
+	local script = Instance.new('LocalScript', RenderFrame)
+
+	local Gui = script.Parent
+	
+	local function onKeyPress(input)
+		if input.KeyCode == Enum.KeyCode.RightShift then
+			if Gui.Visible == true then
+				Gui.Visible = false
+			else
+				Gui.Visible = true
+			end
 		end
 	end
 	
-	button.MouseButton1Click:Connect(toggleESP)
+	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
+	
 end
-coroutine.wrap(LTBP_fake_script)()
-local function RWBT_fake_script() -- infjump.INF JUMP SCRIPT 
+coroutine.wrap(EOCAMK_fake_script)()
+local function TPUHXQE_fake_script() -- Close_2.CLOSE SCRIPT 
+	local script = Instance.new('LocalScript', Close_2)
+
+	local RenderFrame = script.Parent.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		RenderFrame.Visible = false
+	end)
+end
+coroutine.wrap(TPUHXQE_fake_script)()
+local function OTWBODS_fake_script() -- infjump.INF JUMP SCRIPT 
 	local script = Instance.new('LocalScript', infjump)
 
 	local button = script.Parent
@@ -312,5 +477,63 @@ local function RWBT_fake_script() -- infjump.INF JUMP SCRIPT
 		if infJumpEnabled and player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
 			player.Character:FindFirstChildOfClass("Humanoid"):ChangeState(Enum.HumanoidStateType.Jumping)
 		end
+	end)
+end
+coroutine.wrap(OTWBODS_fake_script)()
+local function JGYF_fake_script() -- WorldFrame.DRAG SCRIPT 
+	local script = Instance.new('LocalScript', WorldFrame)
+
+	local parent: Frame = script.Parent
+	parent.Draggable = true
+	parent.Selectable = true
+	parent.Active = true
+end
+coroutine.wrap(JGYF_fake_script)()
+local function CYRUT_fake_script() -- WorldFrame.RIGHTSHIFT TO OPEN 
+	local script = Instance.new('LocalScript', WorldFrame)
+
+	local Gui = script.Parent
+	
+	local function onKeyPress(input)
+		if input.KeyCode == Enum.KeyCode.RightShift then
+			if Gui.Visible == true then
+				Gui.Visible = false
+			else
+				Gui.Visible = true
+			end
+		end
+	end
+	
+	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
+	
+end
+coroutine.wrap(CYRUT_fake_script)()
+local function ZUNVT_fake_script() -- Close_3.CLOSE SCRIPT 
+	local script = Instance.new('LocalScript', Close_3)
+
+	local WorldFrame = script.Parent.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		WorldFrame.Visible = false
+	end)
+end
+coroutine.wrap(ZUNVT_fake_script)()
+local function JLCAN_fake_script() -- OPEN.LocalScript 
+	local script = Instance.new('LocalScript', OPEN)
+
+	local CombatFrame = script.Parent.Parent.CombatFrame
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		CombatFrame.Visible = true
+	end)
+	local RenderFrame = script.Parent.Parent.RenderFrame
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		RenderFrame.Visible = true
+	end)
+	local WorldFrame = script.Parent.Parent.WorldFrame
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		WorldFrame.Visible = true
 	end)
 end
