@@ -22,9 +22,9 @@ local UICorner_9 = Instance.new("UICorner")
 local infjump = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
 local Close_3 = Instance.new("TextButton")
-local OPEN = Instance.new("TextButton")
-local OPEN_2 = Instance.new("TextButton")
-local OPEN_3 = Instance.new("TextButton")
+local OPENCOMBAT = Instance.new("TextButton")
+local OPENRENDER = Instance.new("TextButton")
+local OPENWORLD = Instance.new("TextButton")
 
 --Properties:
 
@@ -217,54 +217,54 @@ Close_3.TextScaled = true
 Close_3.TextSize = 14.000
 Close_3.TextWrapped = true
 
-OPEN.Name = "OPEN"
-OPEN.Parent = ScreenGui
-OPEN.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-OPEN.BorderColor3 = Color3.fromRGB(0, 0, 0)
-OPEN.BorderSizePixel = 0
-OPEN.Position = UDim2.new(0, 0, 0.0403422974, 0)
-OPEN.Size = UDim2.new(0.0631808266, 0, 0.0611246936, 0)
-OPEN.Font = Enum.Font.SourceSansBold
-OPEN.Text = "OPEN Combat"
-OPEN.TextColor3 = Color3.fromRGB(85, 255, 255)
-OPEN.TextScaled = true
-OPEN.TextSize = 14.000
-OPEN.TextStrokeColor3 = Color3.fromRGB(85, 255, 255)
-OPEN.TextWrapped = true
+OPENCOMBAT.Name = "OPEN COMBAT"
+OPENCOMBAT.Parent = ScreenGui
+OPENCOMBAT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OPENCOMBAT.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OPENCOMBAT.BorderSizePixel = 0
+OPENCOMBAT.Position = UDim2.new(0, 0, 0.0403422974, 0)
+OPENCOMBAT.Size = UDim2.new(0.0631808266, 0, 0.0611246936, 0)
+OPENCOMBAT.Font = Enum.Font.SourceSansBold
+OPENCOMBAT.Text = "OPEN Combat"
+OPENCOMBAT.TextColor3 = Color3.fromRGB(85, 255, 255)
+OPENCOMBAT.TextScaled = true
+OPENCOMBAT.TextSize = 14.000
+OPENCOMBAT.TextStrokeColor3 = Color3.fromRGB(85, 255, 255)
+OPENCOMBAT.TextWrapped = true
 
-OPEN_2.Name = "OPEN"
-OPEN_2.Parent = ScreenGui
-OPEN_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-OPEN_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-OPEN_2.BorderSizePixel = 0
-OPEN_2.Position = UDim2.new(0, 0, 0.101466991, 0)
-OPEN_2.Size = UDim2.new(0.0631808266, 0, 0.0611246936, 0)
-OPEN_2.Font = Enum.Font.SourceSansBold
-OPEN_2.Text = "OPEN Render"
-OPEN_2.TextColor3 = Color3.fromRGB(85, 255, 255)
-OPEN_2.TextScaled = true
-OPEN_2.TextSize = 14.000
-OPEN_2.TextStrokeColor3 = Color3.fromRGB(85, 255, 255)
-OPEN_2.TextWrapped = true
+OPENRENDER.Name = "OPEN RENDER"
+OPENRENDER.Parent = ScreenGui
+OPENRENDER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OPENRENDER.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OPENRENDER.BorderSizePixel = 0
+OPENRENDER.Position = UDim2.new(0, 0, 0.101466991, 0)
+OPENRENDER.Size = UDim2.new(0.0631808266, 0, 0.0611246936, 0)
+OPENRENDER.Font = Enum.Font.SourceSansBold
+OPENRENDER.Text = "OPEN Render"
+OPENRENDER.TextColor3 = Color3.fromRGB(85, 255, 255)
+OPENRENDER.TextScaled = true
+OPENRENDER.TextSize = 14.000
+OPENRENDER.TextStrokeColor3 = Color3.fromRGB(85, 255, 255)
+OPENRENDER.TextWrapped = true
 
-OPEN_3.Name = "OPEN"
-OPEN_3.Parent = ScreenGui
-OPEN_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-OPEN_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-OPEN_3.BorderSizePixel = 0
-OPEN_3.Position = UDim2.new(0, 0, 0.162591681, 0)
-OPEN_3.Size = UDim2.new(0.0631808266, 0, 0.0611246936, 0)
-OPEN_3.Font = Enum.Font.SourceSansBold
-OPEN_3.Text = "OPEN WORLD"
-OPEN_3.TextColor3 = Color3.fromRGB(85, 255, 255)
-OPEN_3.TextScaled = true
-OPEN_3.TextSize = 14.000
-OPEN_3.TextStrokeColor3 = Color3.fromRGB(85, 255, 255)
-OPEN_3.TextWrapped = true
+OPENWORLD.Name = "OPEN WORLD"
+OPENWORLD.Parent = ScreenGui
+OPENWORLD.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OPENWORLD.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OPENWORLD.BorderSizePixel = 0
+OPENWORLD.Position = UDim2.new(0, 0, 0.162591681, 0)
+OPENWORLD.Size = UDim2.new(0.0631808266, 0, 0.0611246936, 0)
+OPENWORLD.Font = Enum.Font.SourceSansBold
+OPENWORLD.Text = "OPEN WORLD"
+OPENWORLD.TextColor3 = Color3.fromRGB(85, 255, 255)
+OPENWORLD.TextScaled = true
+OPENWORLD.TextSize = 14.000
+OPENWORLD.TextStrokeColor3 = Color3.fromRGB(85, 255, 255)
+OPENWORLD.TextWrapped = true
 
 -- Scripts:
 
-local function FTKY_fake_script() -- CombatFrame.DRAG SCRIPT 
+local function KMJLWIJ_fake_script() -- CombatFrame.DRAG SCRIPT 
 	local script = Instance.new('LocalScript', CombatFrame)
 
 	local parent: Frame = script.Parent
@@ -272,8 +272,8 @@ local function FTKY_fake_script() -- CombatFrame.DRAG SCRIPT
 	parent.Selectable = true
 	parent.Active = true
 end
-coroutine.wrap(FTKY_fake_script)()
-local function SLMDFQ_fake_script() -- CombatFrame.RIGHTSHIFT TO OPEN 
+coroutine.wrap(KMJLWIJ_fake_script)()
+local function GHUOHR_fake_script() -- CombatFrame.RIGHTSHIFT TO OPEN 
 	local script = Instance.new('LocalScript', CombatFrame)
 
 	local Gui = script.Parent
@@ -291,8 +291,8 @@ local function SLMDFQ_fake_script() -- CombatFrame.RIGHTSHIFT TO OPEN
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(SLMDFQ_fake_script)()
-local function YPLWDKN_fake_script() -- Close.LocalScript 
+coroutine.wrap(GHUOHR_fake_script)()
+local function ZUEQ_fake_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	local CombatFrame = script.Parent.Parent
@@ -301,8 +301,8 @@ local function YPLWDKN_fake_script() -- Close.LocalScript
 		CombatFrame.Visible = false
 	end)
 end
-coroutine.wrap(YPLWDKN_fake_script)()
-local function GLBQVH_fake_script() -- LINES.LINES SCRIPT 
+coroutine.wrap(ZUEQ_fake_script)()
+local function JFAQBRH_fake_script() -- LINES.LINES SCRIPT 
 	local script = Instance.new('LocalScript', LINES)
 
 	local button = script.Parent
@@ -381,8 +381,8 @@ local function GLBQVH_fake_script() -- LINES.LINES SCRIPT
 		end
 	end)
 end
-coroutine.wrap(GLBQVH_fake_script)()
-local function AJJXY_fake_script() -- ESPBUTTON.ESP SCRIPT 
+coroutine.wrap(JFAQBRH_fake_script)()
+local function HETVF_fake_script() -- ESPBUTTON.ESP SCRIPT 
 	local script = Instance.new('LocalScript', ESPBUTTON)
 
 	local players = game:GetService("Players")
@@ -441,8 +441,8 @@ local function AJJXY_fake_script() -- ESPBUTTON.ESP SCRIPT
 		end)
 	end)
 end
-coroutine.wrap(AJJXY_fake_script)()
-local function IPUVB_fake_script() -- RenderFrame.DRAG SCRIPT 
+coroutine.wrap(HETVF_fake_script)()
+local function OAQNDEH_fake_script() -- RenderFrame.DRAG SCRIPT 
 	local script = Instance.new('LocalScript', RenderFrame)
 
 	local parent: Frame = script.Parent
@@ -450,8 +450,8 @@ local function IPUVB_fake_script() -- RenderFrame.DRAG SCRIPT
 	parent.Selectable = true
 	parent.Active = true
 end
-coroutine.wrap(IPUVB_fake_script)()
-local function AIIH_fake_script() -- RenderFrame.RIGHTSHIFT TO OPEN 
+coroutine.wrap(OAQNDEH_fake_script)()
+local function VZDHPTK_fake_script() -- RenderFrame.RIGHTSHIFT TO OPEN 
 	local script = Instance.new('LocalScript', RenderFrame)
 
 	local Gui = script.Parent
@@ -469,8 +469,8 @@ local function AIIH_fake_script() -- RenderFrame.RIGHTSHIFT TO OPEN
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(AIIH_fake_script)()
-local function SYRYIM_fake_script() -- Close_2.CLOSE SCRIPT 
+coroutine.wrap(VZDHPTK_fake_script)()
+local function ZRPLQ_fake_script() -- Close_2.CLOSE SCRIPT 
 	local script = Instance.new('LocalScript', Close_2)
 
 	local RenderFrame = script.Parent.Parent
@@ -479,8 +479,8 @@ local function SYRYIM_fake_script() -- Close_2.CLOSE SCRIPT
 		RenderFrame.Visible = false
 	end)
 end
-coroutine.wrap(SYRYIM_fake_script)()
-local function MPTCPG_fake_script() -- infjump.INF JUMP SCRIPT 
+coroutine.wrap(ZRPLQ_fake_script)()
+local function FGUCI_fake_script() -- infjump.INF JUMP SCRIPT 
 	local script = Instance.new('LocalScript', infjump)
 
 	local button = script.Parent
@@ -500,8 +500,8 @@ local function MPTCPG_fake_script() -- infjump.INF JUMP SCRIPT
 		end
 	end)
 end
-coroutine.wrap(MPTCPG_fake_script)()
-local function GBMMYDO_fake_script() -- WorldFrame.DRAG SCRIPT 
+coroutine.wrap(FGUCI_fake_script)()
+local function SEWRIUW_fake_script() -- WorldFrame.DRAG SCRIPT 
 	local script = Instance.new('LocalScript', WorldFrame)
 
 	local parent: Frame = script.Parent
@@ -509,8 +509,8 @@ local function GBMMYDO_fake_script() -- WorldFrame.DRAG SCRIPT
 	parent.Selectable = true
 	parent.Active = true
 end
-coroutine.wrap(GBMMYDO_fake_script)()
-local function LSSHOUC_fake_script() -- WorldFrame.RIGHTSHIFT TO OPEN 
+coroutine.wrap(SEWRIUW_fake_script)()
+local function MWCE_fake_script() -- WorldFrame.RIGHTSHIFT TO OPEN 
 	local script = Instance.new('LocalScript', WorldFrame)
 
 	local Gui = script.Parent
@@ -528,8 +528,8 @@ local function LSSHOUC_fake_script() -- WorldFrame.RIGHTSHIFT TO OPEN
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(LSSHOUC_fake_script)()
-local function JTZZW_fake_script() -- Close_3.CLOSE SCRIPT 
+coroutine.wrap(MWCE_fake_script)()
+local function XTUTSA_fake_script() -- Close_3.CLOSE SCRIPT 
 	local script = Instance.new('LocalScript', Close_3)
 
 	local WorldFrame = script.Parent.Parent
@@ -538,9 +538,9 @@ local function JTZZW_fake_script() -- Close_3.CLOSE SCRIPT
 		WorldFrame.Visible = false
 	end)
 end
-coroutine.wrap(JTZZW_fake_script)()
-local function HJCRWGL_fake_script() -- OPEN.LocalScript 
-	local script = Instance.new('LocalScript', OPEN)
+coroutine.wrap(XTUTSA_fake_script)()
+local function LJRUR_fake_script() -- OPENCOMBAT.LocalScript 
+	local script = Instance.new('LocalScript', OPENCOMBAT)
 
 	local CombatFrame = script.Parent.Parent.CombatFrame
 	
@@ -548,9 +548,9 @@ local function HJCRWGL_fake_script() -- OPEN.LocalScript
 		CombatFrame.Visible = true
 	end)
 end
-coroutine.wrap(HJCRWGL_fake_script)()
-local function GZPH_fake_script() -- OPEN_2.LocalScript 
-	local script = Instance.new('LocalScript', OPEN_2)
+coroutine.wrap(LJRUR_fake_script)()
+local function BQJOTS_fake_script() -- OPENRENDER.LocalScript 
+	local script = Instance.new('LocalScript', OPENRENDER)
 
 	local RenderFrame = script.Parent.Parent.RenderFrame
 	
@@ -558,9 +558,9 @@ local function GZPH_fake_script() -- OPEN_2.LocalScript
 		RenderFrame.Visible = true
 	end)
 end
-coroutine.wrap(GZPH_fake_script)()
-local function CMNKMYW_fake_script() -- OPEN_3.LocalScript 
-	local script = Instance.new('LocalScript', OPEN_3)
+coroutine.wrap(BQJOTS_fake_script)()
+local function NHNHBMC_fake_script() -- OPENWORLD.LocalScript 
+	local script = Instance.new('LocalScript', OPENWORLD)
 
 	local WorldFrame = script.Parent.Parent.WorldFrame
 	
