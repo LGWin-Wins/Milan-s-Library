@@ -6,21 +6,25 @@ local UICorner_2 = Instance.new("UICorner")
 local Close = Instance.new("TextButton")
 local KillAura = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
+local Speed = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Fly = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
 local RenderFrame = Instance.new("Frame")
 local TEXTRENDER = Instance.new("TextLabel")
-local UICorner_4 = Instance.new("UICorner")
-local UICorner_5 = Instance.new("UICorner")
-local LINES = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
-local ESPBUTTON = Instance.new("TextButton")
 local UICorner_7 = Instance.new("UICorner")
+local LINES = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local ESPBUTTON = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
 local Close_2 = Instance.new("TextButton")
 local WorldFrame = Instance.new("Frame")
 local TextWorld = Instance.new("TextLabel")
-local UICorner_8 = Instance.new("UICorner")
-local UICorner_9 = Instance.new("UICorner")
-local infjump = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
+local UICorner_11 = Instance.new("UICorner")
+local infjump = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
 local Close_3 = Instance.new("TextButton")
 local OPENCOMBAT = Instance.new("TextButton")
 local OPENRENDER = Instance.new("TextButton")
@@ -78,7 +82,7 @@ KillAura.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 KillAura.BorderColor3 = Color3.fromRGB(0, 0, 0)
 KillAura.BorderSizePixel = 0
 KillAura.Position = UDim2.new(1.50332895e-07, 0, 0.150602415, 0)
-KillAura.Size = UDim2.new(0, 174, 0, 50)
+KillAura.Size = UDim2.new(0.857142866, 0, 0.150602415, 0)
 KillAura.Font = Enum.Font.SourceSansBold
 KillAura.Text = "Kill Aura"
 KillAura.TextColor3 = Color3.fromRGB(255, 255, 127)
@@ -88,13 +92,45 @@ KillAura.TextWrapped = true
 
 UICorner_3.Parent = KillAura
 
+Speed.Name = "Speed"
+Speed.Parent = CombatFrame
+Speed.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Speed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Speed.BorderSizePixel = 0
+Speed.Position = UDim2.new(-1.68711011e-07, 0, 0.30120483, 0)
+Speed.Size = UDim2.new(0.856889963, 0, 0.150602415, 0)
+Speed.Font = Enum.Font.SourceSansBold
+Speed.Text = "SPEED"
+Speed.TextColor3 = Color3.fromRGB(255, 255, 127)
+Speed.TextScaled = true
+Speed.TextSize = 14.000
+Speed.TextWrapped = true
+
+UICorner_4.Parent = Speed
+
+Fly.Name = "Fly"
+Fly.Parent = CombatFrame
+Fly.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Fly.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Fly.BorderSizePixel = 0
+Fly.Position = UDim2.new(2.53066503e-07, 0, 0.451807231, 0)
+Fly.Size = UDim2.new(0.857142866, 0, 0.150602415, 0)
+Fly.Font = Enum.Font.SourceSansBold
+Fly.Text = "FLY"
+Fly.TextColor3 = Color3.fromRGB(255, 255, 127)
+Fly.TextScaled = true
+Fly.TextSize = 14.000
+Fly.TextWrapped = true
+
+UICorner_5.Parent = Fly
+
 RenderFrame.Name = "RenderFrame"
 RenderFrame.Parent = ScreenGui
 RenderFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 RenderFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 RenderFrame.BorderSizePixel = 0
 RenderFrame.Position = UDim2.new(0.425948441, 0, 0.219999969, 0)
-RenderFrame.Size = UDim2.new(0, 203, 0, 332)
+RenderFrame.Size = UDim2.new(0.147421926, 0, 0.405867964, 0)
 
 TEXTRENDER.Name = "TEXT RENDER"
 TEXTRENDER.Parent = RenderFrame
@@ -110,9 +146,9 @@ TEXTRENDER.TextSize = 14.000
 TEXTRENDER.TextStrokeColor3 = Color3.fromRGB(85, 255, 255)
 TEXTRENDER.TextWrapped = true
 
-UICorner_4.Parent = TEXTRENDER
+UICorner_6.Parent = TEXTRENDER
 
-UICorner_5.Parent = RenderFrame
+UICorner_7.Parent = RenderFrame
 
 LINES.Name = "LINES"
 LINES.Parent = RenderFrame
@@ -129,7 +165,7 @@ LINES.TextSize = 14.000
 LINES.TextStrokeColor3 = Color3.fromRGB(255, 255, 127)
 LINES.TextWrapped = true
 
-UICorner_6.Parent = LINES
+UICorner_8.Parent = LINES
 
 ESPBUTTON.Name = "ESP BUTTON"
 ESPBUTTON.Parent = RenderFrame
@@ -145,7 +181,7 @@ ESPBUTTON.TextScaled = true
 ESPBUTTON.TextSize = 14.000
 ESPBUTTON.TextWrapped = true
 
-UICorner_7.Parent = ESPBUTTON
+UICorner_9.Parent = ESPBUTTON
 
 Close_2.Name = "Close"
 Close_2.Parent = RenderFrame
@@ -167,7 +203,7 @@ WorldFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 WorldFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 WorldFrame.BorderSizePixel = 0
 WorldFrame.Position = UDim2.new(0.72428304, 0, 0.219999954, 0)
-WorldFrame.Size = UDim2.new(0, 203, 0, 332)
+WorldFrame.Size = UDim2.new(0.147421926, 0, 0.405867964, 0)
 
 TextWorld.Name = "Text World"
 TextWorld.Parent = WorldFrame
@@ -183,9 +219,9 @@ TextWorld.TextSize = 14.000
 TextWorld.TextStrokeColor3 = Color3.fromRGB(85, 255, 255)
 TextWorld.TextWrapped = true
 
-UICorner_8.Parent = TextWorld
+UICorner_10.Parent = TextWorld
 
-UICorner_9.Parent = WorldFrame
+UICorner_11.Parent = WorldFrame
 
 infjump.Name = "inf jump"
 infjump.Parent = WorldFrame
@@ -201,7 +237,7 @@ infjump.TextScaled = true
 infjump.TextSize = 14.000
 infjump.TextWrapped = true
 
-UICorner_10.Parent = infjump
+UICorner_12.Parent = infjump
 
 Close_3.Name = "Close"
 Close_3.Parent = WorldFrame
@@ -264,7 +300,7 @@ OPENWORLD.TextWrapped = true
 
 -- Scripts:
 
-local function KMJLWIJ_fake_script() -- CombatFrame.DRAG SCRIPT 
+local function QKWFWB_fake_script() -- CombatFrame.DRAG SCRIPT 
 	local script = Instance.new('LocalScript', CombatFrame)
 
 	local parent: Frame = script.Parent
@@ -272,8 +308,8 @@ local function KMJLWIJ_fake_script() -- CombatFrame.DRAG SCRIPT
 	parent.Selectable = true
 	parent.Active = true
 end
-coroutine.wrap(KMJLWIJ_fake_script)()
-local function GHUOHR_fake_script() -- CombatFrame.RIGHTSHIFT TO OPEN 
+coroutine.wrap(QKWFWB_fake_script)()
+local function EJBWIQ_fake_script() -- CombatFrame.RIGHTSHIFT TO OPEN 
 	local script = Instance.new('LocalScript', CombatFrame)
 
 	local Gui = script.Parent
@@ -291,8 +327,8 @@ local function GHUOHR_fake_script() -- CombatFrame.RIGHTSHIFT TO OPEN
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(GHUOHR_fake_script)()
-local function ZUEQ_fake_script() -- Close.LocalScript 
+coroutine.wrap(EJBWIQ_fake_script)()
+local function KBRHI_fake_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	local CombatFrame = script.Parent.Parent
@@ -301,8 +337,139 @@ local function ZUEQ_fake_script() -- Close.LocalScript
 		CombatFrame.Visible = false
 	end)
 end
-coroutine.wrap(ZUEQ_fake_script)()
-local function JFAQBRH_fake_script() -- LINES.LINES SCRIPT 
+coroutine.wrap(KBRHI_fake_script)()
+local function VDVQYWE_fake_script() -- Speed.Speed Script 
+	local script = Instance.new('LocalScript', Speed)
+
+	-- LocalScript under the TextButton (UI Button)
+	
+	local player = game.Players.LocalPlayer
+	local button = script.Parent
+	
+	-- Function to set WalkSpeed to 23
+	local function setWalkSpeed()
+		local character = player.Character
+		if character then
+			local humanoid = character:WaitForChild("Humanoid")
+			humanoid.WalkSpeed = 23
+		end
+	end
+	
+	-- Set WalkSpeed when the button is clicked
+	button.MouseButton1Click:Connect(function()
+		setWalkSpeed()
+	end)
+	
+	-- Set WalkSpeed to 23 when the player respawns
+	player.CharacterAdded:Connect(function(character)
+		-- Wait for the humanoid to load and set the WalkSpeed
+		local humanoid = character:WaitForChild("Humanoid")
+		humanoid.WalkSpeed = 23
+	end)
+	
+end
+coroutine.wrap(VDVQYWE_fake_script)()
+local function YUTD_fake_script() -- Fly.Fly Script 
+	local script = Instance.new('LocalScript', Fly)
+
+	-- LocalScript inside the TextButton (UI Button inside CombatFrame)
+	
+	local player = game.Players.LocalPlayer
+	local button = script.Parent  -- Reference to the button
+	local flying = false
+	local speed = 23  -- Fly speed
+	local bodyVelocity = nil
+	
+	local userInputService = game:GetService("UserInputService")
+	
+	-- Function to start flying
+	local function startFlying()
+		local character = player.Character
+		if character and not flying then
+			flying = true
+	
+			-- Create BodyVelocity to control horizontal and vertical movement (forward, backward, left, right, up, down)
+			bodyVelocity = Instance.new("BodyVelocity")
+			bodyVelocity.MaxForce = Vector3.new(500000, 500000, 500000)  -- Apply force in all directions
+			bodyVelocity.Velocity = Vector3.new(0, 0, 0)  -- No initial velocity
+			bodyVelocity.Parent = character:WaitForChild("HumanoidRootPart")
+	
+			-- Set PlatformStand to true to prevent rotation while flying
+			local humanoid = character:WaitForChild("Humanoid")
+			humanoid.PlatformStand = true
+		end
+	end
+	
+	-- Function to stop flying
+	local function stopFlying()
+		local character = player.Character
+		if character and flying then
+			flying = false
+	
+			-- Remove the BodyVelocity to stop flying
+			if bodyVelocity then
+				bodyVelocity:Destroy()
+				bodyVelocity = nil
+			end
+	
+			-- Reset PlatformStand to false to restore normal movement
+			local humanoid = character:WaitForChild("Humanoid")
+			humanoid.PlatformStand = false
+		end
+	end
+	
+	-- Flight controls (W = forward, S = backward, A = left, D = right, Space = up, Q = down)
+	game:GetService("RunService").Heartbeat:Connect(function()
+		if flying then
+			local character = player.Character
+			local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	
+			-- Keep the player's Y position fixed (no vertical movement initially)
+			local yPosition = humanoidRootPart.Position.Y
+	
+			-- Get the direction the player is facing (LookVector for forward/backward, RightVector for left/right, UpVector for vertical)
+			local forwardDirection = humanoidRootPart.CFrame.LookVector  -- Forward direction (Z-axis)
+			local rightDirection = humanoidRootPart.CFrame.RightVector  -- Right direction (X-axis)
+			local upDirection = humanoidRootPart.CFrame.UpVector  -- Up direction (Y-axis)
+	
+			-- Default velocity is zero
+			local velocity = Vector3.new(0, 0, 0)
+	
+			-- Check key inputs for movement (W, S, A, D, Space, Q)
+			if userInputService:IsKeyDown(Enum.KeyCode.W) then
+				velocity = forwardDirection * speed  -- Move forward
+			elseif userInputService:IsKeyDown(Enum.KeyCode.S) then
+				velocity = -forwardDirection * speed  -- Move backward
+			elseif userInputService:IsKeyDown(Enum.KeyCode.A) then
+				velocity = -rightDirection * speed  -- Move left
+			elseif userInputService:IsKeyDown(Enum.KeyCode.D) then
+				velocity = rightDirection * speed  -- Move right
+			elseif userInputService:IsKeyDown(Enum.KeyCode.Space) then
+				velocity = upDirection * speed  -- Move up (jump)
+			elseif userInputService:IsKeyDown(Enum.KeyCode.Q) then
+				velocity = -upDirection * speed  -- Move down (descend)
+			end
+	
+			-- Apply the horizontal and vertical velocity
+			bodyVelocity.Velocity = Vector3.new(velocity.X, velocity.Y, velocity.Z)  -- Apply velocity in X, Y, Z axes
+	
+			-- Fix the Y position (keep player floating at the same height for horizontal movement)
+			humanoidRootPart.CFrame = CFrame.new(humanoidRootPart.Position.X, yPosition, humanoidRootPart.Position.Z)
+		end
+	end)
+	
+	-- Toggling fly with the button click inside CombatFrame
+	button.MouseButton1Click:Connect(function()
+		if flying then
+			stopFlying()  -- Turn off flying
+		else
+			startFlying()  -- Turn on flying
+		end
+	end)
+	
+end
+coroutine.wrap(YUTD_fake_script)()
+local function GXRPTE_fake_script() -- LINES.LINES SCRIPT 
 	local script = Instance.new('LocalScript', LINES)
 
 	local button = script.Parent
@@ -381,8 +548,8 @@ local function JFAQBRH_fake_script() -- LINES.LINES SCRIPT
 		end
 	end)
 end
-coroutine.wrap(JFAQBRH_fake_script)()
-local function HETVF_fake_script() -- ESPBUTTON.ESP SCRIPT 
+coroutine.wrap(GXRPTE_fake_script)()
+local function FVRBY_fake_script() -- ESPBUTTON.ESP SCRIPT 
 	local script = Instance.new('LocalScript', ESPBUTTON)
 
 	local players = game:GetService("Players")
@@ -441,8 +608,8 @@ local function HETVF_fake_script() -- ESPBUTTON.ESP SCRIPT
 		end)
 	end)
 end
-coroutine.wrap(HETVF_fake_script)()
-local function OAQNDEH_fake_script() -- RenderFrame.DRAG SCRIPT 
+coroutine.wrap(FVRBY_fake_script)()
+local function EJMOKHA_fake_script() -- RenderFrame.DRAG SCRIPT 
 	local script = Instance.new('LocalScript', RenderFrame)
 
 	local parent: Frame = script.Parent
@@ -450,8 +617,8 @@ local function OAQNDEH_fake_script() -- RenderFrame.DRAG SCRIPT
 	parent.Selectable = true
 	parent.Active = true
 end
-coroutine.wrap(OAQNDEH_fake_script)()
-local function VZDHPTK_fake_script() -- RenderFrame.RIGHTSHIFT TO OPEN 
+coroutine.wrap(EJMOKHA_fake_script)()
+local function JLVPU_fake_script() -- RenderFrame.RIGHTSHIFT TO OPEN 
 	local script = Instance.new('LocalScript', RenderFrame)
 
 	local Gui = script.Parent
@@ -469,8 +636,8 @@ local function VZDHPTK_fake_script() -- RenderFrame.RIGHTSHIFT TO OPEN
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(VZDHPTK_fake_script)()
-local function ZRPLQ_fake_script() -- Close_2.CLOSE SCRIPT 
+coroutine.wrap(JLVPU_fake_script)()
+local function ROQHZV_fake_script() -- Close_2.CLOSE SCRIPT 
 	local script = Instance.new('LocalScript', Close_2)
 
 	local RenderFrame = script.Parent.Parent
@@ -479,8 +646,8 @@ local function ZRPLQ_fake_script() -- Close_2.CLOSE SCRIPT
 		RenderFrame.Visible = false
 	end)
 end
-coroutine.wrap(ZRPLQ_fake_script)()
-local function FGUCI_fake_script() -- infjump.INF JUMP SCRIPT 
+coroutine.wrap(ROQHZV_fake_script)()
+local function JDNDR_fake_script() -- infjump.INF JUMP SCRIPT 
 	local script = Instance.new('LocalScript', infjump)
 
 	local button = script.Parent
@@ -500,8 +667,8 @@ local function FGUCI_fake_script() -- infjump.INF JUMP SCRIPT
 		end
 	end)
 end
-coroutine.wrap(FGUCI_fake_script)()
-local function SEWRIUW_fake_script() -- WorldFrame.DRAG SCRIPT 
+coroutine.wrap(JDNDR_fake_script)()
+local function VSMQLB_fake_script() -- WorldFrame.DRAG SCRIPT 
 	local script = Instance.new('LocalScript', WorldFrame)
 
 	local parent: Frame = script.Parent
@@ -509,8 +676,8 @@ local function SEWRIUW_fake_script() -- WorldFrame.DRAG SCRIPT
 	parent.Selectable = true
 	parent.Active = true
 end
-coroutine.wrap(SEWRIUW_fake_script)()
-local function MWCE_fake_script() -- WorldFrame.RIGHTSHIFT TO OPEN 
+coroutine.wrap(VSMQLB_fake_script)()
+local function ZWKK_fake_script() -- WorldFrame.RIGHTSHIFT TO OPEN 
 	local script = Instance.new('LocalScript', WorldFrame)
 
 	local Gui = script.Parent
@@ -528,8 +695,8 @@ local function MWCE_fake_script() -- WorldFrame.RIGHTSHIFT TO OPEN
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(MWCE_fake_script)()
-local function XTUTSA_fake_script() -- Close_3.CLOSE SCRIPT 
+coroutine.wrap(ZWKK_fake_script)()
+local function SOUJ_fake_script() -- Close_3.CLOSE SCRIPT 
 	local script = Instance.new('LocalScript', Close_3)
 
 	local WorldFrame = script.Parent.Parent
@@ -538,8 +705,8 @@ local function XTUTSA_fake_script() -- Close_3.CLOSE SCRIPT
 		WorldFrame.Visible = false
 	end)
 end
-coroutine.wrap(XTUTSA_fake_script)()
-local function LJRUR_fake_script() -- OPENCOMBAT.LocalScript 
+coroutine.wrap(SOUJ_fake_script)()
+local function FAMVRW_fake_script() -- OPENCOMBAT.LocalScript 
 	local script = Instance.new('LocalScript', OPENCOMBAT)
 
 	local CombatFrame = script.Parent.Parent.CombatFrame
@@ -548,8 +715,8 @@ local function LJRUR_fake_script() -- OPENCOMBAT.LocalScript
 		CombatFrame.Visible = true
 	end)
 end
-coroutine.wrap(LJRUR_fake_script)()
-local function BQJOTS_fake_script() -- OPENRENDER.LocalScript 
+coroutine.wrap(FAMVRW_fake_script)()
+local function ATDCPU_fake_script() -- OPENRENDER.LocalScript 
 	local script = Instance.new('LocalScript', OPENRENDER)
 
 	local RenderFrame = script.Parent.Parent.RenderFrame
@@ -558,8 +725,8 @@ local function BQJOTS_fake_script() -- OPENRENDER.LocalScript
 		RenderFrame.Visible = true
 	end)
 end
-coroutine.wrap(BQJOTS_fake_script)()
-local function NHNHBMC_fake_script() -- OPENWORLD.LocalScript 
+coroutine.wrap(ATDCPU_fake_script)()
+local function XQGQPYV_fake_script() -- OPENWORLD.LocalScript 
 	local script = Instance.new('LocalScript', OPENWORLD)
 
 	local WorldFrame = script.Parent.Parent.WorldFrame
