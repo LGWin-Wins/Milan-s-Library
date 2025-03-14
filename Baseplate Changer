@@ -1,0 +1,248 @@
+local ScreenGui = Instance.new("ScreenGui")
+local PlayFrame = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+local OPENSCRIPT = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local MainFrame = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local UIGradient_2 = Instance.new("UIGradient")
+local BASEPLATECHANGERSCRIPT = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local UIGradient_3 = Instance.new("UIGradient")
+local BASEPLATEMETAL = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local UIGradient_4 = Instance.new("UIGradient")
+local BASEPLATEBRICK = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local UIGradient_5 = Instance.new("UIGradient")
+local BASEPLATELEATHER = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local UIGradient_6 = Instance.new("UIGradient")
+local OpenClose = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local UIGradient_7 = Instance.new("UIGradient")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+
+PlayFrame.Name = "PlayFrame"
+PlayFrame.Parent = ScreenGui
+PlayFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PlayFrame.BorderSizePixel = 0
+PlayFrame.Position = UDim2.new(0, 0, -0.114864841, 0)
+PlayFrame.Size = UDim2.new(1, 0, 1.11486483, 0)
+PlayFrame.Visible = false
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(85, 255, 255)), ColorSequenceKeypoint.new(0.87, Color3.fromRGB(0, 0, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(85, 255, 255))}
+UIGradient.Parent = PlayFrame
+
+OPENSCRIPT.Name = "OPEN SCRIPT"
+OPENSCRIPT.Parent = PlayFrame
+OPENSCRIPT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OPENSCRIPT.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OPENSCRIPT.BorderSizePixel = 0
+OPENSCRIPT.Position = UDim2.new(0.354523242, 0, 0.375946969, 0)
+OPENSCRIPT.Size = UDim2.new(0.273838639, 0, 0.245312497, 0)
+OPENSCRIPT.Font = Enum.Font.SourceSansBold
+OPENSCRIPT.Text = "OPEN SCRIPT"
+OPENSCRIPT.TextColor3 = Color3.fromRGB(85, 255, 0)
+OPENSCRIPT.TextScaled = true
+OPENSCRIPT.TextSize = 14.000
+OPENSCRIPT.TextWrapped = true
+
+UICorner.Parent = OPENSCRIPT
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = ScreenGui
+MainFrame.Active = true
+MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.BorderSizePixel = 0
+MainFrame.Draggable = true
+MainFrame.Position = UDim2.new(0.320293397, -99, 0.157001421, -49)
+MainFrame.Size = UDim2.new(0, 516, 0, 436)
+
+UICorner_2.Parent = MainFrame
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(85, 0, 255)), ColorSequenceKeypoint.new(0.30, Color3.fromRGB(85, 78, 255)), ColorSequenceKeypoint.new(0.38, Color3.fromRGB(85, 91, 255)), ColorSequenceKeypoint.new(0.45, Color3.fromRGB(85, 101, 255)), ColorSequenceKeypoint.new(0.46, Color3.fromRGB(85, 94, 255)), ColorSequenceKeypoint.new(0.52, Color3.fromRGB(85, 110, 255)), ColorSequenceKeypoint.new(0.60, Color3.fromRGB(85, 128, 255)), ColorSequenceKeypoint.new(0.63, Color3.fromRGB(85, 121, 255)), ColorSequenceKeypoint.new(0.74, Color3.fromRGB(85, 151, 255)), ColorSequenceKeypoint.new(0.76, Color3.fromRGB(85, 153, 255)), ColorSequenceKeypoint.new(0.79, Color3.fromRGB(85, 156, 255)), ColorSequenceKeypoint.new(0.84, Color3.fromRGB(85, 159, 255)), ColorSequenceKeypoint.new(0.92, Color3.fromRGB(85, 164, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(85, 170, 255))}
+UIGradient_2.Parent = MainFrame
+
+BASEPLATECHANGERSCRIPT.Name = "BASEPLATE CHANGER SCRIPT"
+BASEPLATECHANGERSCRIPT.Parent = MainFrame
+BASEPLATECHANGERSCRIPT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BASEPLATECHANGERSCRIPT.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BASEPLATECHANGERSCRIPT.BorderSizePixel = 0
+BASEPLATECHANGERSCRIPT.Position = UDim2.new(0.00193798449, 0, 0, 0)
+BASEPLATECHANGERSCRIPT.Size = UDim2.new(0, 516, 0, 57)
+BASEPLATECHANGERSCRIPT.Font = Enum.Font.SourceSansBold
+BASEPLATECHANGERSCRIPT.Text = "BASEPLATE CHANGER SCRIPT"
+BASEPLATECHANGERSCRIPT.TextColor3 = Color3.fromRGB(0, 0, 0)
+BASEPLATECHANGERSCRIPT.TextScaled = true
+BASEPLATECHANGERSCRIPT.TextSize = 14.000
+BASEPLATECHANGERSCRIPT.TextWrapped = true
+
+UICorner_3.Parent = BASEPLATECHANGERSCRIPT
+
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.05, Color3.fromRGB(111, 255, 146)), ColorSequenceKeypoint.new(0.16, Color3.fromRGB(85, 255, 127)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 127))}
+UIGradient_3.Parent = BASEPLATECHANGERSCRIPT
+
+BASEPLATEMETAL.Name = "BASEPLATE METAL"
+BASEPLATEMETAL.Parent = MainFrame
+BASEPLATEMETAL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BASEPLATEMETAL.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BASEPLATEMETAL.BorderSizePixel = 0
+BASEPLATEMETAL.Position = UDim2.new(0, 0, 0.130733952, 0)
+BASEPLATEMETAL.Size = UDim2.new(0, 178, 0, 57)
+BASEPLATEMETAL.Font = Enum.Font.SourceSansBold
+BASEPLATEMETAL.Text = "BASEPLATE METAL"
+BASEPLATEMETAL.TextColor3 = Color3.fromRGB(0, 0, 0)
+BASEPLATEMETAL.TextScaled = true
+BASEPLATEMETAL.TextSize = 14.000
+BASEPLATEMETAL.TextWrapped = true
+
+UICorner_4.Parent = BASEPLATEMETAL
+
+UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(85, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 85, 0))}
+UIGradient_4.Parent = BASEPLATEMETAL
+
+BASEPLATEBRICK.Name = "BASEPLATE BRICK"
+BASEPLATEBRICK.Parent = MainFrame
+BASEPLATEBRICK.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BASEPLATEBRICK.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BASEPLATEBRICK.BorderSizePixel = 0
+BASEPLATEBRICK.Position = UDim2.new(0, 0, 0.261467904, 0)
+BASEPLATEBRICK.Size = UDim2.new(0, 177, 0, 57)
+BASEPLATEBRICK.Font = Enum.Font.SourceSansBold
+BASEPLATEBRICK.Text = "BASEPLATE BRICK"
+BASEPLATEBRICK.TextColor3 = Color3.fromRGB(0, 0, 0)
+BASEPLATEBRICK.TextScaled = true
+BASEPLATEBRICK.TextSize = 14.000
+BASEPLATEBRICK.TextWrapped = true
+
+UICorner_5.Parent = BASEPLATEBRICK
+
+UIGradient_5.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(85, 170, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(85, 255, 255))}
+UIGradient_5.Parent = BASEPLATEBRICK
+
+BASEPLATELEATHER.Name = "BASEPLATE LEATHER"
+BASEPLATELEATHER.Parent = MainFrame
+BASEPLATELEATHER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BASEPLATELEATHER.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BASEPLATELEATHER.BorderSizePixel = 0
+BASEPLATELEATHER.Position = UDim2.new(0.00193798449, 0, 0.392201841, 0)
+BASEPLATELEATHER.Size = UDim2.new(0, 177, 0, 50)
+BASEPLATELEATHER.Font = Enum.Font.SourceSansBold
+BASEPLATELEATHER.Text = "BASEPLATE LEATHER"
+BASEPLATELEATHER.TextColor3 = Color3.fromRGB(0, 0, 0)
+BASEPLATELEATHER.TextScaled = true
+BASEPLATELEATHER.TextSize = 14.000
+BASEPLATELEATHER.TextWrapped = true
+
+UICorner_6.Parent = BASEPLATELEATHER
+
+UIGradient_6.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 127)), ColorSequenceKeypoint.new(0.15, Color3.fromRGB(223, 239, 150)), ColorSequenceKeypoint.new(0.18, Color3.fromRGB(219, 237, 153)), ColorSequenceKeypoint.new(0.19, Color3.fromRGB(214, 234, 157)), ColorSequenceKeypoint.new(0.22, Color3.fromRGB(211, 233, 159)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(85, 170, 255))}
+UIGradient_6.Parent = BASEPLATELEATHER
+
+OpenClose.Name = "OpenClose"
+OpenClose.Parent = ScreenGui
+OpenClose.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenClose.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OpenClose.BorderSizePixel = 0
+OpenClose.Position = UDim2.new(0, 0, 0.43847242, 0)
+OpenClose.Size = UDim2.new(0, 136, 0, 50)
+OpenClose.Font = Enum.Font.SourceSans
+OpenClose.Text = "Open/Close"
+OpenClose.TextColor3 = Color3.fromRGB(0, 0, 0)
+OpenClose.TextSize = 14.000
+
+UICorner_7.Parent = OpenClose
+
+UIGradient_7.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(85, 170, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(85, 255, 255))}
+UIGradient_7.Parent = OpenClose
+
+-- Scripts:
+
+local function KDUM_fake_script() -- OPENSCRIPT.script that closes startscreen opens script 
+	local script = Instance.new('LocalScript', OPENSCRIPT)
+
+	local playFrame = script.Parent.Parent -- Reference to PlayFrame
+	local mainFrame = playFrame.Parent:WaitForChild("MainFrame") -- Reference to MainFrame
+	local openClose = playFrame.Parent:WaitForChild("OpenClose") -- Reference to OpenClose button
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		playFrame.Visible = false   -- Close PlayFrame
+		mainFrame.Visible = true     -- Open MainFrame
+		openClose.Visible = true     -- Show OpenClose button
+	end)
+	
+end
+coroutine.wrap(KDUM_fake_script)()
+local function IYOBCC_fake_script() -- BASEPLATEMETAL.BASEPLATE CHANGER 
+	local script = Instance.new('Script', BASEPLATEMETAL)
+
+	local baseplate = game.Workspace.Baseplate
+	local originalMaterial = baseplate.Material
+	local isMetal = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if isMetal then
+			baseplate.Material = originalMaterial
+			isMetal = false
+		else
+			baseplate.Material = "Metal"
+			isMetal = true
+		end
+	end)
+end
+coroutine.wrap(IYOBCC_fake_script)()
+local function ZFZOERE_fake_script() -- BASEPLATEBRICK.BASEPLATE CHANGER 
+	local script = Instance.new('Script', BASEPLATEBRICK)
+
+	local baseplate = game.Workspace.Baseplate
+	local originalMaterial = baseplate.Material
+	local Brick = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if Brick then
+			baseplate.Material = originalMaterial
+			Brick = false
+		else
+			baseplate.Material = "Brick"
+			Brick = true
+		end
+	end)
+end
+coroutine.wrap(ZFZOERE_fake_script)()
+local function TPPPMV_fake_script() -- BASEPLATELEATHER.BASEPLATE CHANGER 
+	local script = Instance.new('Script', BASEPLATELEATHER)
+
+	local baseplate = game.Workspace.Baseplate
+	local originalMaterial = baseplate.Material
+	local Leather = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if Leather then
+			baseplate.Material = originalMaterial
+			Leather = false
+		else
+			baseplate.Material = "Leather"
+			Leather = true
+		end
+	end)
+end
+coroutine.wrap(TPPPMV_fake_script)()
+local function JOUUXGA_fake_script() -- OpenClose.Open and close script 
+	local script = Instance.new('LocalScript', OpenClose)
+
+	local openCloseButton = script.Parent
+	local mainFrame = openCloseButton.Parent:WaitForChild("MainFrame")
+	
+	openCloseButton.MouseButton1Click:Connect(function()
+		mainFrame.Visible = not mainFrame.Visible  -- Toggle visibility
+	end)
+	
+end
