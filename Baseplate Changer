@@ -35,7 +35,6 @@ PlayFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 PlayFrame.BorderSizePixel = 0
 PlayFrame.Position = UDim2.new(0, 0, -0.114864841, 0)
 PlayFrame.Size = UDim2.new(1, 0, 1.11486483, 0)
-PlayFrame.Visible = false
 
 UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(85, 255, 255)), ColorSequenceKeypoint.new(0.87, Color3.fromRGB(0, 0, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(85, 255, 255))}
 UIGradient.Parent = PlayFrame
@@ -65,6 +64,7 @@ MainFrame.BorderSizePixel = 0
 MainFrame.Draggable = true
 MainFrame.Position = UDim2.new(0.320293397, -99, 0.157001421, -49)
 MainFrame.Size = UDim2.new(0, 516, 0, 436)
+MainFrame.Visible = false
 
 UICorner_2.Parent = MainFrame
 
@@ -154,6 +154,7 @@ OpenClose.BorderColor3 = Color3.fromRGB(0, 0, 0)
 OpenClose.BorderSizePixel = 0
 OpenClose.Position = UDim2.new(0, 0, 0.43847242, 0)
 OpenClose.Size = UDim2.new(0, 136, 0, 50)
+OpenClose.Visible = false
 OpenClose.Font = Enum.Font.SourceSans
 OpenClose.Text = "Open/Close"
 OpenClose.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -166,7 +167,7 @@ UIGradient_7.Parent = OpenClose
 
 -- Scripts:
 
-local function KDUM_fake_script() -- OPENSCRIPT.script that closes startscreen opens script 
+local function MMIZ_fake_script() -- OPENSCRIPT.script that closes startscreen opens script 
 	local script = Instance.new('LocalScript', OPENSCRIPT)
 
 	local playFrame = script.Parent.Parent -- Reference to PlayFrame
@@ -180,8 +181,8 @@ local function KDUM_fake_script() -- OPENSCRIPT.script that closes startscreen o
 	end)
 	
 end
-coroutine.wrap(KDUM_fake_script)()
-local function IYOBCC_fake_script() -- BASEPLATEMETAL.BASEPLATE CHANGER 
+coroutine.wrap(MMIZ_fake_script)()
+local function CXNAZT_fake_script() -- BASEPLATEMETAL.BASEPLATE CHANGER 
 	local script = Instance.new('Script', BASEPLATEMETAL)
 
 	local baseplate = game.Workspace.Baseplate
@@ -198,8 +199,8 @@ local function IYOBCC_fake_script() -- BASEPLATEMETAL.BASEPLATE CHANGER
 		end
 	end)
 end
-coroutine.wrap(IYOBCC_fake_script)()
-local function ZFZOERE_fake_script() -- BASEPLATEBRICK.BASEPLATE CHANGER 
+coroutine.wrap(CXNAZT_fake_script)()
+local function KBMSZH_fake_script() -- BASEPLATEBRICK.BASEPLATE CHANGER 
 	local script = Instance.new('Script', BASEPLATEBRICK)
 
 	local baseplate = game.Workspace.Baseplate
@@ -216,8 +217,8 @@ local function ZFZOERE_fake_script() -- BASEPLATEBRICK.BASEPLATE CHANGER
 		end
 	end)
 end
-coroutine.wrap(ZFZOERE_fake_script)()
-local function TPPPMV_fake_script() -- BASEPLATELEATHER.BASEPLATE CHANGER 
+coroutine.wrap(KBMSZH_fake_script)()
+local function QKANK_fake_script() -- BASEPLATELEATHER.BASEPLATE CHANGER 
 	local script = Instance.new('Script', BASEPLATELEATHER)
 
 	local baseplate = game.Workspace.Baseplate
@@ -234,8 +235,8 @@ local function TPPPMV_fake_script() -- BASEPLATELEATHER.BASEPLATE CHANGER
 		end
 	end)
 end
-coroutine.wrap(TPPPMV_fake_script)()
-local function JOUUXGA_fake_script() -- OpenClose.Open and close script 
+coroutine.wrap(QKANK_fake_script)()
+local function MQPBBRP_fake_script() -- OpenClose.Open and close script 
 	local script = Instance.new('LocalScript', OpenClose)
 
 	local openCloseButton = script.Parent
