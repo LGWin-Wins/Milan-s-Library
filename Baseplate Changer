@@ -1,4 +1,3 @@
-
 local ScreenGui = Instance.new("ScreenGui")
 local PlayFrame = Instance.new("Frame")
 local UIGradient = Instance.new("UIGradient")
@@ -82,6 +81,7 @@ Frame.Active = true
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
+Frame.Draggable = true
 Frame.Position = UDim2.new(0.355834574, 0, 0.100766733, 0)
 Frame.Size = UDim2.new(0.416801304, 0, 0.533007324, 0)
 Frame.Visible = false
@@ -96,7 +96,7 @@ BASEPLATECHANGERSCRIPT.Parent = Frame
 BASEPLATECHANGERSCRIPT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 BASEPLATECHANGERSCRIPT.BorderColor3 = Color3.fromRGB(0, 0, 0)
 BASEPLATECHANGERSCRIPT.BorderSizePixel = 0
-BASEPLATECHANGERSCRIPT.Position = UDim2.new(0.00193798449, 0, 0, 0)
+BASEPLATECHANGERSCRIPT.Position = UDim2.new(-0.00166440231, 0, 0, 0)
 BASEPLATECHANGERSCRIPT.Size = UDim2.new(0.883720934, 0, 0.130733952, 0)
 BASEPLATECHANGERSCRIPT.Font = Enum.Font.SourceSansBold
 BASEPLATECHANGERSCRIPT.Text = "BASEPLATE CHANGER SCRIPT"
@@ -322,22 +322,22 @@ UIGradient_14.Parent = Open
 
 -- Scripts:
 
-local function NCNIQ_fake_script() -- OPENSCRIPT.script that closes startscreen opens script 
+local function AZZJWOO_fake_script() -- OPENSCRIPT.script that closes startscreen opens script 
 	local script = Instance.new('LocalScript', OPENSCRIPT)
 
 	local playFrame = script.Parent.Parent -- Reference to PlayFrame
-	local mainFrame = playFrame.Parent:WaitForChild("MainFrame") -- Reference to MainFrame
-	local openClose = playFrame.Parent:WaitForChild("OpenClose") -- Reference to OpenClose button
+	local Frame = playFrame.Parent:WaitForChild("Frame") -- Reference to MainFrame
+	local open = playFrame.Parent:WaitForChild("Open") -- Reference to OpenClose button
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		playFrame.Visible = false   -- Close PlayFrame
-		mainFrame.Visible = true     -- Open MainFrame
-		openClose.Visible = true     -- Show OpenClose button
+		Frame.Visible = true     -- Open MainFrame
+		open.Visible = true     -- Show OpenClose button
 	end)
 	
 end
-coroutine.wrap(NCNIQ_fake_script)()
-local function NCVRXAW_fake_script() -- BASEPLATEMETAL.BASEPLATE CHANGER 
+coroutine.wrap(AZZJWOO_fake_script)()
+local function WSEBMUH_fake_script() -- BASEPLATEMETAL.BASEPLATE CHANGER 
 	local script = Instance.new('Script', BASEPLATEMETAL)
 
 	local baseplate = game.Workspace.Baseplate
@@ -354,8 +354,8 @@ local function NCVRXAW_fake_script() -- BASEPLATEMETAL.BASEPLATE CHANGER
 		end
 	end)
 end
-coroutine.wrap(NCVRXAW_fake_script)()
-local function OEULX_fake_script() -- BASEPLATEBRICK.BASEPLATE CHANGER 
+coroutine.wrap(WSEBMUH_fake_script)()
+local function IUHHSGE_fake_script() -- BASEPLATEBRICK.BASEPLATE CHANGER 
 	local script = Instance.new('Script', BASEPLATEBRICK)
 
 	local baseplate = game.Workspace.Baseplate
@@ -372,8 +372,8 @@ local function OEULX_fake_script() -- BASEPLATEBRICK.BASEPLATE CHANGER
 		end
 	end)
 end
-coroutine.wrap(OEULX_fake_script)()
-local function QVGLYGN_fake_script() -- BASEPLATELEATHER.BASEPLATE CHANGER 
+coroutine.wrap(IUHHSGE_fake_script)()
+local function CJSGME_fake_script() -- BASEPLATELEATHER.BASEPLATE CHANGER 
 	local script = Instance.new('Script', BASEPLATELEATHER)
 
 	local baseplate = game.Workspace.Baseplate
@@ -390,8 +390,8 @@ local function QVGLYGN_fake_script() -- BASEPLATELEATHER.BASEPLATE CHANGER
 		end
 	end)
 end
-coroutine.wrap(QVGLYGN_fake_script)()
-local function CBCMWOP_fake_script() -- CloseButton.Close Script 
+coroutine.wrap(CJSGME_fake_script)()
+local function PFCGE_fake_script() -- CloseButton.Close Script 
 	local script = Instance.new('LocalScript', CloseButton)
 
 	local Frame = script.Parent.Parent
@@ -399,8 +399,8 @@ local function CBCMWOP_fake_script() -- CloseButton.Close Script
 		Frame.Visible = false
 	end)
 end
-coroutine.wrap(CBCMWOP_fake_script)()
-local function BRWIV_fake_script() -- BASEPLATEWOOD.BASEPLATE CHANGER 
+coroutine.wrap(PFCGE_fake_script)()
+local function TDUSA_fake_script() -- BASEPLATEWOOD.BASEPLATE CHANGER 
 	local script = Instance.new('LocalScript', BASEPLATEWOOD)
 
 	local baseplate = game.Workspace.Baseplate
@@ -417,8 +417,8 @@ local function BRWIV_fake_script() -- BASEPLATEWOOD.BASEPLATE CHANGER
 		end
 	end)
 end
-coroutine.wrap(BRWIV_fake_script)()
-local function MGPBKLY_fake_script() -- Baseplateice.Baseplate changer 
+coroutine.wrap(TDUSA_fake_script)()
+local function DWGK_fake_script() -- Baseplateice.Baseplate changer 
 	local script = Instance.new('LocalScript', Baseplateice)
 
 	local baseplate = game.Workspace.Baseplate
@@ -435,8 +435,8 @@ local function MGPBKLY_fake_script() -- Baseplateice.Baseplate changer
 		end
 	end)
 end
-coroutine.wrap(MGPBKLY_fake_script)()
-local function LWZT_fake_script() -- Baseplatesand.Baseplate changer 
+coroutine.wrap(DWGK_fake_script)()
+local function KKADI_fake_script() -- Baseplatesand.Baseplate changer 
 	local script = Instance.new('LocalScript', Baseplatesand)
 
 	local baseplate = game.Workspace.Baseplate
@@ -453,8 +453,8 @@ local function LWZT_fake_script() -- Baseplatesand.Baseplate changer
 		end
 	end)
 end
-coroutine.wrap(LWZT_fake_script)()
-local function JBEC_fake_script() -- BaseplateSlate.Baseplate Changer 
+coroutine.wrap(KKADI_fake_script)()
+local function SLFO_fake_script() -- BaseplateSlate.Baseplate Changer 
 	local script = Instance.new('LocalScript', BaseplateSlate)
 
 	local baseplate = game.Workspace.Baseplate
@@ -471,8 +471,8 @@ local function JBEC_fake_script() -- BaseplateSlate.Baseplate Changer
 		end
 	end)
 end
-coroutine.wrap(JBEC_fake_script)()
-local function IYVTNS_fake_script() -- BASEPLATEPEBBLE.BASEPLATE CHANGER 
+coroutine.wrap(SLFO_fake_script)()
+local function DRNY_fake_script() -- BASEPLATEPEBBLE.BASEPLATE CHANGER 
 	local script = Instance.new('LocalScript', BASEPLATEPEBBLE)
 
 	local baseplate = game.Workspace.Baseplate
@@ -489,8 +489,8 @@ local function IYVTNS_fake_script() -- BASEPLATEPEBBLE.BASEPLATE CHANGER
 		end
 	end)
 end
-coroutine.wrap(IYVTNS_fake_script)()
-local function TCMAUDH_fake_script() -- BaseplateWoodPlanks.Baseplate Changer 
+coroutine.wrap(DRNY_fake_script)()
+local function EOZT_fake_script() -- BaseplateWoodPlanks.Baseplate Changer 
 	local script = Instance.new('LocalScript', BaseplateWoodPlanks)
 
 	local baseplate = game.Workspace.Baseplate
@@ -507,8 +507,8 @@ local function TCMAUDH_fake_script() -- BaseplateWoodPlanks.Baseplate Changer
 		end
 	end)
 end
-coroutine.wrap(TCMAUDH_fake_script)()
-local function GWZEXZM_fake_script() -- Open.Open script 
+coroutine.wrap(EOZT_fake_script)()
+local function PGSN_fake_script() -- Open.Open script 
 	local script = Instance.new('LocalScript', Open)
 
 	local Frame = script.Parent.Parent.Frame
