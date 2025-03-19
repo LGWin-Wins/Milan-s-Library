@@ -26,9 +26,6 @@ local UICorner_11 = Instance.new("UICorner")
 local infjump = Instance.new("TextButton")
 local UICorner_12 = Instance.new("UICorner")
 local Close_3 = Instance.new("TextButton")
-local OPENCOMBAT = Instance.new("TextButton")
-local OPENRENDER = Instance.new("TextButton")
-local OPENWORLD = Instance.new("TextButton")
 
 --Properties:
 
@@ -253,54 +250,9 @@ Close_3.TextScaled = true
 Close_3.TextSize = 14.000
 Close_3.TextWrapped = true
 
-OPENCOMBAT.Name = "OPEN COMBAT"
-OPENCOMBAT.Parent = ScreenGui
-OPENCOMBAT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-OPENCOMBAT.BorderColor3 = Color3.fromRGB(0, 0, 0)
-OPENCOMBAT.BorderSizePixel = 0
-OPENCOMBAT.Position = UDim2.new(0, 0, 0.0403422974, 0)
-OPENCOMBAT.Size = UDim2.new(0.0631808266, 0, 0.0611246936, 0)
-OPENCOMBAT.Font = Enum.Font.SourceSansBold
-OPENCOMBAT.Text = "OPEN Combat"
-OPENCOMBAT.TextColor3 = Color3.fromRGB(85, 255, 255)
-OPENCOMBAT.TextScaled = true
-OPENCOMBAT.TextSize = 14.000
-OPENCOMBAT.TextStrokeColor3 = Color3.fromRGB(85, 255, 255)
-OPENCOMBAT.TextWrapped = true
-
-OPENRENDER.Name = "OPEN RENDER"
-OPENRENDER.Parent = ScreenGui
-OPENRENDER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-OPENRENDER.BorderColor3 = Color3.fromRGB(0, 0, 0)
-OPENRENDER.BorderSizePixel = 0
-OPENRENDER.Position = UDim2.new(0, 0, 0.101466991, 0)
-OPENRENDER.Size = UDim2.new(0.0631808266, 0, 0.0611246936, 0)
-OPENRENDER.Font = Enum.Font.SourceSansBold
-OPENRENDER.Text = "OPEN Render"
-OPENRENDER.TextColor3 = Color3.fromRGB(85, 255, 255)
-OPENRENDER.TextScaled = true
-OPENRENDER.TextSize = 14.000
-OPENRENDER.TextStrokeColor3 = Color3.fromRGB(85, 255, 255)
-OPENRENDER.TextWrapped = true
-
-OPENWORLD.Name = "OPEN WORLD"
-OPENWORLD.Parent = ScreenGui
-OPENWORLD.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-OPENWORLD.BorderColor3 = Color3.fromRGB(0, 0, 0)
-OPENWORLD.BorderSizePixel = 0
-OPENWORLD.Position = UDim2.new(0, 0, 0.162591681, 0)
-OPENWORLD.Size = UDim2.new(0.0631808266, 0, 0.0611246936, 0)
-OPENWORLD.Font = Enum.Font.SourceSansBold
-OPENWORLD.Text = "OPEN WORLD"
-OPENWORLD.TextColor3 = Color3.fromRGB(85, 255, 255)
-OPENWORLD.TextScaled = true
-OPENWORLD.TextSize = 14.000
-OPENWORLD.TextStrokeColor3 = Color3.fromRGB(85, 255, 255)
-OPENWORLD.TextWrapped = true
-
 -- Scripts:
 
-local function QKWFWB_fake_script() -- CombatFrame.DRAG SCRIPT 
+local function ARNTRA_fake_script() -- CombatFrame.DRAG SCRIPT 
 	local script = Instance.new('LocalScript', CombatFrame)
 
 	local parent: Frame = script.Parent
@@ -308,8 +260,8 @@ local function QKWFWB_fake_script() -- CombatFrame.DRAG SCRIPT
 	parent.Selectable = true
 	parent.Active = true
 end
-coroutine.wrap(QKWFWB_fake_script)()
-local function EJBWIQ_fake_script() -- CombatFrame.RIGHTSHIFT TO OPEN 
+coroutine.wrap(ARNTRA_fake_script)()
+local function MNYZVXF_fake_script() -- CombatFrame.RIGHTSHIFT TO OPEN 
 	local script = Instance.new('LocalScript', CombatFrame)
 
 	local Gui = script.Parent
@@ -327,8 +279,8 @@ local function EJBWIQ_fake_script() -- CombatFrame.RIGHTSHIFT TO OPEN
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(EJBWIQ_fake_script)()
-local function KBRHI_fake_script() -- Close.LocalScript 
+coroutine.wrap(MNYZVXF_fake_script)()
+local function MMRHMME_fake_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	local CombatFrame = script.Parent.Parent
@@ -337,8 +289,196 @@ local function KBRHI_fake_script() -- Close.LocalScript
 		CombatFrame.Visible = false
 	end)
 end
-coroutine.wrap(KBRHI_fake_script)()
-local function VDVQYWE_fake_script() -- Speed.Speed Script 
+coroutine.wrap(MMRHMME_fake_script)()
+local function DUDH_fake_script() -- KillAura.LocalScript 
+	local script = Instance.new('LocalScript', KillAura)
+
+	-- ✅ Services
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local RunService = game:GetService("RunService")
+	local LocalPlayer = Players.LocalPlayer
+	local Camera = workspace.CurrentCamera
+	
+	-- ✅ Remote Path
+	local DefaultRemotePath = ReplicatedStorage:WaitForChild("rbxts_include")
+		:WaitForChild("node_modules")
+		:WaitForChild("@rbxts")
+		:WaitForChild("net")
+		:WaitForChild("out")
+		:WaitForChild("_NetManaged")
+	
+	local SwordHitRemote = DefaultRemotePath:FindFirstChild("SwordHit")
+	
+	if not SwordHitRemote then
+		warn("❌ SwordHit Remote NOT Found! Check the path.")
+		return
+	end
+	print("✅ SwordHit Remote Found")
+	
+	-- ✅ Settings
+	local KnockbackExploitEnabled = true      -- Toggle knockback exploit on/off
+	local MaxKnockbackMultiplier = 3          -- Max knockback boost
+	local KnockbackRange = 19                 -- Max range for knockback
+	local MaxAuraRange = 30                   -- Max Kill Aura attack range
+	
+	-- ✅ Get Inventory and Sword
+	local BedwarsTables = {
+		ItemTable = debug.getupvalue(require(ReplicatedStorage.TS.item["item-meta"]).getItemMeta, 1)
+	}
+	
+	local function GetInventory(Player)
+		local Player = Player or LocalPlayer
+		local Inventory = require(ReplicatedStorage.TS.inventory["inventory-util"]).InventoryUtil.getInventory(Player)
+		return Inventory
+	end
+	
+	local function GetBestSword()
+		local HighestDamage, SwordData = -math.huge, nil
+	
+		for _, v in next, GetInventory(LocalPlayer).items do
+			local SwordMetaGame = BedwarsTables.ItemTable[v.itemType] and BedwarsTables.ItemTable[v.itemType].sword
+	
+			if SwordMetaGame then
+				local SwordDamage = (SwordMetaGame.damage / SwordMetaGame.attackSpeed)
+	
+				if SwordDamage > HighestDamage then
+					HighestDamage = SwordDamage
+					SwordData = v
+				end
+			end
+		end
+	
+		if SwordData then
+			print("✅ Best Sword:", SwordData.itemType)
+			return SwordData.tool  -- ✅ Return the sword tool
+		else
+			warn("❌ No Sword Found")
+			return nil
+		end
+	end
+	
+	-- ✅ Find Nearest Enemy
+	local function getNearestEnemy(range)
+		local nearest, nearestDist = nil, range
+	
+		for _, player in pairs(Players:GetPlayers()) do
+			if player ~= LocalPlayer and player:IsA("Player") and player:GetAttribute("Team") ~= LocalPlayer:GetAttribute("Team") then
+				local char = player.Character
+				if char and char.PrimaryPart then
+					local dist = (LocalPlayer.Character.PrimaryPart.Position - char.PrimaryPart.Position).Magnitude
+					if dist < nearestDist then
+						nearestDist = dist
+						nearest = char
+					end
+				end
+			end
+		end
+	
+		return nearest, nearestDist
+	end
+	
+	-- ✅ Dynamic Offset Calculation (For Perfect Hits)
+	local function getDynamicOffset(distance)
+		-- Offset scales dynamically with distance for precise hits
+		local baseOffset = 14.4
+		local offset = math.max((distance / 2) - 1, baseOffset)
+		return offset
+	end
+	
+	-- ✅ Knockback Multiplier Calculation
+	local function getKnockbackMultiplier(distance)
+		-- Closer enemies get stronger knockback
+		if distance <= KnockbackRange then
+			local scale = 1 + ((KnockbackRange - distance) / KnockbackRange) * (MaxKnockbackMultiplier - 1)
+			return scale
+		end
+		return 1
+	end
+	
+	-- ✅ Attack Function with Knockback & Dynamic Offset
+	local function attackEntity(entity, sword)
+		local character = LocalPlayer.Character
+		if not character or not character.PrimaryPart then return end
+	
+		local rootPart = character.PrimaryPart
+		local entityPrimaryPart = entity.PrimaryPart
+	
+		if rootPart and entityPrimaryPart then
+			local distance = (rootPart.Position - entityPrimaryPart.Position).Magnitude
+			local lookVector = CFrame.lookAt(rootPart.Position, entityPrimaryPart.Position).LookVector
+	
+			-- ✅ Dynamic offset calculation for perfect hits
+			local offset = getDynamicOffset(distance)
+			local selfPosition = ((math.max(distance - offset, 0) * lookVector) + rootPart.Position)
+	
+			-- ✅ Knockback Exploit Calculation
+			local MouseRay = (entityPrimaryPart.Position - Camera.CFrame.Position).Unit
+			local knockbackMultiplier = KnockbackExploitEnabled and getKnockbackMultiplier(distance) or 1
+			local rayDirection = MouseRay * knockbackMultiplier
+	
+			-- ✅ Fire the remote with knockback and dynamic offset
+			task.spawn(function()
+				SwordHitRemote:FireServer({
+					["weapon"] = sword,
+					["chargedAttack"] = {["chargeRatio"] = 0},
+					["entityInstance"] = entity,
+	
+					["validate"] = {
+						["raycast"] = {
+							["cameraPosition"] = {value = selfPosition},
+							["rayDirection"] = {value = rayDirection}
+						},
+						["targetPosition"] = {value = entityPrimaryPart.Position},
+						["selfPosition"] = {value = selfPosition}
+					}
+				})
+	
+				print("✅ Hit:", entity.Name, "➡️ Offset:", offset, "➡️ Knockback:", knockbackMultiplier, "➡️ Distance:", distance)
+			end)
+		end
+	end
+	
+	-- ✅ Real-Time Kill Aura Execution
+	local killAuraConnection = nil
+	
+	local function startKillAura()
+		-- 🛑 Disconnect previous connection to prevent memory leaks
+		if killAuraConnection then
+			killAuraConnection:Disconnect()
+		end
+	
+		-- ✅ Real-Time Execution with Heartbeat
+		killAuraConnection = RunService.Heartbeat:Connect(function()
+			-- 🛑 Validate character to avoid crashes on death
+			if not LocalPlayer.Character or not LocalPlayer.Character.PrimaryPart then
+				warn("❌ Waiting for Respawn...")
+				return
+			end
+	
+			local sword = GetBestSword()
+			local enemy, distance = getNearestEnemy(MaxAuraRange)
+	
+			if sword and enemy then
+				attackEntity(enemy, sword)
+			else
+				warn("❌ No Enemy or Sword Found")
+			end
+		end)
+	end
+	
+	-- ✅ Restart Kill Aura on Respawn
+	LocalPlayer.CharacterAdded:Connect(function()
+		task.wait(1) -- Wait for character to load
+		print("✅ Respawn Detected - Restarting Kill Aura")
+		startKillAura()
+	end)
+	
+	-- ✅ Start Initial Kill Aura
+	startKillAura()
+end
+coroutine.wrap(DUDH_fake_script)()
+local function RCLNL_fake_script() -- Speed.Speed Script 
 	local script = Instance.new('LocalScript', Speed)
 
 	-- LocalScript under the TextButton (UI Button)
@@ -366,10 +506,9 @@ local function VDVQYWE_fake_script() -- Speed.Speed Script
 		local humanoid = character:WaitForChild("Humanoid")
 		humanoid.WalkSpeed = 23
 	end)
-	
 end
-coroutine.wrap(VDVQYWE_fake_script)()
-local function YUTD_fake_script() -- Fly.Fly Script 
+coroutine.wrap(RCLNL_fake_script)()
+local function MELHTR_fake_script() -- Fly.Fly Script 
 	local script = Instance.new('LocalScript', Fly)
 
 	-- LocalScript inside the TextButton (UI Button inside CombatFrame)
@@ -468,8 +607,8 @@ local function YUTD_fake_script() -- Fly.Fly Script
 	end)
 	
 end
-coroutine.wrap(YUTD_fake_script)()
-local function GXRPTE_fake_script() -- LINES.LINES SCRIPT 
+coroutine.wrap(MELHTR_fake_script)()
+local function JSNWAPZ_fake_script() -- LINES.LINES SCRIPT 
 	local script = Instance.new('LocalScript', LINES)
 
 	local button = script.Parent
@@ -548,8 +687,8 @@ local function GXRPTE_fake_script() -- LINES.LINES SCRIPT
 		end
 	end)
 end
-coroutine.wrap(GXRPTE_fake_script)()
-local function FVRBY_fake_script() -- ESPBUTTON.ESP SCRIPT 
+coroutine.wrap(JSNWAPZ_fake_script)()
+local function EFKQWPG_fake_script() -- ESPBUTTON.ESP SCRIPT 
 	local script = Instance.new('LocalScript', ESPBUTTON)
 
 	local players = game:GetService("Players")
@@ -608,8 +747,8 @@ local function FVRBY_fake_script() -- ESPBUTTON.ESP SCRIPT
 		end)
 	end)
 end
-coroutine.wrap(FVRBY_fake_script)()
-local function EJMOKHA_fake_script() -- RenderFrame.DRAG SCRIPT 
+coroutine.wrap(EFKQWPG_fake_script)()
+local function KVUQEL_fake_script() -- RenderFrame.DRAG SCRIPT 
 	local script = Instance.new('LocalScript', RenderFrame)
 
 	local parent: Frame = script.Parent
@@ -617,8 +756,8 @@ local function EJMOKHA_fake_script() -- RenderFrame.DRAG SCRIPT
 	parent.Selectable = true
 	parent.Active = true
 end
-coroutine.wrap(EJMOKHA_fake_script)()
-local function JLVPU_fake_script() -- RenderFrame.RIGHTSHIFT TO OPEN 
+coroutine.wrap(KVUQEL_fake_script)()
+local function DFINSJ_fake_script() -- RenderFrame.RIGHTSHIFT TO OPEN 
 	local script = Instance.new('LocalScript', RenderFrame)
 
 	local Gui = script.Parent
@@ -636,8 +775,8 @@ local function JLVPU_fake_script() -- RenderFrame.RIGHTSHIFT TO OPEN
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(JLVPU_fake_script)()
-local function ROQHZV_fake_script() -- Close_2.CLOSE SCRIPT 
+coroutine.wrap(DFINSJ_fake_script)()
+local function JGEZ_fake_script() -- Close_2.CLOSE SCRIPT 
 	local script = Instance.new('LocalScript', Close_2)
 
 	local RenderFrame = script.Parent.Parent
@@ -646,8 +785,8 @@ local function ROQHZV_fake_script() -- Close_2.CLOSE SCRIPT
 		RenderFrame.Visible = false
 	end)
 end
-coroutine.wrap(ROQHZV_fake_script)()
-local function JDNDR_fake_script() -- infjump.INF JUMP SCRIPT 
+coroutine.wrap(JGEZ_fake_script)()
+local function QMRRG_fake_script() -- infjump.INF JUMP SCRIPT 
 	local script = Instance.new('LocalScript', infjump)
 
 	local button = script.Parent
@@ -667,8 +806,8 @@ local function JDNDR_fake_script() -- infjump.INF JUMP SCRIPT
 		end
 	end)
 end
-coroutine.wrap(JDNDR_fake_script)()
-local function VSMQLB_fake_script() -- WorldFrame.DRAG SCRIPT 
+coroutine.wrap(QMRRG_fake_script)()
+local function FSVH_fake_script() -- WorldFrame.DRAG SCRIPT 
 	local script = Instance.new('LocalScript', WorldFrame)
 
 	local parent: Frame = script.Parent
@@ -676,8 +815,8 @@ local function VSMQLB_fake_script() -- WorldFrame.DRAG SCRIPT
 	parent.Selectable = true
 	parent.Active = true
 end
-coroutine.wrap(VSMQLB_fake_script)()
-local function ZWKK_fake_script() -- WorldFrame.RIGHTSHIFT TO OPEN 
+coroutine.wrap(FSVH_fake_script)()
+local function KWVOC_fake_script() -- WorldFrame.RIGHTSHIFT TO OPEN 
 	local script = Instance.new('LocalScript', WorldFrame)
 
 	local Gui = script.Parent
@@ -695,43 +834,13 @@ local function ZWKK_fake_script() -- WorldFrame.RIGHTSHIFT TO OPEN
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(ZWKK_fake_script)()
-local function SOUJ_fake_script() -- Close_3.CLOSE SCRIPT 
+coroutine.wrap(KWVOC_fake_script)()
+local function LGCCR_fake_script() -- Close_3.CLOSE SCRIPT 
 	local script = Instance.new('LocalScript', Close_3)
 
 	local WorldFrame = script.Parent.Parent
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		WorldFrame.Visible = false
-	end)
-end
-coroutine.wrap(SOUJ_fake_script)()
-local function FAMVRW_fake_script() -- OPENCOMBAT.LocalScript 
-	local script = Instance.new('LocalScript', OPENCOMBAT)
-
-	local CombatFrame = script.Parent.Parent.CombatFrame
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		CombatFrame.Visible = true
-	end)
-end
-coroutine.wrap(FAMVRW_fake_script)()
-local function ATDCPU_fake_script() -- OPENRENDER.LocalScript 
-	local script = Instance.new('LocalScript', OPENRENDER)
-
-	local RenderFrame = script.Parent.Parent.RenderFrame
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		RenderFrame.Visible = true
-	end)
-end
-coroutine.wrap(ATDCPU_fake_script)()
-local function XQGQPYV_fake_script() -- OPENWORLD.LocalScript 
-	local script = Instance.new('LocalScript', OPENWORLD)
-
-	local WorldFrame = script.Parent.Parent.WorldFrame
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		WorldFrame.Visible = true
 	end)
 end
