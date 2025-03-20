@@ -252,7 +252,7 @@ Close_3.TextWrapped = true
 
 -- Scripts:
 
-local function BBEBTD_fake_script() -- CombatFrame.DRAG SCRIPT 
+local function GHTPWV_fake_script() -- CombatFrame.DRAG SCRIPT 
 	local script = Instance.new('LocalScript', CombatFrame)
 
 	local parent: Frame = script.Parent
@@ -260,8 +260,8 @@ local function BBEBTD_fake_script() -- CombatFrame.DRAG SCRIPT
 	parent.Selectable = true
 	parent.Active = true
 end
-coroutine.wrap(BBEBTD_fake_script)()
-local function UCTR_fake_script() -- CombatFrame.RIGHTSHIFT TO OPEN 
+coroutine.wrap(GHTPWV_fake_script)()
+local function NSAPLZZ_fake_script() -- CombatFrame.RIGHTSHIFT TO OPEN 
 	local script = Instance.new('LocalScript', CombatFrame)
 
 	local Gui = script.Parent
@@ -279,8 +279,8 @@ local function UCTR_fake_script() -- CombatFrame.RIGHTSHIFT TO OPEN
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(UCTR_fake_script)()
-local function QFOUMMA_fake_script() -- Close.LocalScript 
+coroutine.wrap(NSAPLZZ_fake_script)()
+local function MYBC_fake_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	local CombatFrame = script.Parent.Parent
@@ -289,55 +289,11 @@ local function QFOUMMA_fake_script() -- Close.LocalScript
 		CombatFrame.Visible = false
 	end)
 end
-coroutine.wrap(QFOUMMA_fake_script)()
-local function AZFGYK_fake_script() -- KillAura.LocalScript 
+coroutine.wrap(MYBC_fake_script)()
+local function AHBOQM_fake_script() -- KillAura.LocalScript 
 	local script = Instance.new('LocalScript', KillAura)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		-- ✅ Start of your script
-	
-		-- ✅ Reference to the button
-		local button = script.Parent  -- The button itself
-		local KillAura = false  -- Track flying state
-		local isOn = false  -- Toggle state for color change
-	
-		-- ✅ Functions to start and stop flying
-		local function startFlying()
-			print("✅ Flying Activated")
-			KillAura = true
-			-- Insert your flying logic here (e.g., changing position, adding BodyVelocity, etc.)
-		end
-	
-		local function stopFlying()
-			print("❌ Flying Deactivated")
-			KillAura = false
-			-- Insert logic to stop flying here (e.g., resetting gravity, removing BodyVelocity, etc.)
-		end
-	
-		-- ✅ Toggle fly and button color when button is clicked
-		button.MouseButton1Click:Connect(function()
-			-- Toggle flying
-			if KillAura then
-				stopFlying()  -- Stop flying if already flying
-			else
-				startFlying()  -- Start flying if not already flying
-			end
-	
-			-- Toggle button color (Green when flying, Red when not flying)
-			isOn = not isOn  -- Flip the state
-	
-			if isOn then
-				button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)  -- Green when ON
-			else
-				button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)  -- Red when OFF
-			end
-	
-			button.Text = "KillAura"  -- Keep the text the same
-		end)
-	
-		-- ✅ Rest of your combat and other logic goes here...
-	
-	end)
 	-- ✅ Services
 	local Players = game:GetService("Players")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -522,8 +478,8 @@ local function AZFGYK_fake_script() -- KillAura.LocalScript
 	-- ✅ Start Initial Kill Aura
 	startKillAura()
 end
-coroutine.wrap(AZFGYK_fake_script)()
-local function JJMNWR_fake_script() -- Speed.Speed Script 
+coroutine.wrap(AHBOQM_fake_script)()
+local function JMBY_fake_script() -- Speed.Speed Script 
 	local script = Instance.new('LocalScript', Speed)
 
 	-- LocalScript under the TextButton (UI Button)
@@ -576,8 +532,8 @@ local function JJMNWR_fake_script() -- Speed.Speed Script
 	button.MouseButton1Click:Connect(toggle)  -- Click event
 	
 end
-coroutine.wrap(JJMNWR_fake_script)()
-local function VZEJYON_fake_script() -- Fly.FlyScript 
+coroutine.wrap(JMBY_fake_script)()
+local function EJUMPU_fake_script() -- Fly.FlyScript 
 	local script = Instance.new('LocalScript', Fly)
 
 	-- LocalScript inside the TextButton (UI Button inside CombatFrame)
@@ -692,8 +648,8 @@ local function VZEJYON_fake_script() -- Fly.FlyScript
 	button.MouseButton1Click:Connect(toggle)  -- Click event
 	
 end
-coroutine.wrap(VZEJYON_fake_script)()
-local function NOSET_fake_script() -- LINES.LINES SCRIPT 
+coroutine.wrap(EJUMPU_fake_script)()
+local function SMDE_fake_script() -- LINES.LINES SCRIPT 
 	local script = Instance.new('LocalScript', LINES)
 
 	local button = script.Parent
@@ -788,8 +744,8 @@ local function NOSET_fake_script() -- LINES.LINES SCRIPT
 	button.MouseButton1Click:Connect(toggle)  -- Click event
 	
 end
-coroutine.wrap(NOSET_fake_script)()
-local function ERLXRT_fake_script() -- ESPBUTTON.ESP SCRIPT 
+coroutine.wrap(SMDE_fake_script)()
+local function FWBVJBY_fake_script() -- ESPBUTTON.ESP SCRIPT 
 	local script = Instance.new('LocalScript', ESPBUTTON)
 
 	local players = game:GetService("Players")
@@ -865,8 +821,8 @@ local function ERLXRT_fake_script() -- ESPBUTTON.ESP SCRIPT
 	button.MouseButton1Click:Connect(toggle)  -- Click event
 	
 end
-coroutine.wrap(ERLXRT_fake_script)()
-local function LRVE_fake_script() -- RenderFrame.DRAG SCRIPT 
+coroutine.wrap(FWBVJBY_fake_script)()
+local function ZHLEMI_fake_script() -- RenderFrame.DRAG SCRIPT 
 	local script = Instance.new('LocalScript', RenderFrame)
 
 	local parent: Frame = script.Parent
@@ -874,8 +830,8 @@ local function LRVE_fake_script() -- RenderFrame.DRAG SCRIPT
 	parent.Selectable = true
 	parent.Active = true
 end
-coroutine.wrap(LRVE_fake_script)()
-local function SCARBS_fake_script() -- RenderFrame.RIGHTSHIFT TO OPEN 
+coroutine.wrap(ZHLEMI_fake_script)()
+local function DBDNAI_fake_script() -- RenderFrame.RIGHTSHIFT TO OPEN 
 	local script = Instance.new('LocalScript', RenderFrame)
 
 	local Gui = script.Parent
@@ -893,8 +849,8 @@ local function SCARBS_fake_script() -- RenderFrame.RIGHTSHIFT TO OPEN
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(SCARBS_fake_script)()
-local function MGKOZ_fake_script() -- Close_2.CLOSE SCRIPT 
+coroutine.wrap(DBDNAI_fake_script)()
+local function NXAS_fake_script() -- Close_2.CLOSE SCRIPT 
 	local script = Instance.new('LocalScript', Close_2)
 
 	local RenderFrame = script.Parent.Parent
@@ -903,8 +859,8 @@ local function MGKOZ_fake_script() -- Close_2.CLOSE SCRIPT
 		RenderFrame.Visible = false
 	end)
 end
-coroutine.wrap(MGKOZ_fake_script)()
-local function YKMSDD_fake_script() -- infjump.INF JUMP SCRIPT 
+coroutine.wrap(NXAS_fake_script)()
+local function JUVCT_fake_script() -- infjump.INF JUMP SCRIPT 
 	local script = Instance.new('LocalScript', infjump)
 
 	local button = script.Parent
@@ -941,8 +897,8 @@ local function YKMSDD_fake_script() -- infjump.INF JUMP SCRIPT
 	button.MouseButton1Click:Connect(toggle)  -- Click event
 	
 end
-coroutine.wrap(YKMSDD_fake_script)()
-local function PSTG_fake_script() -- WorldFrame.DRAG SCRIPT 
+coroutine.wrap(JUVCT_fake_script)()
+local function BZFWC_fake_script() -- WorldFrame.DRAG SCRIPT 
 	local script = Instance.new('LocalScript', WorldFrame)
 
 	local parent: Frame = script.Parent
@@ -950,8 +906,8 @@ local function PSTG_fake_script() -- WorldFrame.DRAG SCRIPT
 	parent.Selectable = true
 	parent.Active = true
 end
-coroutine.wrap(PSTG_fake_script)()
-local function BTHTXHF_fake_script() -- WorldFrame.RIGHTSHIFT TO OPEN 
+coroutine.wrap(BZFWC_fake_script)()
+local function DLFWIN_fake_script() -- WorldFrame.RIGHTSHIFT TO OPEN 
 	local script = Instance.new('LocalScript', WorldFrame)
 
 	local Gui = script.Parent
@@ -969,8 +925,8 @@ local function BTHTXHF_fake_script() -- WorldFrame.RIGHTSHIFT TO OPEN
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(BTHTXHF_fake_script)()
-local function BDJM_fake_script() -- Close_3.CLOSE SCRIPT 
+coroutine.wrap(DLFWIN_fake_script)()
+local function DZAU_fake_script() -- Close_3.CLOSE SCRIPT 
 	local script = Instance.new('LocalScript', Close_3)
 
 	local WorldFrame = script.Parent.Parent
