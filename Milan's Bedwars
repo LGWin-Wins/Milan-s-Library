@@ -3,7 +3,6 @@ local CombatFrame = Instance.new("Frame")
 local Combat = Instance.new("TextLabel")
 local UICorner = Instance.new("UICorner")
 local UICorner_2 = Instance.new("UICorner")
-local Close = Instance.new("TextButton")
 local Speed = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
 local Fly = Instance.new("TextButton")
@@ -18,14 +17,12 @@ local LINES = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
 local ESPBUTTON = Instance.new("TextButton")
 local UICorner_9 = Instance.new("UICorner")
-local Close_2 = Instance.new("TextButton")
 local WorldFrame = Instance.new("Frame")
 local TextWorld = Instance.new("TextLabel")
 local UICorner_10 = Instance.new("UICorner")
 local UICorner_11 = Instance.new("UICorner")
 local infjump = Instance.new("TextButton")
 local UICorner_12 = Instance.new("UICorner")
-local Close_3 = Instance.new("TextButton")
 local ImageButton = Instance.new("ImageButton")
 
 --Properties:
@@ -59,20 +56,6 @@ Combat.TextWrapped = true
 UICorner.Parent = Combat
 
 UICorner_2.Parent = CombatFrame
-
-Close.Name = "Close"
-Close.Parent = CombatFrame
-Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Close.BorderSizePixel = 0
-Close.Position = UDim2.new(0.886699677, 0, 0, 0)
-Close.Size = UDim2.new(0.108374387, 0, 0.0692771077, 0)
-Close.Font = Enum.Font.SourceSansBold
-Close.Text = "X"
-Close.TextColor3 = Color3.fromRGB(0, 0, 0)
-Close.TextScaled = true
-Close.TextSize = 14.000
-Close.TextWrapped = true
 
 Speed.Name = "Speed"
 Speed.Parent = CombatFrame
@@ -182,20 +165,6 @@ ESPBUTTON.TextWrapped = true
 
 UICorner_9.Parent = ESPBUTTON
 
-Close_2.Name = "Close"
-Close_2.Parent = RenderFrame
-Close_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Close_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Close_2.BorderSizePixel = 0
-Close_2.Position = UDim2.new(0.891439795, 0, 0, 0)
-Close_2.Size = UDim2.new(0.108374387, 0, 0.0692771077, 0)
-Close_2.Font = Enum.Font.SourceSansBold
-Close_2.Text = "X"
-Close_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-Close_2.TextScaled = true
-Close_2.TextSize = 14.000
-Close_2.TextWrapped = true
-
 WorldFrame.Name = "WorldFrame"
 WorldFrame.Parent = ScreenGui
 WorldFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -238,20 +207,6 @@ infjump.TextWrapped = true
 
 UICorner_12.Parent = infjump
 
-Close_3.Name = "Close"
-Close_3.Parent = WorldFrame
-Close_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Close_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Close_3.BorderSizePixel = 0
-Close_3.Position = UDim2.new(0.891439795, 0, 0, 0)
-Close_3.Size = UDim2.new(0.108374387, 0, 0.0692771077, 0)
-Close_3.Font = Enum.Font.SourceSansBold
-Close_3.Text = "X"
-Close_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-Close_3.TextScaled = true
-Close_3.TextSize = 14.000
-Close_3.TextWrapped = true
-
 ImageButton.Parent = ScreenGui
 ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -261,7 +216,7 @@ ImageButton.Image = "rbxassetid://120247631704959"
 
 -- Scripts:
 
-local function DXFM_fake_script() -- CombatFrame.DRAG SCRIPT 
+local function MTOMHU_fake_script() -- CombatFrame.DRAG SCRIPT 
 	local script = Instance.new('LocalScript', CombatFrame)
 
 	local parent: Frame = script.Parent
@@ -269,8 +224,8 @@ local function DXFM_fake_script() -- CombatFrame.DRAG SCRIPT
 	parent.Selectable = true
 	parent.Active = true
 end
-coroutine.wrap(DXFM_fake_script)()
-local function BWNQO_fake_script() -- CombatFrame.RIGHTSHIFT TO OPEN 
+coroutine.wrap(MTOMHU_fake_script)()
+local function NIFJDSU_fake_script() -- CombatFrame.RIGHTSHIFT TO OPEN 
 	local script = Instance.new('LocalScript', CombatFrame)
 
 	local Gui = script.Parent
@@ -288,18 +243,8 @@ local function BWNQO_fake_script() -- CombatFrame.RIGHTSHIFT TO OPEN
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(BWNQO_fake_script)()
-local function GMOXNOS_fake_script() -- Close.LocalScript 
-	local script = Instance.new('LocalScript', Close)
-
-	local CombatFrame = script.Parent.Parent
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		CombatFrame.Visible = false
-	end)
-end
-coroutine.wrap(GMOXNOS_fake_script)()
-local function IKON_fake_script() -- Speed.Speed Script 
+coroutine.wrap(NIFJDSU_fake_script)()
+local function XVHW_fake_script() -- Speed.Speed Script 
 	local script = Instance.new('LocalScript', Speed)
 
 	-- LocalScript under the TextButton (UI Button)
@@ -352,8 +297,8 @@ local function IKON_fake_script() -- Speed.Speed Script
 	button.MouseButton1Click:Connect(toggle)  -- Click event
 	
 end
-coroutine.wrap(IKON_fake_script)()
-local function YXYMWH_fake_script() -- Fly.FlyScript 
+coroutine.wrap(XVHW_fake_script)()
+local function ZNXV_fake_script() -- Fly.FlyScript 
 	local script = Instance.new('LocalScript', Fly)
 
 	-- LocalScript inside the TextButton (UI Button inside CombatFrame)
@@ -468,8 +413,8 @@ local function YXYMWH_fake_script() -- Fly.FlyScript
 	button.MouseButton1Click:Connect(toggle)  -- Click event
 	
 end
-coroutine.wrap(YXYMWH_fake_script)()
-local function YVUWOTU_fake_script() -- ANTIFALL.antifall script 
+coroutine.wrap(ZNXV_fake_script)()
+local function VGOAOZH_fake_script() -- ANTIFALL.antifall script 
 	local script = Instance.new('LocalScript', ANTIFALL)
 
 	local button = script.Parent  -- The button itself
@@ -531,8 +476,8 @@ local function YVUWOTU_fake_script() -- ANTIFALL.antifall script
 	end)
 	
 end
-coroutine.wrap(YVUWOTU_fake_script)()
-local function MLHAPHQ_fake_script() -- LINES.LINES SCRIPT 
+coroutine.wrap(VGOAOZH_fake_script)()
+local function UEBHPE_fake_script() -- LINES.LINES SCRIPT 
 	local script = Instance.new('LocalScript', LINES)
 
 	local button = script.Parent
@@ -627,8 +572,8 @@ local function MLHAPHQ_fake_script() -- LINES.LINES SCRIPT
 	button.MouseButton1Click:Connect(toggle)  -- Click event
 	
 end
-coroutine.wrap(MLHAPHQ_fake_script)()
-local function KBHO_fake_script() -- ESPBUTTON.ESP SCRIPT 
+coroutine.wrap(UEBHPE_fake_script)()
+local function NXAVN_fake_script() -- ESPBUTTON.ESP SCRIPT 
 	local script = Instance.new('LocalScript', ESPBUTTON)
 
 	local players = game:GetService("Players")
@@ -704,8 +649,8 @@ local function KBHO_fake_script() -- ESPBUTTON.ESP SCRIPT
 	button.MouseButton1Click:Connect(toggle)  -- Click event
 	
 end
-coroutine.wrap(KBHO_fake_script)()
-local function WMVE_fake_script() -- RenderFrame.DRAG SCRIPT 
+coroutine.wrap(NXAVN_fake_script)()
+local function YBHDV_fake_script() -- RenderFrame.DRAG SCRIPT 
 	local script = Instance.new('LocalScript', RenderFrame)
 
 	local parent: Frame = script.Parent
@@ -713,8 +658,8 @@ local function WMVE_fake_script() -- RenderFrame.DRAG SCRIPT
 	parent.Selectable = true
 	parent.Active = true
 end
-coroutine.wrap(WMVE_fake_script)()
-local function PJXUZ_fake_script() -- RenderFrame.RIGHTSHIFT TO OPEN 
+coroutine.wrap(YBHDV_fake_script)()
+local function MSYJ_fake_script() -- RenderFrame.RIGHTSHIFT TO OPEN 
 	local script = Instance.new('LocalScript', RenderFrame)
 
 	local Gui = script.Parent
@@ -732,18 +677,8 @@ local function PJXUZ_fake_script() -- RenderFrame.RIGHTSHIFT TO OPEN
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(PJXUZ_fake_script)()
-local function VEMV_fake_script() -- Close_2.CLOSE SCRIPT 
-	local script = Instance.new('LocalScript', Close_2)
-
-	local RenderFrame = script.Parent.Parent
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		RenderFrame.Visible = false
-	end)
-end
-coroutine.wrap(VEMV_fake_script)()
-local function VAGINQZ_fake_script() -- infjump.INF JUMP SCRIPT 
+coroutine.wrap(MSYJ_fake_script)()
+local function ZDSHRXJ_fake_script() -- infjump.INF JUMP SCRIPT 
 	local script = Instance.new('LocalScript', infjump)
 
 	local button = script.Parent
@@ -780,8 +715,8 @@ local function VAGINQZ_fake_script() -- infjump.INF JUMP SCRIPT
 	button.MouseButton1Click:Connect(toggle)  -- Click event
 	
 end
-coroutine.wrap(VAGINQZ_fake_script)()
-local function MRAOPVO_fake_script() -- WorldFrame.DRAG SCRIPT 
+coroutine.wrap(ZDSHRXJ_fake_script)()
+local function HVNAW_fake_script() -- WorldFrame.DRAG SCRIPT 
 	local script = Instance.new('LocalScript', WorldFrame)
 
 	local parent: Frame = script.Parent
@@ -789,8 +724,8 @@ local function MRAOPVO_fake_script() -- WorldFrame.DRAG SCRIPT
 	parent.Selectable = true
 	parent.Active = true
 end
-coroutine.wrap(MRAOPVO_fake_script)()
-local function ORGX_fake_script() -- WorldFrame.RIGHTSHIFT TO OPEN 
+coroutine.wrap(HVNAW_fake_script)()
+local function TIBO_fake_script() -- WorldFrame.RIGHTSHIFT TO OPEN 
 	local script = Instance.new('LocalScript', WorldFrame)
 
 	local Gui = script.Parent
@@ -808,18 +743,8 @@ local function ORGX_fake_script() -- WorldFrame.RIGHTSHIFT TO OPEN
 	game:GetService("UserInputService").InputBegan:Connect(onKeyPress)
 	
 end
-coroutine.wrap(ORGX_fake_script)()
-local function CCCJ_fake_script() -- Close_3.CLOSE SCRIPT 
-	local script = Instance.new('LocalScript', Close_3)
-
-	local WorldFrame = script.Parent.Parent
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		WorldFrame.Visible = false
-	end)
-end
-coroutine.wrap(CCCJ_fake_script)()
-local function UEZJWN_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(TIBO_fake_script)()
+local function HCXV_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local button = script.Parent
@@ -838,3 +763,4 @@ local function UEZJWN_fake_script() -- ImageButton.LocalScript
 	end)
 	
 end
+coroutine.wrap(HCXV_fake_script)()
